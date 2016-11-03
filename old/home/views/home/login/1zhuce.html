@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<title>个人注册</title>
+<link rel="stylesheet" type="text/css" href="/resources/css/home/jQuery_1.css">
+<link rel="stylesheet" type="text/css" href="/resources/css/home/regist.css">
+<style type="text/css">
+.regAndLogin_place .phoneCaptchSeekerReg {
+    cursor: pointer;
+    line-height: 48px;
+    height: 46px;
+    width: 95px;
+    padding:0;
+    text-align: center;
+    display: inline-block;
+    background-color: #F5F5F5;
+    border: 1px solid #696969;
+    border-radius: 3px;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+}
+</style>
+ 
+</head>
+<body>
+<?php include "logininclude.html"; ?>
+<!--IE6提示-->
+<div class="container_header">
+  <div id="xo-canvas-globalnav" style="display:none">Global navigation bar</div>
+  <section class="regAndLogin_section">
+    <input type="hidden" name="valid_key" value="5726682322deae8bccf4ca9634d7cd18" />
+    <input type="hidden" id="redirect" value="" />
+    <div class="regAndLogin_left_box regAndLogin_ad fl">
+      <div class="xo-blockszone">
+        <div class="#_login_banner">
+          <ul>
+            <li><img src="/resources/images/home/1417179063.gif" width="661" height="319" alt="" border="0"  /></li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section_right_box fr">
+      <div class="section_right_form"> 
+      <form action="<?php echo site_url()."/Lilogin/submint";?>" method="post" class="regAndLogin_form" id="form1"> 
+        <div class="regAndLogin_top">
+          <div class="fl regAndLogin_title1">个人注册</div>
+          <div class="fr regAndLogin_quickLink">已有账号? <a class="font_blue"  href="<?php echo site_url()."/Lilogin/login";?>">立即登录</a></div>
+        </div>
+        <div class="clear"></div>
+        <fieldset class="regAndLogin_place">
+           <p class="position_rel"><em class="user_icon"></em>
+            <label for="newphone" class="regAndLogin_first">
+              <input  type="text" name="mobile" id="mobile" placeholder="请输入手机号" value="" />
+            </label>
+            <span class="user_tips" style="display:none;"></span></p>            
+         
+          <p class="position_rel" id="password_div"><em class="pws_icon"></em>
+            <label for="newphone" class="regAndLogin_first">
+              <input class="regAndLogin_secondInput" type="password" name="password" id="password" placeholder="请输入密码" onblur="check_phone2();" />
+            </label>
+             
+             <span class="user_tips" style="display:none;"></span></p>
+            
+           <p class="position_rel" id="password_div"><em class="pws_icon"></em>
+               <label for="password" class="regAndLogin_second">
+               <input class="regAndLogin_secondInput" name="pass"  id="pass" placeholder="请再次输入密码"  maxlength="20" type="password" ></label>
+                     
+                    <span class="user_tips" style="display:none;"></span></p>       
+                                 
+           <p class="position_rel" id="password_div"><em class="pws_icon"></em>
+               <label for="password" class="regAndLogin_second">
+               <input class="regAndLogin_secondInput" name="invitation" id="invitation" type="text" value="" placeholder="请输入邀请码"  maxlength="20" type="text" /></label>                    
+          </p>
+        
+          <p class="position_rel">
+            <label class="regAndLogin_first phonecaptchinput">
+              <input  type="text" name="xoopscaptcha" id="RegPhoneCaptch" placeholder="请输入短信验证码" size="6" value="" />
+            </label>
+            <input type="button" class="phoneCaptchSeekerReg" style="cursor: pointer;" value="获取验证码" onclick="get_code(this)"></p>
+           
+        
+          
+        </fieldset>
+        <input type="hidden"  name="referer" id="referer" value="" />
+        <p class="reg_protocal">
+          <label for="protocol" class="regAndLogin_txt">
+            <input class="regAndLogin_checkbox" type="checkbox" id="protocol" value="1" />
+            同意</label>
+          &nbsp;&nbsp;&nbsp;<a href="javascript:void(0) " target="_blank" class="showbtn font_blue fontSize14" onClick="">个人会员注册协议</a></p>
+        <p class="warning_txt" id="warMsg">请同意勾选"个人会员注册协议"</p>
+     
+ 
+        
+        <div id="bg"></div>
+  <!--<form action="" method="get">  -->  <div class="box" style="display:none">
+        <h2>在加入会员前，请详细阅读会员的权利义务条款</h2>
+        <div class="list">
+          <ul>
+            <li>
+            <div>
+              <textarea cols="93" rows="15" readonly>
+                 
+                        
+本网页阐明了使用中华英才网网站及其服务的使用条款（“使用条款”）。
+“求职者”是指完全同意本协议所有条款，使用中华英才网进行有效注册或虽然未经注册但通过使用经中华英才网许可的方式登录中华英才网，以寻求工作机会为目的的自然人。
+“招聘企业”或“企业会员”是指有人员招聘需求，通过与中华英才网签订协议或中华英才网特别许可的方式获得会员使用资格，从而有权在www.chinahr.com上发布招聘信息、进行求职者简历检索或享受其它服务的企业用户。
+求职者和招聘企业合称为用户。
+这些使用条款构成中华英才网网站用户（“用户”）与英才华网网络技术（北京）有限公司及其关联公司（统称为“中华英才网”）之间具有法律约束力的协议。当用户访问中华英才网网站及使用其服务时，即被视为已接受此协议各项条款。
+中华英才网网站（www.chinahr.com）提供各种功能和服务，包括但不限于在线发布和搜索就业机会（“中华英才网服务”）。
+中华英才网的网站还包括在线社区，旨在方便用户基于共同的经历和兴趣进行有价值的专业及个人交流。用户还可在中华英才网网站创建个人档案资料（“档案资料”）。
+中华英才网将不定时地通过在本网页发布更新版本的方式修改使用条款。 请用户定期访问本网页并查看最新条款。这些条款对用户均具有约束力。
+违反使用条款的用户可能会被暂停或终止使用及访问中华英才网网站。
+
+
+              </textarea>
+            </div>
+             </li>
+             <li><div class="db1"><a href="#" onclick="agree()" class="close">同&nbsp;意</a></div></li>
+             
+            </ul> 
+             
+  </div>
+</div>
+         
+        <p>
+          <input type="button" onclick="sub();" id="submitName" name="submitName"  value="立即注册" class="reg_confirm"  style="box-shadow:#666 1px 2px 2px;"/>
+        </p>
+     </form>  
+      </div>
+    </div>
+    <div class="clear"></div>
+  </section>  
+</div>
+
+<?php include "footer.html"; ?>
+<script type="text/javascript" src="/resources/layer/layer.js"></script>
+<script type="text/javascript">
+
+  function agree(){
+      $("#protocol").attr("checked",true);
+  }
+
+  function sub(){
+      var mobile = $.trim($("#mobile").val());
+      var yzm = $.trim($("#RegPhoneCaptch").val());
+      var password = $.trim($("#password").val());
+      var password_PwdTwo = $.trim($("#pass").val());
+      var invitecode = $.trim($("#invitation").val());
+      if(!mobile || !/^1[3|4|5|7|8]\d{9}$/.test(mobile)){
+        layer.tips('请输入正确的手机号码','#mobile', {tips: 1});
+        return false;
+      }else if(yzm ==''){
+        layer.tips('请输入验证码','#RegPhoneCaptch', {tips: 1});
+        return false;
+      }else if(password == ''){
+        layer.tips('请输入密码','#password', {tips: 1});
+        return false;
+      }else if(password!=password_PwdTwo){
+        layer.tips('2次输入的密码不一样','#pass', {tips: 1});
+        return false;
+      }
+      if(!$("#protocol:checked").val()) {
+          layer.tips('请同意注册协议','#protocol', {tips: 1});
+          return false;
+      }
+      $.ajax({
+          url:"<?php echo site_url();?>/Lilogin/submint",
+          type:"post",
+          data:{mobile:mobile,xoopscaptcha:yzm,password:password,pass:password_PwdTwo,invitation:invitecode},
+          dataType:"json",
+          error:function(){
+             layer.close(index);
+             layer.msg("出错啦");
+          },
+          beforeSend:function(){
+               index = layer.load(2, {shade: false});
+          },
+          success:function(res){
+              layer.close(index);
+              if(res.status==1){
+                window.location.href="<?php echo site_url();?>/PersonalCenter/index";
+              }else{
+                layer.msg(res.message);
+              }
+          }
+      })
+  }
+
+  var wait=60;
+  function get_code(obj){
+    var mobile = $("#mobile").val();
+    if(!mobile || !/^1[3|4|5|7|8]\d{9}$/.test(mobile)){
+      layer.tips('请输入正确手机号码','#mobile', {tips: 1});
+      return false;
+    }
+    time(obj);
+    $.ajax({
+        url:"<?php echo site_url();?>/Lilogin/getcode",
+        type:"post",
+        data:{mobile:mobile},
+        dataType:"json",
+        error:function(){
+           layer.close(index);
+           layer.msg("出错啦");
+        },
+        beforeSend:function(){
+             index = layer.load(2, {shade: false});
+        },
+        success:function(res){
+            layer.close(index);
+            if(res.status==1){
+              layer.msg("验证码发送成功");
+            }else{
+              layer.msg(res.message);
+            }
+        }
+    })
+  }
+
+  function time(o) {
+      if (wait == 0) {
+          o.removeAttribute("disabled"); 
+          o.value ="获取验证码";          
+          wait = 60;
+      } else {
+          o.setAttribute("disabled", true);
+          o.value ="倒计时(" + wait + ")";
+          wait--;
+          setTimeout(function() {
+              time(o)
+          },
+          1000)
+      }
+  }
+
+//修正bug8658 
+var isIE=!!window.ActiveXObject;
+if(isIE && document.domain == 'www.#.com' && document.charset!="utf-8")
+{
+    location.reload(false);
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>后台管理</title>
+    
+    <?php $this->load->view("admin/include.html"); ?>
+</head>
+<body>
+<div id="body-wrapper">
+    <!-- Wrapper for the radial gradient background -->
+    <div id="sidebar">
+        <?php $this->load->view("admin/left.html"); ?>
+    </div>
+    <!-- End #sidebar -->
+    <div id="main-content">
+        <!-- Main Content Section with everything -->
+       
+        <!-- Page Head -->
+        <div class="clear"></div>
+        <!-- End .clear -->
+        <div class="content-box">
+            <!-- Start Content Box -->
+            <div class="content-box-header">
+                <h3>用户编辑</h3>
+                <ul class="content-box-tabs">
+                  <!--  <li><a href="user.php?act=add" function="default-tab">添加帐号</a></li>-->
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!-- End .content-box-header -->
+            <div class="content-box-content">
+                <div class="tab-content default-tab" id="tab2">
+                    <form  action="<?php echo site_url("/User/UserPost");?>" method="post" name="form1"  >
+                        <p>
+                            <label>手机号：</label>
+                            <input name="mobile" type="name" id='mobile' style="width: 200px" value='<?php echo $mobile?>'>
+                        </p>
+                        <p>
+                            <label>密&nbsp;&nbsp;码：</label>
+                            <input name="passd" type="password" id='passd' style="width: 200px" value=''>
+                        </p>
+                        <p>
+                            <input type='hidden' name='id' value='<?php echo $id?>'>
+                            <input type="button" name="is" class="button" value="编辑" onclick='yanzheng()'>
+                        </p>
+                    </from>
+                </div>
+            </div>
+            <!-- End .content-box-content -->
+        </div>
+
+        <div class="clear"></div>
+
+        <?php $this->load->view("admin/footer.html"); ?>
+    </div>
+    <!-- End #main-content -->
+</div>
+</body>
+<script>
+    function yanzheng(){
+        var mobile = $('#mobile').val();
+        var passd = $('#passd').val();
+
+        var zemobile = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
+        if(mobile.match(zemobile) == null){
+            alert('请正确输入手机号！');
+            return false;
+        }else if((passd !="") && (passd.length<6 || passd.length>16)){
+            alert('密码长度要6-16位！');
+            return false;
+        }else{
+            $('form').submit();
+        }
+    }
+</script>
+</html>

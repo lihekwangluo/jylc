@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<title>个人注册</title>
+<script src="/resources/js/html5.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="/resources/css/home/regist.css" />
+<link rel="stylesheet" type="text/css" href="/resources/css/home/jQuery_1.css">
+	
+<script type="text/javascript" src="/resources/js/jqures_1.js"></script>
+
+</head>
+<body>
+<!--<script type="text/javascript" src="js/2014-11-10-GA-default.js"></script> -->
+  
+<!--IE6提示-->
+<div class="nocitIE6 clearfix" id="nocitIE6">
+  <div class="fr mTR12"><a href="javascript:closeIE6Tip();void(0)" class="alrClose2" id="closeIE6Tip"></a></div>
+  <div class="noticeCen"><span class="noticeRed"></span>由于您使用IE6浏览器版本过低，可能会造成无法正常浏览网页，建议升级浏览器后继续使用。</div>
+</div>
+<!--IE6提示-->
+<!--<section class="headerRegist_border">
+  <header class="header_regist">
+    <div class="logo_regist  "><a href="index.html" onClick="clickLog('from=chr_jsreg_logo');"><img src="/resources/images/home/logo_www.gif" alt="xx"></a></div>
+    <div class="fr headerRegist_right">
+      <div class="hotline fr">
+        <div class="clearfix" ><span class="hotline_icon"></span> <span class="hotline_Text"> 客服热线 400-000-0000</span></div>
+      </div>
+      <div class="m_site fr"><a class="clearfix" href="sjb.html" onClick="clickLog('from=chr_jsreg_mobile');"><span class="phone_site"></span> <span class="phone_siteText"> 手机站</span></a></div>
+    </div>
+  </header>
+  <div class="clear"></div>
+</section>-->
+<?php include "logininclude.html"; ?>
+<script src="/resources/js/person_login.js" type="text/javascript"></script>
+<div class="container_header">
+  <div id="xo-canvas-globalnav" style="display:none">Global navigation bar</div>
+   
+  <section class="regAndLogin_section">
+    <input type="hidden" name="valid_key" value="5726682322deae8bccf4ca9634d7cd18" />
+    <input type="hidden" id="redirect" value="" />
+    <div class="regAndLogin_left_box regAndLogin_ad fl">
+      <div class="xo-blockszone">
+        <div class="#_login_banner">
+          <ul>
+            <li><img src="/resources/images/home/1417179063.gif" width="661" height="319" alt="" border="0"  /></li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section_right_box fr">
+      <div class="section_right_form"> 
+         <form action="<?php echo site_url()."/Lilogin/submint";?>" method="post" class="regAndLogin_form" id="form1"> 
+        <div class="regAndLogin_top">
+          <div class="fl regAndLogin_title1">个人注册</div>
+          <div class="fr regAndLogin_quickLink">已有账号? <a class="font_blue"  href="<?php echo site_url()."/Lilogin/login";?>">立即登录</a></div>
+        </div>
+        <div class="clear"></div>
+        <fieldset style='border: 0px solid #999;' class="regAndLogin_place">
+           <p class="position_rel"><em class="user_icon"></em>
+            <label for="newphone" class="regAndLogin_first">
+              <input  class="fdfdf" type="text" name="mobile" id="mobile" placeholder="请输入手机号" value="" />
+            </label>
+            <span class="user_tips" style="display:none;"></span></p>            
+         
+          <p class="position_rel" id="password_div"><em class="pws_icon"></em>
+            <label for="newphone" class="regAndLogin_first">
+              <input class="regAndLogin_secondInput fdfdf" type="password" name="password" id="password" placeholder="请输入密码" onblur="check_phone2();" />
+            </label>
+             
+             <span class="user_tips" style="display:none;"></span></p>
+            
+           <p class="position_rel" id="password_div"><em class="pws_icon"></em>
+               <label for="password" class="regAndLogin_second">
+               <input class="regAndLogin_secondInput fdfdf" name="pass"  id="pass" placeholder="请再次输入密码"  maxlength="20" type="password" ></label>
+                     
+                    <span class="user_tips" style="display:none;"></span></p>       
+                                 
+           <p class="position_rel" id="password_div"><em class="pws_icon"></em>
+               <label for="password" class="regAndLogin_second">
+               <input class="regAndLogin_secondInput fdfdf" name="invitation" id="invitation" type="text" value="" placeholder="请输入邀请码"  maxlength="20" type="text" /></label>                    
+          </p>
+        
+          <p class="position_rel">
+            <label class="regAndLogin_first phonecaptchinput">
+              <input  type="text" name="xoopscaptcha" id="RegPhoneCaptch" placeholder="请输入短信验证码" size="6" value="" style="width:200px;height:48px;border:1px solid #dedede;"/>
+            </label>
+            <input  type="button" class="phoneCaptchSeekerReg lias" style="cursor: pointer;" value="获取验证码" onclick="get_code(this)"></p>
+
+
+           <!--<p class="position_rel">
+            <label class="regAndLogin_first phonecaptchinput">
+              <input  type="text" name="xoopscaptcha" id="RegPhoneCaptch" placeholder="请输入短信验证码" size="6" value="" />
+            </label>
+            <span style="" class="phoneCaptchSeekerReg" style="cursor: pointer;" onclick="get_code(this)">
+            <label>获取验证码</label>
+            </span> </p>-->
+        
+          
+        </fieldset>
+        <input type="hidden"  name="referer" id="referer" value="" />
+        <p class="reg_protocal">
+          <label for="protocol" class="regAndLogin_txt">
+            <input class="regAndLogin_checkbox" type="checkbox" id="protocol" value="1" />
+            同意</label>
+          &nbsp;&nbsp;&nbsp;<a href="javascript:void(0) " target="_blank" class="showbtn font_blue fontSize14" onClick="">个人会员注册协议</a></p>
+        <p class="warning_txt" id="warMsg">请同意勾选"个人会员注册协议"</p>
+     
+ 
+        
+        <div id="bg"></div>
+  <!--<form action="" method="get">  -->  <div class="box" style="display:none">
+        <h2>在加入会员前，请详细阅读会员的权利义务条款</h2>
+        <div class="list">
+          <ul>
+            <li>
+            <div>
+              <textarea cols="93" rows="15" readonly class="sb1">
+　一、定义
+　本协议中的“本平台”是指北京礼和网络科技股份有限公司及其关联公司、北京礼和网络科技股份有限公司建立的“建遇良才”信息服务平台（包括App、微信公共号、功能网页以及相关服务平台等）。
+　本平台的“用户”，包含注册用户和非注册用户。注册用户是指在本平台完成注册程序的用户。非注册用户是指未进行注册、直接登录本平台或通过其他网络链接进入本平台的用户。
+　协议方，本协议中协议双方合称协议方。
+　二、协议的效力
+　1、本协议由用户与北京礼和网络科技股份有限公司缔结，本协议具有合同效力。
+　在注册时，用户应当按照法律法规要求，或注册页面的提示，准确填写并及时更新用户提供的电子邮件地址、联系电话、联系地址、邮政编码等联系方式，以便本平台或其他会员与用户进行有效联系。如用户的资料发生变更，用户应及时更新用户的资料，以使之真实、及时，完整和准确。如有合理理由怀疑用户提供的资料错误、不实、过时或不完整的，本平台有权向用户发出询问及/或要求改正的通知，并有权不通知用户而直接做出删除相应资料的处理，直至中止、终止对用户提供部分或全部服务。由此导致用户在使用本平台服务过程中产生任何损失或增加费用的，应由用户完全独自承担。
+　2、对于用户提供的资料及数据信息，用户授予本平台独家的、全球通用的、永久的、免费的许可使用权力。用户同意，本平台有权（全部或部分地）使用、复制、更正、发布、翻译、分发、执行和展示用户的资料数据（包括但不限于注册资料、行为数据及全部展示于本平台的各类信息）或制作其派生作品，并以现在已知或日后开发的任何形式、媒体或技术，将上述信息纳入其它作品内。
+　在此，用户特别做出授权，允许本平台依据用户提供的信息资料及在本平台上的行为、投诉及侵权状况等进行信用评级，用户对本平台的信用评级体系予以认可并同意本平台将用户在平台存储的全部或部分信息及信用评价结果以有偿或无偿方式提供给第三方进行商业或非商业方式的使用，而无需在该提供行为之前再另行取得用户的同意。如用户不同意做出前述授权，用户应立即停止注册程序或停止使用本平台服务。如用户继续使用本平台服务的，即表示用户同意做出前述授权。
+　3、用户应当在使用本平台服务之前认真阅读全部协议内容。如用户对协议有任何疑问的，应向本平台咨询。但无论用户事实上是否在使用本平台服务之前认真阅读了本协议内容，只要用户使用本平台服务，则本协议即对用户产生约束，届时用户不应以未阅读本协议的内容或者未获得本平台对用户问询的解答等理由，主张本协议无效，或要求撤销本协议。
+　4、本协议内容包括协议正文及所有本平台已经发布的或将来可能发布的各类规则。所有规则为本协议不可分割的组成部分，与协议正文具有同等法律效力。除另行明确声明外，任何本平台及其关联公司提供的服务（以下称为本平台服务）均受本协议约束。用户承诺接受并遵守本协议的约定。如果用户不同意本协议的约定，用户应立即停止注册程序或停止使用本平台服务。
+　5、本平台有权根据国家法律法规的更新、本平台产品和服务规则的调整需要不时地制订、修改本协议及/或各类规则，并以平台公示的方式进行公示。如用户继续使用本平台服务的，即表示用户接受经修订的协议和规则。
+　三、注册、使用
+　1、用户确认，在用户完成注册程序或以其他本平台允许的方式实际使用本平台服务时，用户应当是具备相应民事行为能力的自然人、法人或其他组织。若用户不具备前述主体资格，则用户及用户的监护人应承担因此而导致的一切后果，且本平台有权注销用户的账户，并向用户及用户的监护人索偿。
+　2、本平台非常重视对青少年个人信息安全性的保护。本平台建议，任何未满18周岁的未成年人参加网上活动应事先取得其监护人（以下简称"监护人"）的同意并遵守《青少年网络文明公约》。
+　3、在用户签署本协议，完成注册程序时，本平台会向用户提供唯一编号的本平台账户。用户应对用户的账户和密码的安全，以及对通过用户的账户和密码实施的行为负责。除非有法律规定或行政司法机关的指令，且征得本平台的同意，否则，账户和密码不得以任何方式转让、赠与或继承（与账户相关的财产权益除外）。如果发现任何人不当使用用户的账户或有任何其他可能危及用户的账户安全的情形时，用户应当立即以有效方式通知本平台，要求本平台暂停相关服务。用户理解本平台对用户的请求采取行动需要合理时间，本平台对在采取行动前已经产生的后果（包括但不限于用户的任何损失）不承担任何责任。
+　4、注册及使用本平台的过程中，如用户选择进行实名认证并上传个人身份证件及个人头像图片的，由本平台对用户上传的个人身份证件及个人头像进行常规形式的审核。用户同意并理解本平台仅能对上传者的行为是否合法正当、个人身份证件是否真实有效进行表面的形式审核，本平台没有能力和权限对用户提供的实名认证信息进行实质性的审核，本平台的审核结果有可能会因用户不正当的行为方式出现与实际的事实情况不一致的情形。在此用户保证用户会严格保管用户的本平台账户、密码及个人身份证件，并保证不会使用他人或伪造的身份证件用于自身的实名认证，否则由此产生的全部不利责任将全部由用户自身承担。
+　四、本平台服务使用规范
+　1、通过本平台，用户可以按照本平台的规则发布相关信息。但所发布之信息不得含有如下内容：
+　1）煽动抗拒、破坏宪法和法律、行政法规实施的；
+　2）煽动颠覆国家政权，推翻社会主义制度的；
+　3）煽动分裂国家、破坏国家统一的；
+　4）煽动民族仇恨、民族歧视，破坏民族团结的；
+　5）捏造或者歪曲事实，散布谣言，扰乱社会秩序的；
+　6）宣扬迷信、淫秽、色情、赌博、暴力、凶杀、恐怖、教唆犯罪的；
+　7）公然侮辱他人或者捏造事实诽谤他人的，或者进行其他恶意攻击的；
+　8）损害国家机关信誉的；
+　9）其他违反宪法和法律法规的；
+　2、在接受本平台服务的过程中，用户不得从事下列行为：
+　1）制造虚假身份以误导、欺骗他人；发表、传送、传播、储存侵害他人知识产权、商业秘密权等合法权利的内容，以及包含病毒、木马、定时炸弹等可能对本平台系统造成伤害或影响其稳定性的内容；
+　2）以各种形式传送或散布含有受到知识产权法律保护的图像、相片、软件或其他资料的文件，包括但不限于：专利、版权、商标等。除非用户拥有相应的权力或已得到所有必要的认可；
+　3）使用通过侵犯任何一方的商标、版权、专利、商业机密、其他专有权利的方式获得的图像或相片的资料或信息；
+　4）进行危害本平台以及计算机网络安全的行为，包括但不限于：使用未经许可的数据或进入未经许可的服务器/帐号；进入没有对其开放的数据库；未经允许进入公众计算机网络或者他人计算机系统并删除、修改、增加存储信息；企图探查、扫描、测试本平台系统或网络的弱点或其它实施破坏网络安全的行为；企图干扰、破坏本平台系统或正常运行，故意传播恶意程序或病毒以及其他破坏干扰正常网络信息服务的行为；伪造TCP/IP数据包名称或部分名称；
+　5）修改或伪造软件作品运行中的指令、数据、数据包，增加、删减、变动软件的功能或运行效果，不得将用于上述用途的软件通过信息网络向公众传播或者运营；
+　6）违背本平台页面公布的活动规则，包括但不限于：发布虚假信息、作弊等。
+　3、用户了解并同意，本平台有权应政府部门（包括司法及行政部门）的要求，向其提供用户在本平台填写的注册信息和发布纪录等必要信息。
+　4、在本平台上使用本平台服务过程中，用户承诺遵守以下约定：
+　1）在使用本平台服务过程中实施的所有行为均遵守国家法律、法规等规范文件及本平台各项规则的规定和要求，不违背社会公共利益或公共道德，不损害他人的合法权益，不违反本协议及相关规则。用户如果违反前述承诺，产生任何法律后果的，用户应以自己的名义独立承担所有的法律责任，并确保本平台免于因此产生任何损失。
+　2）不发布国家禁止发布的信息（除非取得合法且足够的许可），不发布涉嫌侵犯他人知识产权或其它合法权益的信息，不发布违背社会公共利益或公共道德、公序良俗的信息，不发布其它涉嫌违法或违反本协议及各类规则的信息。
+　3）不对本平台上的任何数据作商业性利用，包括但不限于在未经本平台事先书面同意的情况下，以复制、传播等任何方式使用本平台站上展示的资料。
+　4）不使用任何装置、软件或例行程序干预或试图干预本平台的正常运作或正在本平台上进行的任何活动。用户不得采取任何将导致不合理的庞大数据负载加诸本平台网络系统的行动。
+　5、用户了解并同意：
+　1）用户违反上述承诺时，本平台有权依据本协议的约定，做出相应处理或终止向用户提供服务，且无须征得用户的同意或提前通知予用户。
+　2）根据相关法令的指定或者本平台服务规则的判断，用户的行为涉嫌违反法律法规的规定或违反本协议和/或规则的条款的，本平台有权采取相应措施，包括但不限于直接屏蔽、删除侵权信息、降低用户的信用值或直接停止提供服务。
+　3）对于用户在本平台上实施的行为，包括用户未在本平台上实施但已经对本平台及其他用户产生影响的行为，本平台有权单方认定用户行为的性质及是否构成对本协议和/或规则的违反，并据此采取相应的处理措施。用户应自行保存与用户行为有关的全部证据，并应对无法提供充要证据而承担的不利后果。
+　4）对于用户涉嫌违反承诺的行为对任意第三方造成损害的，用户均应当以自己的名义独立承担所有的法律责任，并应确保本平台免于承担因此产生的损失或增加的费用。
+　5）如用户涉嫌违反有关法律或者本协议之规定，使本平台遭受任何损失，或受到任何第三方的索赔，或受到任何行政管理部门的处罚，用户应当赔偿本平台因此造成的损失及（或）发生的费用，包括合理的律师费用。
+　6、用户必须同意使用本平台仅用于合法的目的。用户须独自对登记在本平台上及其他链接页面上的内容的正确性负责。本平台保留对用户所发布的资料进行合理性修改、删除的权力。本平台保留在适当的时候制订新的服务收费标准的权力。
+　7、已注册求职者可以把个人简历通过本平台或直接发送给在本平台已注册的雇主。在此种情况下，求职者个人简历仍储存在本平台数据库中，直至求职者把个人简历从其中删除为止。本平台保留对求职者的不合理简历进行删除处理的权利。求职者必须独自全部承担由于向雇主或其他用户发送个人资料所形成的一切风险。本平台对于任何雇主（不管是否在中国境内）与求职者之间所造成的任何纠纷，概不负责。
+　8、已注册雇主有权进入本平台数据库进行职位查询，但禁止利用此项权利进行查询人才以外的其他用途。
+　9、求职者不能登记（或邮寄）不完全的、虚假的个人信息，不得试图获取职位以外的内容；雇主不得试图得到求职者个人简历以外的其他信息。
+　五、责任范围和责任限制
+　1、本平台负责向用户提供本平台的服务。但本平台对本平台服务不作任何明示或暗示的保证，包括但不限于本平台服务的适用性、没有错误或疏漏、持续性、准确性、可靠性、适用于某一特定用途。同时，本平台也不对本平台服务所涉及的技术及信息的有效性、准确性、正确性、可靠性、稳定性、完整性和及时性作出任何承诺和保证。
+　2、本平台上的信息系用户自行发布，由于海量信息的存在，且本平台无法杜绝可能存在风险和瑕疵。用户应谨慎判断确定相关信息的真实性、合法性和有效性，并注意保留相应的证据以利于维权。
+　3、用户同意在发现本平台任何内容不符合法律规定，或不符合本用户协议规定的，用户有义务及时通知本平台。如果用户发现用户的个人信息被盗用，或者用户的版权或者其他权利被侵害，请将此情况告知本平台并同时提供如下信息和材料：
+　1）侵犯用户权力的信息的网址，编号或其他可以找到该信息的细节；
+　2）用户是所述的版权或者其他权利的合法拥有者的权利证明；
+　3）用户的联系方式，包括联系人姓名，地址，电话号码和电子邮件；
+　4）用户的身份证复印件、营业执照等其他相关资料。
+　经审查得到证实的，我们将及时删除相关信息。我们仅接受邮寄、电子邮件或传真方式的书面侵权通知。情况紧急的，用户可以通过客服电话先行告知，我们会视情况采取相应措施。
+　4、本平台无需全天监控本平台的运作；但拥有该项权利。本平台所有用户必须认可自己所输入的表格、内容、简历的正确性；独立对链接的页面、内容承担责任。本平台并不保证所有信息、文本、图形、链接及其它项目的绝对准确性和完整性，故仅供用户参考使用。本平台对任何与本平台链接的网页的内容的正确性不承担任何责任。
+　5、本平台不能保证服务一定能满足用户的要求，也不能保证网络服务不会中断，不能保证网络服务的及时性、安全性、准确性。同时，本平台不保证能够长期无错误运营，也不保证服务器不受病毒或其他故障的侵扰。如果用户在使用本平台时发生数据丢失的情况，与本平台无关。
+　就法律所允许的范围内，本平台放弃承诺不出现故障；放弃承诺免使第三方权利受到侵害；放弃承诺本平台内容、服务、软件、文本、图像、链接等的适用性、精确性、可靠性、完整性。
+　6、用户了解并同意，本平台不对因下述任一情况而导致用户的任何损害赔偿承担责任，包括但不限于利润、商誉、使用、数据等方面的损失或其它无形损失的损害赔偿 ：
+　1）使用或未能使用本平台服务。
+　2）第三方未经批准的使用用户的账户或更改用户的数据。
+　3）通过本平台服务购买或获取任何商品、样品、数据、信息等行为或替代行为产生的费用及损失。
+　4）用户对本平台服务的误解。
+　5）任何非因本平台的原因而引起的与本平台服务有关的其它损失。
+　7、本平台对下列不可抗力行为免责：信息网络设备维护，信息网络连接故障，电脑、通讯或其他系统的故障，电力故障，罢工，劳动争议，暴乱，起义，骚乱，生产力或生产资料不足，火灾，洪水，风暴，爆炸，战争，政府行为，司法行政机关的命令或第三方的不作为而造成的不能服务或延迟服务。
+　8、用户应当严格遵守本协议及本平台发布的其他协议、活动规则，因用户违反协议或规则的行为给第三方、或本平台造成损失的，用户应当承担全部责任。
+　9、本平台仅为相关信息发布平台，任何透过本平台发布的招聘信息及其他产品或者服务均系用户自行发布，本平台对其合法性概不负责，亦不承担任何法律责任；用户在通过本平台得到资讯和信息后，与信息发布人所进行的任何交易均系其双方自主交易，双方若发生纠纷，皆与本平台无关，本平台不承担任何法律责任；本公司对于用户由于使用本平台而造成的任何金钱、商誉、名誉的损失，或任何特殊的、间接的、或结果性的损失都不负任何责任。
+　10、本平台对用户因使用本网站产生损失而提出的索赔金额，以用户向本平台已交付的款项之和为限。
+　六、个人风险条款
+　1、用户必须独自承担由于使用本平台或通过本平台登录到其他站点而形成的全部风险，并独立承担与他人交流信息（包括但不限于应聘、招聘、商品等信息）所造成的后果。本平台不能保证用户发送给另一方用户的资料的真实性、精确性与可靠性。用户对所接受的资料的信任纯属个人风险。
+　2、本平台一经发现任何有违反本协议或侵犯法律的行为，有权马上解除该用户的注册用户资格及禁止其再次登录本平台。本平台保留删除一切非法的、辱骂性的及不健康的资料的权力。
+　七、通知送达
+　1、本平台对于用户所有的通知均可通过本平台公告、电子邮件、手机短信或常规的信件传送等方式进行；该等通知于发送之日视为已送达收件人。
+　2、用户对于本平台的通知应当通过本平台对外正式公布的通信地址、传真号码、电子邮件地址等联系信息进行送达。
+　八、协议终止
+　1、用户同意，本平台基于平台服务的安全性，有权中止向用户提供部分或全部本平台服务，暂时冻结用户的账户，待安全问题解决后及时恢复，并对中止、冻结及恢复的事实及时通知。如果平台的安全问题是由于用户的违法行为引起，本平台有终止向用户提供部分或全部本平台服务，永久冻结（注销）用户的帐户，并有权向用户对损失进行索赔。
+　2、用户的账户被注销后，本平台没有义务为用户保留或向用户披露用户账户中的任何信息，也没有义务向用户或第三方转发任何用户未曾阅读或发送过的信息。
+　3、用户同意，用户与本平台的协议关系终止后，本平台仍享有下列权利：
+　1）继续保存用户未及时删除的注册信息及用户使用本平台服务期间发布的所有信息至法律规定的记录保存期满。
+　2）用户在使用本平台服务期间存在违法行为或违反本协议和/或规则的行为的，本平台仍可依据本协议向用户主张权利。
+　九、隐私权政策
+　1、本平台将在本平台公布并不时修订隐私权政策，隐私权政策构成本协议的有效组成部分。
+　2、你知悉并认可：本平台可能会与第三方合作向用户提供相关的网络服务，在此情况下，如该第三方同意承担与本平台同等的保护用户隐私的责任，则本平台有权将用户的注册资料等提供给该第三方。另外，在不透露单个用户隐私资料的前提下，本平台有权对整个用户数据库进行分析并对用户数据库进行商业上的利用。
+　3、为保护用户的个人信息的安全。我们使用各种安全技术和程序来保护用户的个人信息不被未经授权的访问、使用或泄漏。对此用户表示理解和认同。
+　4、本平台使用 Cookie 来帮助用户实现用户的联机体验的个性化。Cookie 是由网页服务器存放在用户的硬盘中的文本文件。Cookie 不能用来运行程序或将病毒递送到用户的计算机中。指定给用户的 Cookie 是唯一的，它只能由将 Cookie 发布给用户的域中的 Web 服务器读取，Cookie 会帮助本平台在用户后续访问时调用用户的特定信息。这样可以简化记录用户的个人信息，当用户下次使用本平台服务时，系统会自动调出用户以前发布或浏览的信息，使用户的使用变得更加便捷和高效。
+　十、版权声明
+　1、本平台的版权内容包括：所有标识、图标、版面设计、编排方式、图表、文字、声音、相片、录像、软件；广告中的全部内容；电子邮件的全部内容；本平台为用户提供的商业信息。所有这些内容受版权、商标及其他相关法律的保护。没有本平台明确的书面批准，任何个人或实体不能擅自复制、再造这些内容，或创造与内容有关的派生产品。
+　2、用户发布的所有内容仅代表作者自己的立场和观点，与本平台无关，由发布者本人承担一切法律责任。
+　十一、法律适用、管辖与其他
+　1、本协议之效力、解释、变更、执行与争议解决均适用中华人民共和国法律，如无相关法律规定的，则应参照通用国际商业惯例和（或）行业惯例。
+　2、因本协议产生之争议，应依照中华人民共和国法律予以处理，并以北京市海淀区人民法院为第一审管辖法院，按照中华人民共和国法律，因级别管辖的规定，北京市海淀区人民法院无权管辖的，以其上级法院作为第一审管辖法院。
+
+
+              </textarea>
+            </div>
+             </li>
+             <li><div class="db1"><a href="#" onclick="agree()" class="close">同&nbsp;意</a></div></li>
+             
+            </ul> 
+             
+  </div>
+</div>
+         
+        <p>
+          <input type="button" onclick="sub();" id="submitName" name="submitName"  value="立即注册" class="reg_confirm"  style="box-shadow:#666 1px 2px 2px;"/>
+        </p>
+     </form>  
+      </div>
+    </div>
+    <div class="clear"></div>
+  </section>
+  
+</div>
+<?php include "footer.html"; ?>
+ <script type="text/javascript" src="/resources/layer/layer.js"></script>
+<script type="text/javascript">
+	if   (top.location == self.location){
+  var _gaq = _gaq || [];
+  var vv1 = ['_setAccount', 'UA-38715952-1'];
+  var vv6 = ['_addOrganic', 'sm','q'];
+  var vv9 = ['_addOrganic', 'baidu','word'];
+  
+  var vv11 = ['_addOrganic', 'soso','w'];
+  var vv12 = ['_addOrganic', 'sogou','query'];
+  var vv13 = ['_addOrganic', 'youdao','q']; 
+ var vv2 = ['_setDomainName', '.#.com'];
+  var vv4 = ['_trackPageview'];  
+  _gaq.push(vv1);
+  _gaq.push(vv6);
+  _gaq.push(vv9);
+  
+  _gaq.push(vv11);
+  _gaq.push(vv12);
+  _gaq.push(vv13);
+  _gaq.push(vv2);
+  _gaq.push(vv4);
+
+  //(function() {
+  //  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  //  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  //  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  //})();
+}
+</script> 
+
+<!--{xo-logger-output}-->
+</body>
+</html>
+<script type="text/javascript">
+
+  function agree(){
+      $("#protocol").attr("checked",true);
+  }
+
+  function sub(){
+      var mobile = $.trim($("#mobile").val());
+      var yzm = $.trim($("#RegPhoneCaptch").val());
+      var password = $.trim($("#password").val());
+      var password_PwdTwo = $.trim($("#pass").val());
+      var invitecode = $.trim($("#invitation").val());
+      if(!mobile || !/^1[3|4|5|7|8]\d{9}$/.test(mobile)){
+        layer.tips('请输入正确的手机号码','#mobile', {tips: 1});
+        return false;
+      }else if(yzm ==''){
+        layer.tips('请输入验证码','#RegPhoneCaptch', {tips: 1});
+        return false;
+      }else if(password == ''){
+        layer.tips('请输入密码','#password', {tips: 1});
+        return false;
+      }else if(password!=password_PwdTwo){
+        layer.tips('2次输入的密码不一样','#pass', {tips: 1});
+        return false;
+      }
+      if(!$("#protocol:checked").val()) {
+          layer.tips('请同意注册协议','#protocol', {tips: 1});
+          return false;
+      }
+      $.ajax({
+          url:"<?php echo site_url();?>/Lilogin/submint",
+          type:"post",
+          data:{mobile:mobile,xoopscaptcha:yzm,password:password,pass:password_PwdTwo,invitation:invitecode},
+          dataType:"json",
+          error:function(){
+             layer.close(index);
+             layer.msg("出错啦");
+          },
+          beforeSend:function(){
+               index = layer.load(2, {shade: false});
+          },
+          success:function(res){
+              layer.close(index);
+              if(res.status==1){
+                window.location.href="<?php echo site_url();?>/PersonalCenter/index";
+              }else{
+                layer.msg(res.message);
+              }
+          }
+      })
+  }
+
+  var wait=60;
+  function get_code(obj){
+    var mobile = $("#mobile").val();
+    if(!mobile || !/^1[3|4|5|7|8]\d{9}$/.test(mobile)){
+      layer.tips('请输入正确手机号码','#mobile', {tips: 1});
+      return false;
+    }
+    time(obj);
+    $.ajax({
+        url:"<?php echo site_url();?>/Lilogin/getcode",
+        type:"post",
+        data: { mobile: mobile, is_register:1},
+        dataType:"json",
+        error:function(){
+           layer.close(index);
+           layer.msg("获取验证码出错");
+        },
+        beforeSend:function(){
+             index = layer.load(2, {shade: false});
+        },
+        success:function(res){
+            layer.close(index);
+            if(res.status==1){
+              layer.msg("验证码发送成功");
+            }else{
+              layer.msg(res.message);
+            }
+        }
+    })
+  }
+
+  function time(o) {
+      if (wait == 0) {
+          o.removeAttribute("disabled");
+          o.value ="获取验证码";
+          wait = 60;
+      } else {
+          o.setAttribute("disabled", true);
+          o.value ="倒计时(" + wait + ")";
+          wait--;
+          setTimeout(function() {
+              time(o)
+          },
+          1000)
+      }
+  }
+
+//修正bug8658
+var isIE=!!window.ActiveXObject;
+if(isIE && document.domain == 'www.#.com' && document.charset!="utf-8")
+{
+    location.reload(false);
+}
+
+</script>
+
+<script type="text/javascript">
+
+//修正bug8658
+var isIE=!!window.ActiveXObject;
+if(isIE && document.domain == 'www.#.com' && document.charset!="utf-8")
+{
+    location.reload(false);
+}
+</script>

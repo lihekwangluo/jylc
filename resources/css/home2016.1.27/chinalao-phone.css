@@ -1,0 +1,48 @@
+﻿@CHARSET "UTF-8";
+*{ margin:0; padding:0;}
+img{ vertical-align:top; border:0;}
+.pgwrap { width: 1024px; margin: 0px auto; }
+.pgwrap:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
+.phone-chinalao { background:#18CEA8; font-family: "Microsoft Yahei", \5FAE\8F6F\96C5\9ED1; }
+.phone-chinalao .pgwrap { position:relative; }
+.phone-chinalao .phone-main { position:relative; height:530px; }
+.phone-chinalao .phone-head { height:100px; border-bottom:1px solid #fff; position:relative; z-index:3; }
+.phone-chinalao .phone-foot { width:100%; /*position:absolute; bottom:0; left:0;*/ margin-top:-200px; height:651px; z-index:2; background:url(../images/botbg1.png) no-repeat top center; }
+.phone-chinalao .pnav { float:left; display:inline; margin-left:324px; }
+.phone-chinalao .pnav li {float:left; display:inline; margin-right:34px; height:100px; width:120px; text-align:center; position:relative; }
+.phone-chinalao .pnav li a { display:block; color:#fff; font-size:20px; line-height:100px; height:100px; text-decoration:none; overflow:hidden; position:relative; z-index:2; }
+.phone-chinalao .pnav li a .mbg { position:absolute; top:0; left:0; width:100%; height:100%; font-size:0; background-color:#0FB391; z-index:-1; display:none;}
+.subnav { position:absolute; width:474px; height:225px; padding-top:16px; background:url(../images/qrcode_bg.png) no-repeat 0 16px; display:none; }
+.subnav .subnav-wrap { width:410px; height:150px; padding:25px; margin-top:12px; margin-left:6px; overflow:hidden;}
+.code2 { float:left; width:150px; height:150px; }
+.code-r { margin-left:172px;}
+.code-top { height:50px; }
+.code-top .h3 { float:left; font-size:24px; font-weight:normal; color:#18CEA8;}
+.code-top p { float:right; font-size:12px; line-height:24px; color:#333;}
+.code-top p span { color:#18CEA8; font-size:16px;}
+.code-cen { margin-top:15px; margin-left:38px;}
+.code-cen dd { font-size:15px; color:#666; height:24px; line-height:24px; text-align:left;}
+.code-cen i {  float:left; vertical-align:middle; width:8px; height:8px; background:#18CEA8; font-size:0; margin:8px }
+.phone-chinalao .plogo { float:left;margin-top:15px;font-size:54px;color:#ffffff; letter-spacing:-1px; text-decoration:none;}
+.phone-chinalao .pic1 { position:absolute; left:64px; top:128px; width:266px; height:426px; }
+.phone-chinalao .pic2 { position:absolute; left:342px; top:45px; width:642px; height:132px; }
+.phone-chinalao .pic3 { position:absolute; left:306px; top:100px; width:682px; height:565px; background:url(../images/beijin .png) no-repeat top center ; }
+.phone-chinalao .pic2 p { font-size:60px; line-height:60px; color:#fff;}
+.phone-chinalao .pic2 span { font-size:40px; line-height:40px; }
+.phone-chinalao .pic2  .pic2-txt{  font-size:24px; line-height:150%; margin-top:16px; margin-left:55px; letter-spacing:3px;}
+.phone-chinalao .pic2  .pic2-txt i { letter-spacing:0;}
+.phone-chinalao .pic2 .pictxt { display:block; margin-top:16px; margin-left:35px; }
+.phone-chinalao .pic3 .picl { width:284px; margin:126px 0px 0px 165px; float:left; display:inline; }
+.phone-chinalao .pic3 .picl p {color:#fff; font-size:14px; height:24px; line-height:24px; padding-left:3em;}
+.phone-chinalao .pic3 .picr { position:absolute; right:70px; top:124px; width:164px; text-align:center;}
+.phone-chinalao .pic3 .picr2 { position:absolute; right:-10px; top:-10px; width:164px; text-align:center;}
+.phone-chinalao .pic3 .picr1 { position:absolute; right:-10px; top:245px; width:164px; text-align:center;}
+.qrcode { width:134px;  margin:0px auto 0; padding:15px;}
+.qrcode p { font-size:12px; color:#fff; line-height:18px; height:18px; margin-top:5px;}
+.w1em,.w2em {width:1em; display:inline-block; vertical-align:middle; overflow:hidden;}
+.w2em {width:2em;}
+.vers {height:41px; margin-bottom:8px; display:block;}
+.copyright { text-align: center; padding: 10px 0 20px; line-height: 24px; color: #fff; }
+.copyright .foot-link { margin: 5px 0; }
+.copyright .foot-link a { padding: 0px 25px; color: #fff; }
+.phone-bot { position:relative; margin-top:-100px; z-index:3;}

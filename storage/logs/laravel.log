@@ -1,0 +1,336 @@
+[2016-10-31 11:22:16] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function site_url()' in G:\www\jylc8\old\application\views\admin\left.html:12
+Stack trace:
+#0 {main}  
+[2016-10-31 11:56:16] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function site_url()' in G:\www\jylc8\old\application\views\admin\left.html:12
+Stack trace:
+#0 {main}  
+[2016-10-31 14:49:12] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function site_url()' in G:\www\jylc8\old\application\views\admin\left.html:12
+Stack trace:
+#0 {main}  
+[2016-10-31 15:04:18] local.ERROR: exception 'ThinkException' with message '非法操作:login' in G:\www\jylc8\old\wap\ThinkPHP\Common\functions.php:65
+Stack trace:
+#0 G:\www\jylc8\old\wap\ThinkPHP\Common\functions.php(112): throw_exception('\xE9\x9D\x9E\xE6\xB3\x95\xE6\x93\x8D\xE4\xBD\x9C:lo...')
+#1 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\Action.class.php(216): _404('\xE9\x9D\x9E\xE6\xB3\x95\xE6\x93\x8D\xE4\xBD\x9C:lo...')
+#2 [internal function]: Action->__call('login', '')
+#3 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\App.class.php(169): ReflectionMethod->invokeArgs(Object(LoginAction), Array)
+#4 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\App.class.php(189): App::exec()
+#5 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\Think.class.php(39): App::run()
+#6 G:\www\jylc8\old\wap\ThinkPHP\Common\runtime.php(242): Think::start()
+#7 G:\www\jylc8\old\wap\ThinkPHP\ThinkPHP.php(34): require('G:\\www\\jylc8\\ol...')
+#8 G:\www\jylc8\old\wap\index_old.php(13): require('G:\\www\\jylc8\\ol...')
+#9 G:\www\jylc8\app\Http\Middleware\ServiceRedirection.php(40): require('G:\\www\\jylc8\\ol...')
+#10 [internal function]: App\Http\Middleware\ServiceRedirection->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(124): call_user_func_array(Array, Array)
+#12 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#13 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#14 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(124): call_user_func_array(Array, Array)
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#21 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#22 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#23 G:\www\jylc8\public\wap\index.php(14): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#24 {main}  
+[2016-10-31 16:15:10] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function site_url()' in G:\www\jylc8\old\application\views\admin\left.html:12
+Stack trace:
+#0 {main}  
+[2016-10-31 16:16:15] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function site_url()' in G:\www\jylc8\old\application\views\admin\left.html:12
+Stack trace:
+#0 {main}  
+[2016-10-31 17:12:37] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'UploadFileInfo' (T_STRING)' in G:\www\jylc8\old\api\App\Lib\Model\PublicModel.class.php:120
+Stack trace:
+#0 {main}  
+[2016-10-31 17:13:00] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'UploadFileInfo' (T_STRING)' in G:\www\jylc8\old\api\App\Lib\Model\PublicModel.class.php:120
+Stack trace:
+#0 {main}  
+[2016-10-31 17:17:22] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'UploadFileInfo' (T_STRING)' in G:\www\jylc8\old\api\App\Lib\Model\PublicModel.class.php:120
+Stack trace:
+#0 {main}  
+[2016-10-31 17:17:31] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'UploadFileInfo' (T_STRING)' in G:\www\jylc8\old\api\App\Lib\Model\PublicModel.class.php:120
+Stack trace:
+#0 {main}  
+[2016-10-31 17:17:44] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'UploadFileInfo' (T_STRING)' in G:\www\jylc8\old\api\App\Lib\Model\PublicModel.class.php:120
+Stack trace:
+#0 {main}  
+[2016-10-31 17:17:44] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'UploadFileInfo' (T_STRING)' in G:\www\jylc8\old\api\App\Lib\Model\PublicModel.class.php:120
+Stack trace:
+#0 {main}  
+[2016-10-31 17:17:44] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'UploadFileInfo' (T_STRING)' in G:\www\jylc8\old\api\App\Lib\Model\PublicModel.class.php:120
+Stack trace:
+#0 {main}  
+[2016-10-31 17:17:45] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'UploadFileInfo' (T_STRING)' in G:\www\jylc8\old\api\App\Lib\Model\PublicModel.class.php:120
+Stack trace:
+#0 {main}  
+[2016-11-01 09:31:44] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function site_url()' in G:\www\jylc8\old\application\views\admin\left.html:12
+Stack trace:
+#0 {main}  
+[2016-11-01 10:01:44] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function site_url()' in G:\www\jylc8\old\application\views\admin\left.html:12
+Stack trace:
+#0 {main}  
+[2016-11-02 10:05:36] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '0' (T_LNUMBER), expecting ':' or ';'' in G:\www\jylc8\old\wap\App\Lib\Action\Home\PublishAction.class.php:57
+Stack trace:
+#0 {main}  
+[2016-11-02 10:11:09] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'break' (T_BREAK), expecting ',' or ';'' in G:\www\jylc8\old\wap\App\Lib\Action\Home\PublishAction.class.php:61
+Stack trace:
+#0 {main}  
+[2016-11-02 10:30:04] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ''</script>";' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'' in G:\www\jylc8\old\wap\App\Lib\Action\Home\PublishAction.class.php:60
+Stack trace:
+#0 {main}  
+[2016-11-02 10:30:54] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '"'</script>"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'' in G:\www\jylc8\old\wap\App\Lib\Action\Home\PublishAction.class.php:57
+Stack trace:
+#0 {main}  
+[2016-11-02 10:31:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '"'</script>"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'' in G:\www\jylc8\old\wap\App\Lib\Action\Home\PublishAction.class.php:57
+Stack trace:
+#0 {main}  
+[2016-11-02 10:36:21] local.ERROR: exception 'ThinkException' with message '非法操作:$url' in G:\www\jylc8\old\wap\ThinkPHP\Common\functions.php:65
+Stack trace:
+#0 G:\www\jylc8\old\wap\ThinkPHP\Common\functions.php(112): throw_exception('\xE9\x9D\x9E\xE6\xB3\x95\xE6\x93\x8D\xE4\xBD\x9C:$u...')
+#1 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\Action.class.php(216): _404('\xE9\x9D\x9E\xE6\xB3\x95\xE6\x93\x8D\xE4\xBD\x9C:$u...')
+#2 [internal function]: Action->__call('$url', '')
+#3 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\App.class.php(169): ReflectionMethod->invokeArgs(Object(PublishAction), Array)
+#4 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\App.class.php(189): App::exec()
+#5 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\Think.class.php(39): App::run()
+#6 G:\www\jylc8\old\wap\ThinkPHP\Common\runtime.php(242): Think::start()
+#7 G:\www\jylc8\old\wap\ThinkPHP\ThinkPHP.php(34): require('G:\\www\\jylc8\\ol...')
+#8 G:\www\jylc8\old\wap\index_old.php(13): require('G:\\www\\jylc8\\ol...')
+#9 G:\www\jylc8\app\Http\Middleware\ServiceRedirection.php(40): require('G:\\www\\jylc8\\ol...')
+#10 [internal function]: App\Http\Middleware\ServiceRedirection->handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(124): call_user_func_array(Array, Array)
+#12 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#13 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#14 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(124): call_user_func_array(Array, Array)
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#21 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#22 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#23 G:\www\jylc8\public\wap\index.php(14): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#24 {main}  
+[2016-11-02 10:38:07] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '"</script>"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'' in G:\www\jylc8\old\wap\App\Lib\Action\Home\PublishAction.class.php:59
+Stack trace:
+#0 {main}  
+[2016-11-03 09:52:50] local.ERROR: exception 'ThinkException' with message 'XML标签语法错误 : condition="$vo.status eq 2" /' in G:\www\jylc8\old\wap\ThinkPHP\Common\functions.php:65
+Stack trace:
+#0 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\TagLib.class.php(86): throw_exception('XML\xE6\xA0\x87\xE7\xAD\xBE\xE8\xAF\xAD\xE6\xB3\x95...')
+#1 G:\www\jylc8\old\wap\ThinkPHP\Lib\Driver\TagLib\TagLibCx.class.php(157): TagLib->parseXmlAttr('condition="$vo....', 'if')
+#2 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(456): TagLibCx->_if('condition="$vo....', '<span style="fo...')
+#3 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(428): ThinkTemplate->parseXmlTag('cx', 'if', 'condition="$vo....', '\r\n        <span...')
+#4 [internal function]: ThinkTemplate->{closure}(Array)
+#5 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(429): preg_replace_callback('/<if\\s([^>]*)>(...', Object(Closure), '<!doctype html>...')
+#6 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(198): ThinkTemplate->parseTagLib('cx', '<!doctype html>...', true)
+#7 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(135): ThinkTemplate->parse('<!doctype html>...')
+#8 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(116): ThinkTemplate->compiler('<!doctype html>...')
+#9 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(80): ThinkTemplate->loadTemplate('G:\\www\\jylc8\\ol...', '')
+#10 G:\www\jylc8\old\wap\ThinkPHP\Lib\Behavior\ParseTemplateBehavior.class.php(62): ThinkTemplate->fetch('G:\\www\\jylc8\\ol...', Array, '')
+#11 G:\www\jylc8\old\wap\ThinkPHP\Common\common.php(644): ParseTemplateBehavior->run(Array)
+#12 G:\www\jylc8\old\wap\ThinkPHP\Common\common.php(597): B('ParseTemplate', Array)
+#13 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\View.class.php(128): tag('view_parse', Array)
+#14 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\View.class.php(76): View->fetch('', '', '')
+#15 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\Action.class.php(95): View->display('', '', '', '', '')
+#16 G:\www\jylc8\old\wap\App\Lib\Action\Home\PublishAction.class.php(190): Action->display()
+#17 [internal function]: PublishAction->detail()
+#18 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\App.class.php(153): ReflectionMethod->invoke(Object(PublishAction))
+#19 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\App.class.php(189): App::exec()
+#20 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\Think.class.php(39): App::run()
+#21 G:\www\jylc8\old\wap\ThinkPHP\Common\runtime.php(242): Think::start()
+#22 G:\www\jylc8\old\wap\ThinkPHP\ThinkPHP.php(34): require('G:\\www\\jylc8\\ol...')
+#23 G:\www\jylc8\old\wap\index_old.php(13): require('G:\\www\\jylc8\\ol...')
+#24 G:\www\jylc8\app\Http\Middleware\ServiceRedirection.php(40): require('G:\\www\\jylc8\\ol...')
+#25 [internal function]: App\Http\Middleware\ServiceRedirection->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(124): call_user_func_array(Array, Array)
+#27 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#29 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(124): call_user_func_array(Array, Array)
+#32 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#34 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#35 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 G:\www\jylc8\public\wap\index.php(14): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}  
+[2016-11-03 09:53:32] local.ERROR: exception 'ThinkException' with message 'XML标签语法错误 : condition="$vo.status eq 1" /' in G:\www\jylc8\old\wap\ThinkPHP\Common\functions.php:65
+Stack trace:
+#0 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\TagLib.class.php(86): throw_exception('XML\xE6\xA0\x87\xE7\xAD\xBE\xE8\xAF\xAD\xE6\xB3\x95...')
+#1 G:\www\jylc8\old\wap\ThinkPHP\Lib\Driver\TagLib\TagLibCx.class.php(157): TagLib->parseXmlAttr('condition="$vo....', 'if')
+#2 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(456): TagLibCx->_if('condition="$vo....', '<span style="fo...')
+#3 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(428): ThinkTemplate->parseXmlTag('cx', 'if', 'condition="$vo....', '\r\n        <span...')
+#4 [internal function]: ThinkTemplate->{closure}(Array)
+#5 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(429): preg_replace_callback('/<if\\s([^>]*)>(...', Object(Closure), '<!doctype html>...')
+#6 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(198): ThinkTemplate->parseTagLib('cx', '<!doctype html>...', true)
+#7 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(135): ThinkTemplate->parse('<!doctype html>...')
+#8 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(116): ThinkTemplate->compiler('<!doctype html>...')
+#9 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(80): ThinkTemplate->loadTemplate('G:\\www\\jylc8\\ol...', '')
+#10 G:\www\jylc8\old\wap\ThinkPHP\Lib\Behavior\ParseTemplateBehavior.class.php(62): ThinkTemplate->fetch('G:\\www\\jylc8\\ol...', Array, '')
+#11 G:\www\jylc8\old\wap\ThinkPHP\Common\common.php(644): ParseTemplateBehavior->run(Array)
+#12 G:\www\jylc8\old\wap\ThinkPHP\Common\common.php(597): B('ParseTemplate', Array)
+#13 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\View.class.php(128): tag('view_parse', Array)
+#14 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\View.class.php(76): View->fetch('', '', '')
+#15 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\Action.class.php(95): View->display('', '', '', '', '')
+#16 G:\www\jylc8\old\wap\App\Lib\Action\Home\PublishAction.class.php(190): Action->display()
+#17 [internal function]: PublishAction->detail()
+#18 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\App.class.php(153): ReflectionMethod->invoke(Object(PublishAction))
+#19 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\App.class.php(189): App::exec()
+#20 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\Think.class.php(39): App::run()
+#21 G:\www\jylc8\old\wap\ThinkPHP\Common\runtime.php(242): Think::start()
+#22 G:\www\jylc8\old\wap\ThinkPHP\ThinkPHP.php(34): require('G:\\www\\jylc8\\ol...')
+#23 G:\www\jylc8\old\wap\index_old.php(13): require('G:\\www\\jylc8\\ol...')
+#24 G:\www\jylc8\app\Http\Middleware\ServiceRedirection.php(40): require('G:\\www\\jylc8\\ol...')
+#25 [internal function]: App\Http\Middleware\ServiceRedirection->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(124): call_user_func_array(Array, Array)
+#27 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#29 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(124): call_user_func_array(Array, Array)
+#32 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#34 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#35 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 G:\www\jylc8\public\wap\index.php(14): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}  
+[2016-11-03 10:16:30] local.ERROR: exception 'ThinkException' with message 'XML标签语法错误 : $vo.price eq 0___$vo.price1 eq 0' in G:\www\jylc8\old\wap\ThinkPHP\Common\functions.php:65
+Stack trace:
+#0 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\TagLib.class.php(86): throw_exception('XML\xE6\xA0\x87\xE7\xAD\xBE\xE8\xAF\xAD\xE6\xB3\x95...')
+#1 G:\www\jylc8\old\wap\ThinkPHP\Lib\Driver\TagLib\TagLibCx.class.php(157): TagLib->parseXmlAttr('$vo.price eq 0&...', 'if')
+#2 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(456): TagLibCx->_if('$vo.price eq 0&...', '\xE9\x9D\xA2\xE8\xAE\xAE  \r\n     ...')
+#3 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(428): ThinkTemplate->parseXmlTag('cx', 'if', '$vo.price eq 0&...', '\r\n           \xE9\x9D...')
+#4 [internal function]: ThinkTemplate->{closure}(Array)
+#5 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(429): preg_replace_callback('/<if\\s([^>]*)>(...', Object(Closure), '<!doctype html>...')
+#6 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(198): ThinkTemplate->parseTagLib('cx', '<!doctype html>...', true)
+#7 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(135): ThinkTemplate->parse('<!doctype html>...')
+#8 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(116): ThinkTemplate->compiler('<!doctype html>...')
+#9 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(80): ThinkTemplate->loadTemplate('G:\\www\\jylc8\\ol...', '')
+#10 G:\www\jylc8\old\wap\ThinkPHP\Lib\Behavior\ParseTemplateBehavior.class.php(62): ThinkTemplate->fetch('G:\\www\\jylc8\\ol...', Array, '')
+#11 G:\www\jylc8\old\wap\ThinkPHP\Common\common.php(644): ParseTemplateBehavior->run(Array)
+#12 G:\www\jylc8\old\wap\ThinkPHP\Common\common.php(597): B('ParseTemplate', Array)
+#13 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\View.class.php(128): tag('view_parse', Array)
+#14 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\View.class.php(76): View->fetch('', '', '')
+#15 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\Action.class.php(95): View->display('', '', '', '', '')
+#16 G:\www\jylc8\old\wap\App\Lib\Action\Home\PublishAction.class.php(190): Action->display()
+#17 [internal function]: PublishAction->detail()
+#18 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\App.class.php(153): ReflectionMethod->invoke(Object(PublishAction))
+#19 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\App.class.php(189): App::exec()
+#20 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\Think.class.php(39): App::run()
+#21 G:\www\jylc8\old\wap\ThinkPHP\Common\runtime.php(242): Think::start()
+#22 G:\www\jylc8\old\wap\ThinkPHP\ThinkPHP.php(34): require('G:\\www\\jylc8\\ol...')
+#23 G:\www\jylc8\old\wap\index_old.php(13): require('G:\\www\\jylc8\\ol...')
+#24 G:\www\jylc8\app\Http\Middleware\ServiceRedirection.php(40): require('G:\\www\\jylc8\\ol...')
+#25 [internal function]: App\Http\Middleware\ServiceRedirection->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(124): call_user_func_array(Array, Array)
+#27 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#29 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(124): call_user_func_array(Array, Array)
+#32 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#34 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#35 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 G:\www\jylc8\public\wap\index.php(14): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}  
+[2016-11-03 10:16:56] local.ERROR: exception 'ThinkException' with message 'XML标签语法错误 : $vo.price eq 0 ___ $vo.price2 eq 0' in G:\www\jylc8\old\wap\ThinkPHP\Common\functions.php:65
+Stack trace:
+#0 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\TagLib.class.php(86): throw_exception('XML\xE6\xA0\x87\xE7\xAD\xBE\xE8\xAF\xAD\xE6\xB3\x95...')
+#1 G:\www\jylc8\old\wap\ThinkPHP\Lib\Driver\TagLib\TagLibCx.class.php(157): TagLib->parseXmlAttr('$vo.price eq 0 ...', 'if')
+#2 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(456): TagLibCx->_if('$vo.price eq 0 ...', '\xE9\x9D\xA2\xE8\xAE\xAE  \r\n     ...')
+#3 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(428): ThinkTemplate->parseXmlTag('cx', 'if', '$vo.price eq 0 ...', '\r\n           \xE9\x9D...')
+#4 [internal function]: ThinkTemplate->{closure}(Array)
+#5 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(429): preg_replace_callback('/<if\\s([^>]*)>(...', Object(Closure), '<!doctype html>...')
+#6 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(198): ThinkTemplate->parseTagLib('cx', '<!doctype html>...', true)
+#7 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(135): ThinkTemplate->parse('<!doctype html>...')
+#8 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(116): ThinkTemplate->compiler('<!doctype html>...')
+#9 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(80): ThinkTemplate->loadTemplate('G:\\www\\jylc8\\ol...', '')
+#10 G:\www\jylc8\old\wap\ThinkPHP\Lib\Behavior\ParseTemplateBehavior.class.php(62): ThinkTemplate->fetch('G:\\www\\jylc8\\ol...', Array, '')
+#11 G:\www\jylc8\old\wap\ThinkPHP\Common\common.php(644): ParseTemplateBehavior->run(Array)
+#12 G:\www\jylc8\old\wap\ThinkPHP\Common\common.php(597): B('ParseTemplate', Array)
+#13 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\View.class.php(128): tag('view_parse', Array)
+#14 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\View.class.php(76): View->fetch('', '', '')
+#15 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\Action.class.php(95): View->display('', '', '', '', '')
+#16 G:\www\jylc8\old\wap\App\Lib\Action\Home\PublishAction.class.php(190): Action->display()
+#17 [internal function]: PublishAction->detail()
+#18 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\App.class.php(153): ReflectionMethod->invoke(Object(PublishAction))
+#19 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\App.class.php(189): App::exec()
+#20 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\Think.class.php(39): App::run()
+#21 G:\www\jylc8\old\wap\ThinkPHP\Common\runtime.php(242): Think::start()
+#22 G:\www\jylc8\old\wap\ThinkPHP\ThinkPHP.php(34): require('G:\\www\\jylc8\\ol...')
+#23 G:\www\jylc8\old\wap\index_old.php(13): require('G:\\www\\jylc8\\ol...')
+#24 G:\www\jylc8\app\Http\Middleware\ServiceRedirection.php(40): require('G:\\www\\jylc8\\ol...')
+#25 [internal function]: App\Http\Middleware\ServiceRedirection->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(124): call_user_func_array(Array, Array)
+#27 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#29 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(124): call_user_func_array(Array, Array)
+#32 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#34 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#35 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 G:\www\jylc8\public\wap\index.php(14): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}  
+[2016-11-03 10:17:10] local.ERROR: exception 'ThinkException' with message 'XML标签语法错误 : $vo.price eq 0 and $vo.price2 eq 0' in G:\www\jylc8\old\wap\ThinkPHP\Common\functions.php:65
+Stack trace:
+#0 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\TagLib.class.php(86): throw_exception('XML\xE6\xA0\x87\xE7\xAD\xBE\xE8\xAF\xAD\xE6\xB3\x95...')
+#1 G:\www\jylc8\old\wap\ThinkPHP\Lib\Driver\TagLib\TagLibCx.class.php(157): TagLib->parseXmlAttr('$vo.price eq 0 ...', 'if')
+#2 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(456): TagLibCx->_if('$vo.price eq 0 ...', '\xE9\x9D\xA2\xE8\xAE\xAE  \r\n     ...')
+#3 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(428): ThinkTemplate->parseXmlTag('cx', 'if', '$vo.price eq 0 ...', '\r\n           \xE9\x9D...')
+#4 [internal function]: ThinkTemplate->{closure}(Array)
+#5 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(429): preg_replace_callback('/<if\\s([^>]*)>(...', Object(Closure), '<!doctype html>...')
+#6 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(198): ThinkTemplate->parseTagLib('cx', '<!doctype html>...', true)
+#7 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(135): ThinkTemplate->parse('<!doctype html>...')
+#8 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(116): ThinkTemplate->compiler('<!doctype html>...')
+#9 G:\www\jylc8\old\wap\ThinkPHP\Lib\Template\ThinkTemplate.class.php(80): ThinkTemplate->loadTemplate('G:\\www\\jylc8\\ol...', '')
+#10 G:\www\jylc8\old\wap\ThinkPHP\Lib\Behavior\ParseTemplateBehavior.class.php(62): ThinkTemplate->fetch('G:\\www\\jylc8\\ol...', Array, '')
+#11 G:\www\jylc8\old\wap\ThinkPHP\Common\common.php(644): ParseTemplateBehavior->run(Array)
+#12 G:\www\jylc8\old\wap\ThinkPHP\Common\common.php(597): B('ParseTemplate', Array)
+#13 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\View.class.php(128): tag('view_parse', Array)
+#14 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\View.class.php(76): View->fetch('', '', '')
+#15 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\Action.class.php(95): View->display('', '', '', '', '')
+#16 G:\www\jylc8\old\wap\App\Lib\Action\Home\PublishAction.class.php(190): Action->display()
+#17 [internal function]: PublishAction->detail()
+#18 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\App.class.php(153): ReflectionMethod->invoke(Object(PublishAction))
+#19 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\App.class.php(189): App::exec()
+#20 G:\www\jylc8\old\wap\ThinkPHP\Lib\Core\Think.class.php(39): App::run()
+#21 G:\www\jylc8\old\wap\ThinkPHP\Common\runtime.php(242): Think::start()
+#22 G:\www\jylc8\old\wap\ThinkPHP\ThinkPHP.php(34): require('G:\\www\\jylc8\\ol...')
+#23 G:\www\jylc8\old\wap\index_old.php(13): require('G:\\www\\jylc8\\ol...')
+#24 G:\www\jylc8\app\Http\Middleware\ServiceRedirection.php(40): require('G:\\www\\jylc8\\ol...')
+#25 [internal function]: App\Http\Middleware\ServiceRedirection->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(124): call_user_func_array(Array, Array)
+#27 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#29 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 [internal function]: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(124): call_user_func_array(Array, Array)
+#32 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#34 [internal function]: Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#35 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(103): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(132): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 G:\www\jylc8\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(99): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 G:\www\jylc8\public\wap\index.php(14): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}  
+[2016-11-03 10:34:22] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in G:\www\jylc8\old\wap\App\Lib\Action\Api\DemandAction.class.php:909
+Stack trace:
+#0 {main}  
+[2016-11-03 10:34:27] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in G:\www\jylc8\old\wap\App\Lib\Action\Api\DemandAction.class.php:909
+Stack trace:
+#0 {main}  
+[2016-11-03 10:34:40] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in G:\www\jylc8\old\wap\App\Lib\Action\Api\DemandAction.class.php:909
+Stack trace:
+#0 {main}  

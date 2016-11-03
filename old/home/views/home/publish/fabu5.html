@@ -1,0 +1,269 @@
+﻿<!doctype html>
+<html>
+<head>
+<title>用户发布-设备出租</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=edge" />
+<?php $this->load->view("home/header.html"); ?>
+<script src="/resources/layer/layer.js" type="text/javascript"></script>
+<style type="text/css">
+  .pics a{
+  position: relative;
+  }
+  .pics input {
+    position: absolute;
+    float: left;
+    padding: 0px 5px;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+</style>
+    <script>
+        function tianjia0(){
+            document.getElementById("file0").click();}
+    </script>
+    <script>
+        function tianjia1(){
+            document.getElementById("file1").click();}
+    </script>
+    <script>
+        function tianjia2(){
+            document.getElementById("file2").click();}
+    </script>
+    <script>
+        function tianjia3(){
+            document.getElementById("file3").click();}
+    </script>
+    <script>
+        function tianjia4(){
+            document.getElementById("file4").click();}
+    </script>
+    <script>
+        function tianjia5(){
+            document.getElementById("file5").click();}
+    </script>
+
+
+<div class="pgwrap">
+<form action="<?php echo site_url()."/Publish/fabu5";?>" method="post" enctype="multipart/form-data" onsubmit="return sub();">
+<input type="hidden" name="id" value="<?php echo $id; ?>" />
+<div class="ad-fbnr">
+<div class="loyls">为了信息的准确性，请尽量填写真实信息</div> 
+<table width="1024" height="550" border="0" cellspacing="0" cellpadding="0">
+  <tr width="156" height="20"></tr>
+  <tr>
+    <td height="50" align="right"><span class="xhb">*</span>设备名称：</td>
+    <td colspan="2">
+      <label for="guge_xinhao"></label>
+      <select class="loyln" name="deviceid" id="sb_name" required />
+      <option value="0">-- 选择设备 --</option>
+      <?php foreach($device as $v){?>
+        <option <?php if($deviceid==$v['id']) echo "selected";?> value="<?php echo $v['id']?>"><?php echo $v['name']?></option>
+      <?php }?>
+      </select>
+    </td>
+  </tr>
+    <tr>
+        <td height="50" align="right"><span class="xhb">*</span>业主名称：</td>
+        <td colspan="2">
+            <label for="owner"></label>
+            <span id="sprytextfield5" />
+                <label for="owner"></label>
+                <input class="loyab" type="text" name="owner" value="<?php echo $owner; ?>" id="owner" placeholder="请输入业主名" required>
+    </tr>
+  <tr>
+    <td height="50" align="right"><span class="xhb">*</span>数&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 量：</td>
+    <td colspan="2"><label for="guge_xinhao"></label>
+      <span id="sprytextfield4">
+      <label for="guge_xinhao"></label>
+      <input class="loyab" type="number" required name="num" value="<?php echo $num; ?>" id="shuliang" placeholder="请输入数量">
+      <span class="textfieldRequiredMsg">请输入数量</span>
+      <span class="textfieldInvalidFormatMsg">格式不正确</span></span>
+    </td>
+  </tr>
+  <tr>
+    <td height="50" align="right"><span class="xhb">*</span>规格型号：</td>
+    <td colspan="2"><label for="guge_xinhao"></label>
+      <span id="sprytextfield5">
+    <label for="guge_xinhao"></label>
+    <input class="loyab" type="text" name="model" value="<?php echo $model; ?>" id="guge_xinhao" placeholder="请输入规格" required>
+  </tr>
+  <tr>
+    <td height="50" align="right"><span class="xhb">*</span>司&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 机：</td>
+    <td width="50"><input name="driver" <?php if($driver==1||empty($driver)) echo "checked"; ?> type="radio" id="driver1" value="1" >有</td>
+    <td width="723"><input type="radio" <?php if($driver==0) echo "checked"; ?> name="driver" id="driver2" value="0">无</td>
+  </tr>
+  <tr>
+    <td height="50" align="right"><span class="xhb">*</span>地&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 区：</td>
+    <td colspan="2"><label for="diqu"></label>
+      <select class="loyln" name="area1" id="diqu" onchange="show_shi(this)">
+        <option value="0">-- 地区 --</option>
+    <?php foreach($sheng as $s){?>
+      <option <?php if($area1==$s['area_id']) echo "selected"; ?> value="<?php echo $s['area_id']?>"><?php echo $s['area_name']?></option>
+    <?php }?>
+      </select>
+      <label for="diqu_shi"></label>
+      <select class="loyln" name="area2" id="diqu_shi">
+         <option value="0">-- 市 --</option>
+    <?php foreach($shi as $ss){?>
+      <option <?php if($area2==$ss['area_id']) echo "selected"; ?> value="<?php echo $ss['area_id']?>"><?php echo $ss['area_name']?></option>
+    <?php }?>
+      </select></td>
+  </tr>
+
+  <tr>
+    <td height="50" align="right"><span class="xhb">*</span>详细地址：</td>
+    <td colspan="2"><label for="address"></label>
+    <span id="sprytextfield8">
+      <input class="loyab" type="text" name="address" value="<?php echo $address; ?>" id="xiangxi_dizhi" placeholder="请输入地址" required><span class="textfieldRequiredMsg">请输入详细地址</span><span class="textfieldInvalidFormatMsg">格式不正确</span></span></td>
+  </tr>  
+
+  <tr>
+    <td height="50" align="right"><span class="xhb">*</span>权&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 限：</td>
+    <td width="145"><input name="power" <?php if($power==1) echo "checked"; ?> type="radio" id="quanxian1" value="1">
+      认证用户可见</td>
+    <td width="723"><input type="radio" name="power" <?php if($power==2||empty($power)) echo "checked"; ?> id="quanxian2" value="2" checked>
+  全部用户可见</td>
+  </tr>
+  <tr>
+    <td height="50" align="right"><span class="xhb">*</span>联&nbsp; 系 人：</td>
+    <td colspan="2"><span id="sprytextfield2">
+      <label for="lianxiren"></label>
+      <input required name="name" type="text" class="loyab" value="<?php echo $username; ?>" id="lianxiren" value="" maxlength="4" placeholder="请输入姓名">
+      <span class="textfieldRequiredMsg">需要提供一个值。</span></span></td>
+  </tr>
+  <tr>
+    <td height="50" align="right"><span class="xhb">*</span>电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 话：</td>
+    <td colspan="2"><span id="sprytextfield4">
+    <label for="tel"></label>
+    <input name="moblie" required type="text" value="<?php echo $moblie; ?>" class="loyab" id="tel" value="" maxlength="11" placeholder="请输入手机号">
+    <span class="textfieldRequiredMsg">请输入联系电话。</span><span class="textfieldInvalidFormatMsg">格式不正确</span></span></td>
+  </tr>
+   <tr>
+    <!--<td height="150" align="right"><span class="xhb">*</span>图&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;片：</td>-->
+     <!--<td colspan="2" class="pics">-->
+      <!---->
+        <!--<div><a href="javascript:;">-->
+        <!--<input type='file' id="file0" name="pic0"><img class="add" src="<?php if($pics[0]) echo $pics[0];else echo "/resources/images/home/12.jpg"; ?>"></a></div>-->
+        <!--<div><a href="javascript:;">-->
+        <!--<input type='file' id="file1" name="pic1"><img class="add" src="<?php if($pics[1]) echo $pics[1];else echo "/resources/images/home/12.jpg"; ?>"></a></div>-->
+        <!--<div><a href="javascript:;">-->
+        <!--<input type='file' id="file2" name="pic2"><img class="add" src="<?php if($pics[2]) echo $pics[2];else echo "/resources/images/home/12.jpg"; ?>"></a></div>-->
+        <!--<div><a href="javascript:;">-->
+        <!--<input type='file' id="file3" name="pic3"><img class="add" src="<?php if($pics[3]) echo $pics[3];else echo "/resources/images/home/12.jpg"; ?>"></a></div>-->
+        <!--<div><a href="javascript:;">-->
+        <!--<input type='file' id="file4" name="pic4"><img class="add" src="<?php if($pics[4]) echo $pics[4];else echo "/resources/images/home/12.jpg"; ?>"></a></div>-->
+        <!--<div><a href="javascript:;">-->
+        <!--<input type='file' id="file5" name="pic5"><img class="add" src="<?php if($pics[5]) echo $pics[5];else echo "/resources/images/home/12.jpg"; ?>"></a></div>-->
+      <!---->
+    <!--</td>-->
+       <td height="150" align="right"><span class="xhb">*</span>图&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;片</td>
+       <td colspan="2">
+           <div ><a href="javascript:tianjia0();"><input type=file  id="file0" name="pic0" style="display:none"><img   src="<?php if($pics[0]) echo $pics[0];else echo "/resources/images/home/12.jpg"; ?>"> </a></div>
+
+           <div ><a href="javascript:tianjia1();"><input type=file  id="file1" name="pic1" style="display:none"><img   src="<?php if($pics[1]) echo $pics[1];else echo "/resources/images/home/12.jpg"; ?>"> </a></div>
+
+           <div ><a href="javascript:tianjia2();"><input type=file  id="file2" name="pic2" style="display:none"><img   src="<?php if($pics[2]) echo $pics[2];else echo "/resources/images/home/12.jpg"; ?>"> </a></div>
+
+           <div ><a href="javascript:tianjia3();"><input type=file  id="file3" name="pic3" style="display:none"><img   src="<?php if($pics[3]) echo $pics[3];else echo "/resources/images/home/12.jpg"; ?>"> </a></div>
+
+           <div ><a href="javascript:tianjia4();"><input type=file  id="file4" name="pic4" style="display:none"><img   src="<?php if($pics[4]) echo $pics[4];else echo "/resources/images/home/12.jpg"; ?>"> </a></div>
+
+           <div ><a href="javascript:tianjia5();"><input type=file  id="file5" name="pic5" style="display:none"><img   src="<?php if($pics[5]) echo $pics[5];else echo "/resources/images/home/12.jpg"; ?>"> </a></div>
+       </td>
+  </tr>
+  
+  <tr>
+    <td height="200" align="right"><span class="xhb">*</span>设备描述：</td>
+    <td colspan="2"><span id="sprytextfield8"><label for="yaoqiu"></label>
+      <textarea required class="textb" name="content" cols="60" rows="10" id="yaoqiu" placeholder="请输入描述"><?php echo $content; ?></textarea><span class="textfieldRequiredMsg">请输入设备描述。</span><span class="textfieldInvalidFormatMsg">格式不正确</span></span></td>
+  </tr>
+ 
+  <tr>
+    <td height="50" align="right">&nbsp;</td>
+    <td colspan="2"><input type="submit"  class="int_b" name="ok" id="ok" value="确定"></td>
+  </tr>
+ 
+        </table>
+</div>
+</form>
+</div>
+
+<?php $this->load->view("home/footer.html"); ?>
+    
+<a id="backtop" href="javascript:;" title="返回顶部" rel="nofollow"></a> 
+
+<script>
+show_shi();
+function sub(){
+    if($("#sb_name option:selected").val()==0){
+        layer.msg("请选择设备");
+        return false;
+    }
+    if($("#diqu_shi option:selected").val()==0){
+        layer.msg("请选择地区");
+        return false;
+    }
+}
+
+if(typeof FileReader==='undefined'){ 
+    layer.msg("抱歉，你的浏览器不支持 FileReader");
+    input.setAttribute('disabled','disabled');
+}else{
+    $("input[type=file]").on("change",function(e){
+        var p = $(this);
+       
+        var files = $(this).get(0).files;
+        for(var i=0;i<files.length;i++){
+            (function(file) {
+                if(!/image\/\w+/.test(files[i].type)){ 
+                    layer.msg("文件必须为图片！");
+                    delete files[i];
+                    return false; 
+                } 
+                var reader = new FileReader();
+                reader.readAsDataURL(files[i]); 
+                reader.onload = function(e){ 
+                    var url = e.target.result;
+                    $(p).parent("a").find("img").remove();
+                    $(p).parent("a").append('<img width="100%" src="'+url+'" alt=""/>');
+                } 
+            })(files[i]);
+        }
+    })
+}
+
+function show_shi(){
+  var diqu=$("#diqu").val();
+  var area2 = <?php if($area2) echo $area2;else echo "0"; ?>;
+  var s='';
+  $.ajax({
+    url:"<?php echo site_url()."/Publish/index_2"?>", 
+    type: 'POST', 
+    data:{diqu:diqu}, 
+    dataType:'json', 
+    timeout: 5000, 
+    error: function(){
+      alert("网络故障！");
+    },
+    beforeSend:function(){
+      
+    },
+    success:function(result){
+      //<option value="0">-- 市 --</option>
+      var f='<option value="0">-- 市 --</option>';
+      for(var g in result){
+        if(area2==result[g]['area_id']) s='selected';
+        f+='<option '+s+' value="'+result[g]['area_id']+'">'+result[g]['area_name']+'</option>';
+      }
+      $('#diqu_shi').html(f);
+
+
+    } 
+  });
+}
+</script> 
+ 
+</body>
+</html>

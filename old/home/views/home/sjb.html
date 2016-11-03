@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+    <title>建筑手机版</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=edge" />
+
+    <link rel="stylesheet" href="/resources/css/home/chinalao-phone.css"/>
+ 
+</head>
+<body class="phone-chinalao">
+<div class="phone-head">
+    <div class="pgwrap">
+        <a href="<?php echo site_url("/Index/index");?>" class="plogo icon" style="font-size:40px">“建遇良才”</a>
+        <ul class="pnav">
+          <li><a href="<?php echo site_url("/Index/index");?>">首页<b class="mbg"></b></a></li>
+          <li><!--<a href="javascript:;">触屏版<b class="mbg"></b></a>-->
+                <!--<div class="subnav" style="left:-290px;">
+                    <div class="subnav-wrap">
+                        <img src="/resources/images/home/chinalao-gongyoubang.jpg" class="code2" />
+                        <div class="code-r">
+                            <div class="code-top">
+                                <h3 class="h3" style="line-height:50px;">手机访问</h3><p><span>xxxx.com</span><br/>或者扫描左侧二维码</p>
+                            </div>
+                            <dl class="code-cen">
+                                <dd><i></i>无需下载，超省流量</dd>
+                                <dd><i></i>超省流量，即可使用</dd>
+                                <dd><i></i>超省流量，一键访问</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>-->
+            </li>
+            <li><a href="javascript:;">微信版<b class="mbg"></b></a>
+                <div class="subnav" style="left:-290px;">
+                    <div class="subnav-wrap">
+                        <img src="/resources/images/home/chinalao-gongyoubang.jpg" class="code2" />
+                        <div class="code-r">
+                            <div class="code-top">
+                                <img src="/resources/images/home/wx1.png"  style="float:left;display:inline; margin-left:20px;"/><p><span class="h3" style="font-size: 20px;">微信搜索建遇良才</span><br/>或者扫描左侧二维码</p>
+                            </div>
+                            <dl class="code-cen">
+                                <dd><i></i>微信找活 方便省流量</dd>
+                                <dd><i></i>安全高效 找活更放心</dd>
+                                <dd><i></i>有奖活动 生活更精彩</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="pgwrap">
+    <div class="phone-main">
+        <div class="pic1"><img src="/resources/images/home/p2.png"/></div>
+        <div class="pic2">
+            <p>“建遇良才”<span>手机客户端</span></p>
+			<p class="pic2-txt">最快响应的蓝领求职手机<i>APP</i></p>
+        </div>
+        <div class="pic3">
+            <div class="picl">
+			  <img src="/resources/images/home/d-andi.png" class="vers" />
+                <p>容量：14.7M	版本：1.2.2</p>
+                <p>更新：2016年4月2日</p>
+              <p>支持：Android4.0及以上固件版本</p><br>
+<br>
+<br>
+<br>
+<br>
+
+			  <img src="/resources/images/home/d-apple.png" class="vers" style="margin-top:20px;"  />
+                <p>容量：25.1M	版本：1.0</p>
+                <p>更新：2016年3月20日</p>
+                <p>支持：需要iOS6.0或更高版本。</p>
+				<p style="padding-left:6em;">与iPhone,iPad,iPod touch兼容</p>
+          </div>
+            <div class="picr">
+                <div class="picr2">
+                <div class="qrcode">
+                  <!--<img src="/resources/images/home/chinalao-gongyoubanga.jpg"  width="150px" height="150px"/>-->
+                  <img src="/resources/images/and_qrcode.png"  width="150px" height="150px"/>
+                    <p>手机扫一扫，下载APP</p>
+              </div>
+            </div>
+
+              <div class="picr1">
+                <div class="qrcode">
+                  <!--<img src="/resources/images/home/chinalao-gongyoubang.jpg"  width="150px" height="150px"/>-->
+                  <img src="/resources/images/ios_qrcode.png"  width="150px" height="150px"/>
+                    <p>手机扫一扫，下载APP</p>
+              </div>
+            </div> 
+             </div>
+            
+        </div>
+    </div>
+</div>
+<div class="phone-foot"></div>
+<?php include "footer.html"?>
+<script src="/resources/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var dir = 1;
+        $(".pnav>li").each(function(){
+            $(this).hover(function(e){
+                $(this).find(".subnav").stop(1,1).fadeIn(200);
+                //$(this).find(".mbg").stop(1,1).animate({left:"0"},300);
+                $(this).find(".mbg").stop(1,1).fadeIn(300);
+            },function(e){
+                $(this).find(".subnav").stop(1,1).fadeOut();
+                dir=getDir($(this).find(".mbg"),e);
+                $(this).find(".mbg").stop(1,1).fadeOut();
+                
+            })
+        });
+
+        function getDir(a,eve) {
+            var c = a.width(),
+                d = a.height(),
+                e = (eve.pageX - a.offset().left - c / 2) * (c > d ? d / c : 1),
+                f = (eve.pageY - a.offset().top - d / 2) * (d > c ? c / d : 1),
+                g = Math.round((Math.atan2(f, e) * (180 / Math.PI) + 180) / 90 + 3) % 4;
+            return g
+        }
+    });
+
+</script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "js/hm.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</body>
+</html>

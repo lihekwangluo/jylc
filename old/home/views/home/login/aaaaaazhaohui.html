@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<title>找回密码</title>
+ 
+<link rel="stylesheet" type="text/css" media="screen" href="/resources/css/home/fregist.css" />
+ 
+ 
+<link rel="stylesheet" type="text/css" href="/resources/css/home/fjQuery_1.css">
+ 
+</head>
+<body>
+ 
+<section class="headerRegist_border">
+  <header class="header_regist">
+    <div class="logo_regist  "><a href="/" onClick="clickLog('from=chr_jsreg_logo');"><img src="images/logo_www.gif" alt="xx"></a></div>
+    <div class="fr headerRegist_right">
+      <div class="hotline fr">
+        <div class="clearfix" ><span class="hotline_icon"></span> <span class="hotline_Text"> 客服热线 400-671-1818</span></div>
+      </div>
+      <div class="m_site fr"><a class="clearfix" href="#" onClick="clickLog('from=chr_jsreg_mobile');"><span class="phone_site"></span> <span class="phone_siteText"> 手机站</span></a></div>
+    </div>
+  </header>
+  <div class="clear"></div>
+</section>
+<div class="container_header">
+  <div id="xo-canvas-globalnav" style="display:none">Global navigation bar</div>
+ 
+   
+  <section class="regAndLogin_section">
+    <input type="hidden" name="valid_key" value="5726682322deae8bccf4ca9634d7cd18" />
+    <input type="hidden" id="redirect" value="" />
+ 
+    <div class="section_right_box  " style="width:800px;">
+      <div class="section_right_form"> 
+        
+        <div class="regAndLogin_top">
+          <div class="fl regAndLogin_title1">找回密码</div>
+          
+        </div>
+        <div class="clear"></div>
+        <fieldset class="regAndLogin_place">
+          <p class="position_rel"><em class="user_icon"></em>
+            <label for="newphone" class="regAndLogin_first">
+              <input class="ssif" type="text" name="newphone" id="newphone" placeholder="请输入手机号" value="" onblur="check_phone2();" />
+           </label> <span class="ts1">请输入手机号</span>
+            <span class="user_tips" style="display:none;"></span></p>
+            
+                <p class="position_rel"><em class="pws_icon"></em>
+            <label class="regAndLogin_first phonecaptchinput">
+              <input  class="ssif" type="text" name="xoopscaptcha" id="RegPhoneCaptch" placeholder="请输入短信验证码" size="6" value="" />
+            </label>
+            <span class="phoneCaptchSeekerReg" style="cursor: pointer;" onClick="clickLog('from=chr_jsreg_getcode');">
+            <label>获取验证码</label>
+            </span> </p>      
+                     
+            <p class="position_rel" id="password_div"><em class="pws_icon"></em>
+            <label for="password" class="regAndLogin_second">
+              <input class="ssif regAndLogin_secondInput" name="password"  placeholder="请输入新密码" id="password" onblur="check_password();setnor(this);" onfocus="setcur(this);" value="" maxlength="20" type="password" >
+            </label>
+             
+               <p class="position_rel" id="password_div"><em class="pws_icon"></em>
+               <label for="password" class="regAndLogin_second">
+               <input class="regAndLogin_secondInput ssif" name="password"  placeholder="请再次输入新密码" id="password" onblur="check_password();setnor(this);" onfocus="setcur(this);" value="" maxlength="20" type="password" ></label>
+                
+          <div class="new_reg_tix" id="passtip" style="display:none;">
+            <p class="warning_txt">6~20个字符，包括字母、数字、键盘符号，区分大小写</p>
+            <span id="password_tip" class="warning_txt"></span></div>
+          <p class="securityCode" id="remember3" style="display:none;height: 45px;"> 
+          
+            <label class="security_input new_reg_o">
+              <input name="reg_rand" id="reg_rand" class="fl" type="text"/>
+              &nbsp;&nbsp;&nbsp; <span id="randImgSpan" class="fl"> <img id="randImg" onclick="resetrand()" src="" style="height:44px;cursor:pointer"/> </span> </label>
+          
+          </p>
+           
+        <input type="hidden"  name="referer" id="referer" value="" />
+         
+        <div id="bg"></div>          
+        <p>
+          <input type="button" onclick="clickLog('from=chr_jsreg_regist');on_submit_new();" id="submitName" name="submitName"  value="确定" class="reg_confirm"  style="box-shadow:#666 1px 2px 2px;"/>
+        </p></fieldset>
+        
+      </div>
+    </div>
+    <div class="clear"></div>
+  </section>
+   
+  
+</div>
+<footer class="footerBox_regist">
+  <div class="footer_regist">
+    <nav class="Fquick_link fl">
+      <ul>
+        <li><a href="#" target="_blank">关于我们</a></li>
+        <li><a href="#" target="_blank">联系我们</a></li>
+        <li><a  href="#" target="_blank">加入我们</a></li>
+      </ul>
+      <ul>
+        <li><a  href="#" target="_blank">使用条款</a></li>
+        <li><a href="#" target="_blank">网站声明</a></li>
+        <li><a  href="#" target="_blank">帮助</a></li>        
+      </ul>
+      <ul>
+        <li><a  href="#" target="_blank">网站地图</a></li>
+        <li><a  href="#" target="_blank">媒体报道</a></li>
+        <li><a  href="#" target="_blank">友情链接</a></li>
+      </ul>
+   
+      <div class="clear"></div>
+    </nav>
+    <aside class="offcial_link fl">
+      <ul>
+        <li> <a href="#" class="app_link">建筑APP</a> </li>
+        <li> <a href="#" class="weibo_link">官方微博</a> </li>
+        <li> <a class="weixin_link2">官方微信</a> </li>
+      </ul>
+      <div class="clear"></div>
+    </aside>
+    <div class="copyright fr"> Copyright ? ccccc信息技术有限公司  版权所有 </div>
+    <div class="clear"></div>
+  </div>
+</footer> 
+ 
+</body>
+</html>
+ 

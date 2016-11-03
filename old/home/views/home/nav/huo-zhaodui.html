@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+    <head>
+    <title>活找队</title>
+    <meta charset="utf-8">
+   <?php $this->load->view("home/header.html"); ?>
+  <style type="text/css" media="screen" id="test">
+   	
+   	.xuanzhogle{
+		background:#06c1b0;
+		color:#fff;
+	}
+   </style>
+<div class="pgwrap">
+      <div class="ad-city">
+    <div class="city-filt clearfix">
+          <div class="city-nm fl">
+        <p class="city-t">城市</p>
+			<div class="city-b"> <a href="<?php echo site_url()."/ActivityTeam/index";?>">全国</a> <?php foreach($area as $array){?><a href="?city=<?php echo $array['area_id'];?>&craftname=<?php echo @$_GET['craftname'];?>&value=<?php echo @$_GET['value'];?>" <?php if(@$_GET['city']==$array['area_id'] ){echo "class='xuanzhogle'";}?> >
+					<?php echo	$array['area_name']?>
+				<b class="ico-pos"></b></a><?php }?><!--<a href="/qingdao/" >青岛<b class="ico-pos"></b></a> <a href="/shanghai/" >上海<b class="ico-pos"></b></a> <a href="/nanjing/" >南京<b class="ico-pos"></b></a> <a href="/tianjin/" >天津<b class="ico-pos"></b></a> <a href="/suzhou/" >苏州<b class="ico-pos"></b><a href="/suzhou/" >杭州<b class="ico-pos"></b><a href="/suzhou/" >中山<b class="ico-pos"></b></a> <a href="/wuxi/" >无锡<b class="ico-pos"></b></a> --><span class="other" id="js_other"> <a href="javascript:;" class="more">...</a>
+		
+          <div class="city-expect" id="js_expectcity" style="display:none"> 
+	          <span class="bot"></span> <span class="top"></span>
+            <dl>
+              <dd> <?php foreach($area1 as $array){?><a href="?city=<?php echo $array['area_id'];?>&craftname=<?php echo $_GET['craftname'];?>&value=<?php echo $_GET['value'];?>" <?php if(@$_GET['city']==$array['area_id'] ){echo "class='xuanzhogle'";}?> >
+				  	<?php echo	$array['area_name']?>
+				  	<b class="ico-pos"></b></a><?php }?></dd>
+            </dl>
+          </div>
+          </span> </div>
+      </div>
+        </div>
+  </div>
+    </div>
+<div class="pgwrap">
+      <div class="job-filter mgt10">
+    <div class="filter-bg">
+          <form action="#" method="post">
+        <dl class="fliters">
+              <dt>工种筛选 :</dt>
+              <dd>
+            <div class="flit-city clearfix">
+                  <div class="flit-main"><a href="<?php echo site_url()."/ActivityTeam/index";?>" class="selected">所有工种</a></div>
+                  <div class="flit-zone">
+                  <div class="flit-zone-t"> 
+	               <?php foreach($craft as $array){ ?>
+	               		<a href="?city=<?php echo $_GET['city'];?>&craftname=<?php echo $array['id'];?>&value=<?php echo $_GET['value'];?>" <?php if(@$_GET['craftname']==$array['id'] ){echo "class='xuanzhogle'";}?> >
+							<?php echo	$array['name']?></a> 
+                  <?php } ?></div>
+              </div>
+                </div>
+          </dd>
+            </dl>
+        <dl class="fliters">
+              <dt>工程总价 :</dt>
+              <dd>
+            <div class="slider-wrap">
+                  <ul class="slider-num">
+					  <li value="0">
+					   <a href="?city=<?php echo $_GET['city'];?>&craftname=<?php echo $_GET['craftname'];?>&value=0" <?php if(@$_GET['value']=='0' ){echo "class='xuanzhogle'";}?>  >全部</a>
+					 </li>
+					<li value="0-100000">
+						<a href="?city=<?php echo $_GET['city'];?>&craftname=<?php echo $_GET['craftname'];?>&value=0-100000" <?php if(@$_GET['value']=='0-100000' ){echo "class='xuanzhogle'";}?> >10万以下</a>
+					</li>
+					<li value="100000-250000">
+						 <a href="?city=<?php echo $_GET['city'];?>&craftname=<?php echo $_GET['craftname'];?>&value=100000-250000" <?php if(@$_GET['value']=='100000-250000' ){echo "class='xuanzhogle'";}?>>10-25万</a>
+					</li>
+					<li value="250000-500000">
+						 <a href="?city=<?php echo $_GET['city'];?>&craftname=<?php echo $_GET['craftname'];?>&value=250000-500000" <?php if(@$_GET['value']=='250000-500000' ){echo "class='xuanzhogle'";}?>>25-50万</a>
+					</li>
+					<li value="500000-750000">
+						 <a href="?city=<?php echo $_GET['city'];?>&craftname=<?php echo $_GET['craftname'];?>&value=500000-750000" <?php if(@$_GET['value']=='500000-750000' ){echo "class='xuanzhogle'";}?> >50-75万</a>
+					</li>
+					<li value="750000-1000000">
+						 <a href="?city=<?php echo $_GET['city'];?>&craftname=<?php echo $_GET['craftname'];?>&value=750000-1000000" <?php if(@$_GET['value']=='750000-1000000' ){echo "class='xuanzhogle'";}?>>75-100万</a>
+					</li>
+					<li value="1000000">
+						 <a href="?city=<?php echo $_GET['city'];?>&craftname=<?php echo $_GET['craftname'];?>&value=1000000" <?php if(@$_GET['value']=='1000000' ){echo "class='xuanzhogle'";}?>>100万以上</a>
+					</li>
+              </ul>
+                </div>
+          </dd>
+            </dl>
+      </form>
+        </div>
+  </div>
+    </div>
+<div class="pgwrap">
+      <div class=" mgt10 ">
+    <div class="dright">
+          <h4 class="con-tyb">相似的岗位</h4>
+          <div class="dpd-rq">
+        <div class="inbox-list">
+              <ul class="job-list clearfix">
+	               <?php if(empty($xiangsi)){echo '<div style="margin-top:50px">暂无信息</div>';}?>
+	              <?php foreach($xiangsi as $array){?>
+					<li class="job-box">
+						  <div class="job-item">
+						<h3 class="j-company f18"><a href="<?php echo site_url()."/ActivityTeam/contentid/".$array['id'];?>"><?php echo $array['title']; ?></a></h3>
+						<p class="j-work"><span class="w5em">队伍人数：</span><?php echo $array['num'] ?>人</p>
+						<p class="j-price f20"><?php if($array['price']!="0"){echo $array['price'];}?><?php if($array['price']!="0" &&	$array['price2']!="0"){echo "-";}?><?php if($array['price2']!="0"){echo $array['price2'];}?><?php if($array['price']!="0" || $array['price2']!="0"){echo "/天";}?><?php if($array['price']=="0"	&& $array['price2']=="0"){echo "面议";}?></p>
+						<div class="j-local"><i class="ico-local"></i><span class="j-zone"><?php echo $array['area1'] ?></span><?php echo $array['area2'] ?></div>
+						<div class="j-high"> </div>
+					  </div>
+						</li>
+					<?php }?>
+            <!--<li class="job-box">
+                  <div class="job-item">
+                <h3 class="j-company f18"><a href="#">这里是推荐或者历史队找人</a></h3>
+                <p class="j-work"><span class="w5em">队伍人数：</span>200人</p>
+                <p class="j-price f20">200-300/天</p>
+                <div class="j-local"><i class="ico-local"></i><span class="j-zone">山东</span>青岛</div>
+                <div class="j-high"> </div>
+              </div>
+                </li>
+            <li class="job-box">
+                  <div class="job-item">
+                <h3 class="j-company f18"><a href="#">这里是推荐或者历史队找人</a></h3>
+                <p class="j-work"><span class="w5em">队伍人数：</span>200人</p>
+                <p class="j-price f20">200-250/天</p>
+                <div class="j-local"><i class="ico-local"></i><span class="j-zone">山东</span>青岛</div>
+                <div class="j-high"> </div>
+              </div>
+                </li>
+            <li class="job-box">
+                  <div class="job-item">
+                <h3 class="j-company f18"><a href="#">这里是推荐或者历史队找人</a></h3>
+                <p class="j-work"><span class="w5em">队伍人数：</span>200人</p>
+                <p class="j-price f20">200-250/天</p>
+                <div class="j-local"><i class="ico-local"></i><span class="j-zone">山东</span>青岛</div>
+                <div class="j-high"> </div>
+              </div>
+                </li>
+            <li class="job-box">
+                  <div class="job-item">
+                <h3 class="j-company f18"><a href="#">这里是推荐或者历史队找人</a></h3>
+                <p class="j-work"><span class="w5em">队伍人数：</span>200人</p>
+                <p class="j-price f20">200-250/天</p>
+                <div class="j-local"><i class="ico-local"></i><span class="j-zone">山东</span>青岛</div>
+                <div class="j-high"> </div>
+              </div>
+                </li>-->
+          </ul>
+            </div>
+      </div>
+        </div>
+  </div>
+      <div class="r mgt10">
+		<div class="tabBlock"  >
+		  <ul class="tabBlock-tabs">
+		<li style="width:60px; text-align: center; height:30px;font-size:18px;" class="tabBlock-tab <?php echo $_GET['renzheng']==1?'is-active':'';?>"><a href="<?php echo site_url().'/ActivityTeam/index?renzheng=1';?>">已认证</a></li>
+		<li style="width:60px; text-align: center;  height:30px;font-size:18px;" class="tabBlock-tab <?php echo $_GET['renzheng']==1?'':'is-active';?>"><a href="<?php echo site_url().'/ActivityTeam/index';?>">全部</a></li>
+	  </ul>
+		  <div class="tabBlock-content">
+		<!--tab2-->
+		<div class="tabBlock-pane">
+			  <div class="work-sort">
+			<p class="fr">共为您找到<strong class="f_red"><?php echo $num1;?></strong>条信息</p>
+			排列方式：<a href="?city=<?php echo @$_GET['city'];?>&craftname=<?php echo @$_GET['craftname'];?>&value=<?php echo @$_GET['value'];?>&num=yes" <?php if(@$_GET['num']=="yes" ){echo "class='xuanzhogle'";}?> >人数</a><em>|</em>
+			<a href="?city=<?php echo @$_GET['city'];?>&craftname=<?php echo @$_GET['craftname'];?>&value=<?php echo @$_GET['value'];?>&times=yes" <?php if(@$_GET['times']=="yes" ){echo "class='xuanzhogle'";}?> >
+			发布时间 </a> </div>
+			  <div class="nr_row_tabwrap">
+			<div class="work-content js_nr_row_tabmain">
+				  <ul class="work-box">
+				<?php foreach($a as $array){?>
+					<li class="work-list w-had w-last" style="" companyid="0">
+	                      <div class="work-t">
+	                    <h2 class="wtit"><a href="<?php echo site_url()."/ActivityTeam/contentid/".$array['id'];?>" target="_blank"><?php echo $array['title'];?></a></h2>
+	                    <span class="wdate"><?php echo date("Y-m-d H:i:s",$array['addtime']);?></span></div>
+	                      <div class="work-b job-item clearfix">
+	                    <div class="wprice">
+	                          <p class="j-price f20"><?php echo round($array['price']/10000,2);?>/万</p>
+	                        </div>
+	                    <ul class="work-info">
+	                          <li><span>项目类型：</span><?php echo $array['moldid'];?></li>
+	                        </ul>
+	                  </div>
+	                  </li>
+				 <?php }?>
+			  </ul>
+				</div>
+		  </div>
+			</div>
+	  </div>
+		</div>
+		<?php 
+            $this->load->view("home/page.html");
+        ?>
+  </div>
+    </div>
+</div>
+<script>
+	pageConfig.filter = {sex0:'/m/',sex1:'/f/',gz1:1000,gz2:8500,gzurl:'/_gongzi_/',pgurl:'/_page_/'};
+</script> 
+<!--<script src="--><!--js/app/zhaogong/list.js" ></script>--> 
+<script src="js/require.min.js" ></script> 
+<script src="js/require-conf.js" ></script> 
+<script src="js/list.js" ></script> 
+<!-- footer { -->
+<?php $this->load->view("home/footer.html"); ?>
+<a id="backtop" href="javascript:;" title="返回顶部" rel="nofollow"></a> 
+<!--<script type="text/javascript" src="css/gdt.php" charset="UTF-8"></script> -->
+<script>
+  //(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  //(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  //m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  //})(window,document,'script','js/analytics.js','ga');
+  //ga('create', 'UA-67905236-1', 'auto');
+  //ga('require', 'linkid');
+  //  ga('send', 'pageview');
+</script>
+<script>
+	$(document).ready(function(){
+		$(".more").click(function(){
+			if($(".city-expect").css("display")=="none"){
+				$(".city-expect").show();
+
+			}else{
+				$(".city-expect").hide();
+
+			}
+		});
+		$(window).scroll(function() {
+		   if ($(this).scrollTop() > 100) {
+                   $("#backtop").show();
+                } else {
+                   $("#backtop").hide();
+            }
+		 });
+	   $("#backtop").click(function(){
+		   $("body, html").animate({
+                    scrollTop : 0
+           }, 800); 
+	   });
+	  // $(".city-b a").click(function(){
+		 // var area_id=$(this).attr("area_id");
+		 //   if(area_id){
+		 //      $(".city-b a").removeClass("selected");
+		 //     $(this).addClass("selected"); 
+		 //   }
+		 //  return false;
+	  //});
+	  //$(".flit-zone-t a").click(function(){
+		 // var craftname=$(this).attr("craftname");
+		 //   if(craftname){
+			//  $(".flit-zone-t a").removeClass("selected");
+		 //     $(this).addClass("selected"); 
+		 //   }
+		 //  return false;	
+	  //});
+	  //$(".slider-num li").click(function(){
+		 // var valuename=$(this).attr("value");
+		 //   if(valuename){
+			//  $(".slider-num li").removeClass("selected");
+		 //     $(this).addClass("selected"); 
+		 //   }
+		 //  return false;	
+	  //});
+	});
+</script>
+</body>
+</html>

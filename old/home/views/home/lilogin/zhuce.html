@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<title>个人注册</title>
+<link rel="stylesheet" type="text/css" href="/resources/css/home/jQuery_1.css">
+ 
+</head>
+<body>
+<?php include "logininclude.html"; ?>
+<!--<script type="text/javascript" src="js/2014-11-10-GA-default.js"></script> -->
+<!--IE6提示-->
+<div class="container_header">
+  <div id="xo-canvas-globalnav" style="display:none">Global navigation bar</div>
+  <section class="regAndLogin_section">
+    <input type="hidden" name="valid_key" value="5726682322deae8bccf4ca9634d7cd18" />
+    <input type="hidden" id="redirect" value="" />
+    <div class="regAndLogin_left_box regAndLogin_ad fl">
+      <div class="xo-blockszone">
+        <div class="#_login_banner">
+          <ul>
+            <li><img src="/resources/images/home/1417179063.gif" width="661" height="319" alt="" border="0"  /></li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section_right_box fr">
+      <div class="section_right_form"> 
+      <form action="<?php echo site_url()."/Lilogin/submint";?>" method="post" class="regAndLogin_form" id="form1"> 
+        <div class="regAndLogin_top">
+          <div class="fl regAndLogin_title1">个人注册</div>
+          <div class="fr regAndLogin_quickLink">已有账号? <a class="font_blue"  href="<?php echo site_url()."/Lilogin/login";?>">立即登录</a></div>
+        </div>
+        <div class="clear"></div>
+        <fieldset class="regAndLogin_place">
+           <p class="position_rel"><em class="user_icon"></em>
+            <label for="newphone" class="regAndLogin_first">
+              <input  type="text" name="mobile" id="newphone" placeholder="请输入手机号" value="" onblur="check_phone2();" />
+            </label>
+            <span class="user_tips" style="display:none;"></span></p>            
+         
+          <p class="position_rel" id="password_div"><em class="pws_icon"></em>
+            <label for="newphone" class="regAndLogin_first">
+              <input class="regAndLogin_secondInput" type="password" name="password" id="password" placeholder="请输入密码" onblur="check_phone2();" />
+            </label>
+             
+             <span class="user_tips" style="display:none;"></span></p>
+            
+           <p class="position_rel" id="password_div"><em class="pws_icon"></em>
+               <label for="password" class="regAndLogin_second">
+               <input class="regAndLogin_secondInput" name="pass"  id="pass" placeholder="请再次输入密码" onblur="check_password();setnor(this);" onfocus="setcur(this);"  maxlength="20" type="password" ></label>
+                     
+                    <span class="user_tips" style="display:none;"></span></p>       
+                                 
+           <p class="position_rel" id="password_div"><em class="pws_icon"></em>
+               <label for="password" class="regAndLogin_second">
+               <input class="regAndLogin_secondInput" name="invitation"  id="text" value="" placeholder="请输入邀请码"  maxlength="20" type="text" onblur="check_phone2();"/></label>                    
+                
+          </p>
+        
+          <!--      <p class="securityCode" id="remember3" style="display:none;height: 45px;"> 
+            
+            <label class="security_input new_reg_o">
+              <input name="reg_rand" id="reg_rand" class="fl" type="text"/>
+              &nbsp;&nbsp;&nbsp; <span id="randImgSpan" class="fl"> <img id="randImg" onclick="resetrand()" src="" style="height:44px;cursor:pointer"/> </span> </label>
+          
+          </p>-->
+          
+          <p class="position_rel">
+            <label class="regAndLogin_first phonecaptchinput">
+              <input  type="text" name="xoopscaptcha" id="RegPhoneCaptch" placeholder="请输入短信验证码" size="6" value="" />
+            </label>
+            <span class="phoneCaptchSeekerReg" style="cursor: pointer;" onClick="clickLog('from=chr_jsreg_getcode');">
+            <label>获取验证码</label>
+            </span> </p>
+           
+        
+          
+        </fieldset>
+        <input type="hidden"  name="referer" id="referer" value="" />
+        <p class="reg_protocal">
+          <label for="protocol" class="regAndLogin_txt">
+            <input class="regAndLogin_checkbox" type="checkbox" onclick="check_pro(this);" checked="checked" id="protocol" />
+            同意</label>
+          &nbsp;&nbsp;&nbsp;<a href="javascript:void(0) " target="_blank" class="showbtn font_blue fontSize14" onClick="clickLog('from=chr_jsreg_agreement');">个人会员注册协议</a></p>
+        <p class="warning_txt" id="warMsg">请同意勾选"个人会员注册协议"</p>
+     
+ 
+        
+        <div id="bg"></div>
+  <!--<form action="" method="get">  -->  <div class="box" style="display:none">
+        <h2>在加入会员前，请详细阅读会员的权利义务条款</h2>
+        <div class="list">
+          <ul>
+            <li>
+            <div>
+              <textarea cols="93" rows="15" readonly>
+                 
+                        
+本网页阐明了使用中华英才网网站及其服务的使用条款（“使用条款”）。
+“求职者”是指完全同意本协议所有条款，使用中华英才网进行有效注册或虽然未经注册但通过使用经中华英才网许可的方式登录中华英才网，以寻求工作机会为目的的自然人。
+“招聘企业”或“企业会员”是指有人员招聘需求，通过与中华英才网签订协议或中华英才网特别许可的方式获得会员使用资格，从而有权在www.chinahr.com上发布招聘信息、进行求职者简历检索或享受其它服务的企业用户。
+求职者和招聘企业合称为用户。
+这些使用条款构成中华英才网网站用户（“用户”）与英才华网网络技术（北京）有限公司及其关联公司（统称为“中华英才网”）之间具有法律约束力的协议。当用户访问中华英才网网站及使用其服务时，即被视为已接受此协议各项条款。
+中华英才网网站（www.chinahr.com）提供各种功能和服务，包括但不限于在线发布和搜索就业机会（“中华英才网服务”）。
+中华英才网的网站还包括在线社区，旨在方便用户基于共同的经历和兴趣进行有价值的专业及个人交流。用户还可在中华英才网网站创建个人档案资料（“档案资料”）。
+中华英才网将不定时地通过在本网页发布更新版本的方式修改使用条款。 请用户定期访问本网页并查看最新条款。这些条款对用户均具有约束力。
+违反使用条款的用户可能会被暂停或终止使用及访问中华英才网网站。
+
+
+              </textarea>
+            </div>
+             </li>
+             <li><div class="db1"><a href="#" class="close">同&nbsp;意</a></div></li>
+             
+            </ul> 
+             
+  </div>
+</div>
+<!--</form>-->
+<!--<script type="text/javascript">
+        //var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F188334bb1c28ed46d0d4d8c306c766b3' type='text/javascript'%3E%3C/script%3E"));
+    </script>-->
+         
+        <p>
+          <input type="button" onclick="subimits();" id="submitName" name="submitName"  value="立即注册" class="reg_confirm"  style="box-shadow:#666 1px 2px 2px;"/>
+        </p>
+     </form>  
+      </div>
+    </div>
+    <div class="clear"></div>
+  </section>  
+</div>
+<!---->
+<?php include "footer.html"; ?>
+<!--{xo-logger-output}-->
+</body>
+</html>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#submitName").click(function(){
+		$('form').submit();   
+    //    $.ajax({
+	   //      url:"<?php echo site_url()."/Lilogin/submint";?>",
+	   //      data:$("#form1").serialize(),
+	   //      type:"post",
+	   //      async : false,
+	   //      dataType : "json",
+	   //      success:function(data){//ajax返回的数据
+	   //      	alert(data);
+	   //      }
+    //    });
+    });
+});
+//修正bug8658	
+var isIE=!!window.ActiveXObject;
+if(isIE && document.domain == 'www.#.com' && document.charset!="utf-8")
+{
+    location.reload(false);
+}
+
+</script>

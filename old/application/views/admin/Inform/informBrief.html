@@ -1,0 +1,94 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>后台管理</title>
+    
+    <?php $this->load->view("admin/include.html"); ?>
+</head>
+<body>
+<div id="body-wrapper">
+    <!-- Wrapper for the radial gradient background -->
+    <div id="sidebar">
+        <?php $this->load->view("admin/left.html"); ?>
+    </div>
+    <!-- End #sidebar -->
+    <div id="main-content">
+        <!-- Main Content Section with everything -->
+       
+        <!-- Page Head -->
+        <div class="clear"></div>
+        <!-- End .clear -->
+        <div class="content-box">
+            <!-- Start Content Box -->
+            <div class="content-box-header">
+                <h3>发送短信</h3>
+                <ul class="content-box-tabs">
+                  <!--  <li><a href="user.php?act=add" function="default-tab">添加帐号</a></li>-->
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!-- End .content-box-header -->
+            <div class="content-box-content">
+                <div class="tab-content default-tab" id="tab2">
+                    <form >
+                       
+                        <p>
+                            <label>手机号码：</label>
+                            <textarea rows='10' id='tel'></textarea><span style='color:red'> * 多个用英文逗号","隔开</span>
+                        </p>
+                        <p>
+                            <label>短信内容：</label>
+                            <textarea rows='10' id='content'></textarea>
+                        </p>
+                        <p>
+                            <input type="button"  class="button" value="确认发送" onclick='yanzheng()' />
+                            <span style='color:red' id='tishi'></span>
+                        </p>
+                    </from>
+                </div>
+            </div>
+            <!-- End .content-box-content -->
+        </div>
+
+        <div class="clear"></div>
+
+        <?php $this->load->view("admin/footer.html"); ?>
+    </div>
+    <!-- End #main-content -->
+</div>
+</body>
+<script type="text/javascript">
+        function yanzheng(){
+            var tel = $('#tel').val();
+            var content = $('#content').val();
+            if(tel == ''){
+                alert("请输入手机号！");
+                return false;
+
+            }else if(content == ''){
+                alert("请输入发送的内容！");
+                return false;
+            }else{
+               $('#tishi').text('正在发送...');
+               ajaxp(tel,content);
+            }
+        }
+        function ajaxp(tel,content){
+            $.ajax({  
+            url: "<?php echo site_url('/Inform/BriefAjax')?>", 
+            type:'POST',
+            data :{tel:tel,content:content},
+            async:false,
+            success: function(data){
+                if(data){
+                     $('#tishi').text('发送成功！');
+                }else{
+                    $('#tishi').text('发送失败！');
+                }
+            }
+            
+            });
+        }
+</script>
+</html>

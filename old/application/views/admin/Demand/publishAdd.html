@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>后台管理</title>
+    
+    <?php $this->load->view("admin/include.html"); ?>
+</head>
+<body>
+<div id="body-wrapper">
+    <!-- Wrapper for the radial gradient background -->
+    <div id="sidebar">
+        <?php $this->load->view("admin/left.html"); ?>
+    </div>
+    <!-- End #sidebar -->
+    <div id="main-content">
+        <!-- Main Content Section with everything -->
+       
+        <!-- Page Head -->
+        <div class="clear"></div>
+        <!-- End .clear -->
+        <div class="content-box">
+            <!-- Start Content Box -->
+            <div class="content-box-header">
+                <h3>编辑需求 - <span id='xtitle'>
+                <?php
+                    if($status == 1){
+                        echo "设备出租";
+                    }elseif($status == 2){
+                        echo "活找队";
+                    }elseif($status == 3){
+                        echo "队找活";
+                    }elseif($status == 4){
+                        echo "队找人";
+                    }elseif($status == 5){
+                        echo "辅材";
+                    }else{
+                        echo "请选择";
+                    }
+                ?>
+                </span></h3>
+                <ul class="content-box-tabs">
+                  <!--  <li><a href="user.php?act=add" function="default-tab">添加帐号</a></li>-->
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!-- End .content-box-header -->
+            <div class="content-box-content">
+                <?php
+                    if(empty($id)){
+                ?>
+                    <div  style="height: 40px;font-size: 14px;">
+                        <input id='rentOut' type='button' value='设备出租' />
+                        <input id='workTeam' type='button' value='活找队' />
+                        <input id='teamWork' type='button' value='队找活' />
+                        <input id='teamPerson' type='button' value='队找人' />
+                        <input id='alcorAdd' type='button' value='辅材' />
+                    </div>
+                <?php } ?>
+                <form  action="<?php echo site_url("/Demand/publishPost");?>" method="post" name="form1"  enctype="multipart/form-data" onSubmit="return verifyForm();">
+                <div>
+                    <p>
+                        <span>用 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 户：</span>
+                        <input type='text' id='username' value='<?php echo $yname?>'  readonly='readonly'/>
+                    </p>
+                    <p>
+                         <span style="color:red">*</span><span>权 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 限：</span>
+                        <input type='radio' value='2' name='power' checked/> 全部用户可见
+                        <input type='radio' value='1' name='power' <?php if($power==1){echo 'checked';}?>/> 仅对认证可见
+                    </p>
+
+                </div>
+                <div class="tab-content default-tab" id="tab1">
+                    <?php
+
+                        if($status == 1){
+                            echo $htmlRentOut;
+                        }elseif($status == 2){
+                            echo $htmlWorkTeam;
+                        }elseif($status == 3){
+                            echo $htmlTeamWork;
+                        }elseif($status == 4){
+                            echo $htmlTeamPerson;
+                        }elseif($status == 5){
+                            echo $htmlAlcorAdd;
+                        }
+                    ?>
+                </div>
+                <div>
+                    <p>
+                         <span style="color:red">*</span><span>联 &nbsp;系&nbsp; 人：</span>
+                        <input name="name" type="text" id='name' style="width: 200px" value='<?php echo $username?>'>
+                    </p>
+                    <p>
+                         <span style="color:red">*</span><span>联系电话：</span>
+                        <input name="moblie" type="text" id='moblie' style="width: 200px" value='<?php echo $moblie?>'>
+                    </p>
+                    <p>
+                         <span style="color:red">*</span><span>地 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 址：</span>
+                        <input name='area' type='text' id='area' style='width: 200px' value='<?php echo $area1_c.$area2_c?>' readonly='readonly'>
+                    </p>
+                    <p>
+                         <span style="color:red">*</span><span>详细地址：</span>
+                        <input name="address" type="text" id='address' style="width: 300px" value='<?php echo $address?>'>
+                    </p>
+                    <p>
+                         <span style="color:red">*</span><span>审 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 核：</span>
+                        <input type='radio' value='0' name='zhuangtai' checked/> 不通过
+                        <input type='radio' value='1' name='zhuangtai' <?php if($zhuangtai==1){echo 'checked';}?>/> 通过
+                    </p>
+                    <p>
+                        <label>描 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 述：</label>
+                        <textarea id='content' name='content'><?php echo $content?></textarea>
+                    </p>
+                    <input type='hidden' name='area1' id='area1' value='<?php echo $area1?>'/>
+                    <input type='hidden' name='area2' id='area2' value='<?php echo $area2?>'/>
+                    <input type='hidden' name='userid' id='userid' value='<?php echo $userid?>'/>
+                    <input type='hidden' name='status' id='status' value='<?php echo $status?>'/>
+                    <input type='hidden' name='id' id='id' value='<?php echo $id?>'/>
+                    <!-- 图片 -->
+                    <?php
+                       $pic = explode(',',$pic);
+                    ?>
+                    <input type='hidden' name='pics1' id='pics1' value='<?php echo $pic['0']?>'/>
+                    <input type='hidden' name='pics2' id='pics2' value='<?php echo $pic['1']?>'/>
+                    <input type='hidden' name='pics3' id='pics3' value='<?php echo $pic['2']?>'/>
+                    <input type='hidden' name='pics4' id='pics4' value='<?php echo $pic['3']?>'/>
+                    <input type='hidden' name='pics5' id='pics5' value='<?php echo $pic['4']?>'/>
+                    <input type='hidden' name='pics6' id='pics6' value='<?php echo $pic['5']?>'/>
+                    <input type='hidden' name='pics7' id='pics7' value='<?php echo $pic['6']?>'/>
+                    <input type='hidden' name='pics8' id='pics8' value='<?php echo $pic['7']?>'/>
+                    <input type='hidden' name='pics9' id='pics9' value='<?php echo $pic['8']?>'/>
+                    <input type='submit' value='确认发布' />
+                </div>
+                </from>
+            </div>
+            <!-- End .content-box-content -->
+        </div>
+
+        <div class="clear"></div>
+
+        <?php $this->load->view("admin/footer.html"); ?>
+    </div>
+    <!-- End #main-content -->
+</div>
+<script>
+    var device = "<?php echo $device?>";
+    var craft = "<?php echo $craft?>";
+    var mold = "<?php echo $mold?>";
+    var alcor = "<?php echo $alcor?>";
+    var area_1 = "<?php echo $area_1?>";
+    var url = '<?php echo site_url();?>';
+    <?php if(empty($id)){?>
+        var htmlRentOut = "<?php echo $htmlRentOut?>";
+        var htmlWorkTeam = "<?php echo $htmlWorkTeam?>";
+        var htmlTeamWork = "<?php echo $htmlTeamWork?>";
+        var htmlTeamPerson = "<?php echo $htmlTeamPerson?>";
+        var htmlAlcorAdd = "<?php echo $htmlAlcorAdd?>";
+    <?php }?>
+    function verifyForm(){
+    	if($("#name").val()==''|| $("#moblie").val()==''|| $("#area").val()==''){        
+        	alert('参数不全!');        
+        	return false;    
+        }
+        switch($("#status").val()){
+			case '1':
+			  if($("#deviceid").val()==''|| $("#num").val()==''|| $("#moblie").val()==''){
+				alert('参数不全!');
+				return false;
+			  }
+			  break;
+			case '2':
+			  if($("#price").val()==''){
+				alert('参数不全!');
+				return false;
+			  }
+			  break;
+			case '3':
+			  if($("#num").val()==''){
+				alert('参数不全!');
+				return false;
+			  }
+			  break;
+			case '4':
+			  if($("#num").val()==''|| $("#age1").val()==''|| $("#age2").val()==''|| $("#price").val()==''){
+				alert('参数不全!');
+				return false;
+			  }
+			  break;
+			case '5':
+			  if($("#shopname").val()==''){
+				alert('参数不全!');
+				return false;
+			  }
+			  break;
+			default:
+			  return false;
+		}
+        return true;
+}
+</script>
+<script type="text/javascript" src="/resources/layer/layer.js"></script>
+<script type="text/javascript" src="/resources/scripts/publish.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>收藏</title>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(function(){
+	$(".shou li").click(function(){
+		
+		 var d=$(".shou li").index(this)
+	
+		for( var i=0;i<4;i++){
+			$(".shou li:eq("+i+") p").removeClass("bg")
+			}
+		$(".shou li:eq("+d+") p").addClass("bg")
+		})
+	$(".shou li:eq(0) p").click(function(){
+		$(".fa").css("display","block")
+		$(".fa1").css("display","none")
+		$(".fa2").css("display","none")
+		})
+	$(".shou li:eq(1) p").click(function(){
+		$(".fa").css("display","none")
+		$(".fa1").css("display","block")
+		$(".fa2").css("display","none")
+		})
+	$(".shou li:eq(2) p").click(function(){
+		$(".fa1").css("display","none")
+		$(".fa").css("display","none")
+		$(".fa2").css("display","block")
+		})
+	})
+</script>
+<link href="css/tcstyle.css" rel="stylesheet" type="text/css">
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<link href="css/nei.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div style="width:100%; height:1140px; background-color:#fff;" class="mobile">
+  <div class="tou"><a href="javascript:history.back();"><img src="images/zuo.png" style="margin-top:10px; cursor:pointer; float:left;"></a> <img   style="cursor:pointer; float: right;margin-top:10px; margin-right:20px;" src="images/fabu_03.png">
+    <h2>我的收藏</h2> </div>
+  <br>
+	<div class="shou">
+	<ul>
+    	<li><p class="bg">职位收藏</p></li>
+        <li><p>辅材信息</p></li>
+        <li style=" border-right:none;"><p>设备承租</p></li>
+	
+    </ul></div>
+  <div class="fa">
+    <div class="fa_1">
+      <div class="zuo1">
+        <div style=" position:relative; float:left; margin-left:10px; margin-top:10px;">
+          <p style="color:#474747; font-size:16px; line-height:40px; font-weight:700;">河北省沧州市招木工队</p>
+          <p style=" line-height:38px;">建筑规模： XXX</p>
+          <p style=" line-height:40px;">发布时间：07-10 12:33</p>
+       
+        </div>
+        <div class=" you11">
+          <div style="position: absolute; width:60px; height:20px; top: 60px; left:50%; background-color:#cc0c0c; margin-left:-30px; color:#FFF; text-align:center; border-radius:5px; line-height:20px;">未验证</div>
+        </div>
+      </div>
+    </div>
+    <div class="fa_2">
+      <div class="zuo1">
+        <div style=" float:left; position:relative; margin-left:10px; margin-top:10px;">
+          <p style="color:#474747; font-size:16px; line-height:40px; font-weight:700;">河北省沧州市招木工队10人</p>
+          <p style=" line-height:38px;">待遇：XXX</p>
+          <p style=" line-height:40px;">发布时间：07-10 12:33</p>
+      </div>
+        <div class=" you11"><div style="position: absolute; width:60px; height:20px; top: 60px; left:50%; background-color:#cc0c0c; margin-left:-30px; color:#FFF; text-align:center; border-radius:5px; line-height:20px;">未验证</div>
+        </div>
+      </div>
+    </div>
+    <div class="fa_3">
+      <div class="zuo1">
+        <div style=" float:left; margin-left:10px; position:relative; margin-top:10px;">
+          <p style="color:#474747; font-size:16px; line-height:40px; font-weight:700;">河北省沧州市有10人木工队</p>
+          <p style=" line-height:38px;">队伍人数：XX</p>
+          <p style=" line-height:40px;">发布时间：07-10 12:33</p>
+        </div>
+        <div class=" you11"><div style="position: absolute; width:60px; height:20px; top: 60px; left:50%; background-color:#cc0c0c; margin-left:-30px; color:#FFF; text-align:center; border-radius:5px; line-height:20px;">未验证</div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="fa1">
+    <div class="fa_1">
+      <div class="zuo1"> 
+        <div style=" float:left; position:relative; margin-left:10px; margin-top:10px;">
+        
+          <p style="color:#474747; font-size:16px; line-height:40px; font-weight:700;">河北省沧州市招木工队</p>
+          <p style=" line-height:38px;">建筑规模： XXX</p>
+          <p style=" line-height:40px;">发布时间：07-10 12:33</p>
+        </div>
+        <div class=" you11"><div style="position: absolute; width:60px; height:20px; top: 60px; left:50%; background-color:#247cff; margin-left:-30px; color:#FFF; text-align:center; border-radius:5px; line-height:20px;">平台验证</div><span style="margin
+        -top:30px; color:#d20000;"></span></div>
+      </div>
+    </div>
+    
+    <div class="fa_3">
+      <div class="zuo1"> 
+        <div style=" float:left; position:relative; margin-left:10px; margin-top:10px;">
+          <p style="color:#474747; font-size:16px; line-height:40px; font-weight:700;">河北省沧州市有10人木工队</p>
+          <p style=" line-height:38px;">队伍人数：XX</p>
+          <p style=" line-height:40px;">发布时间：07-10 12:33</p>
+        </div>
+        <div class=" you11"><div style="position: absolute; width:60px; height:20px; top: 60px; left:50%; background-color:#cc0c0c; margin-left:-30px; color:#FFF; text-align:center; border-radius:5px; line-height:20px;">未认证</div><span style="margin-top:30px; color:#ffb82e;"></span></div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="fa2">
+    <div class="fa_1">
+      <div class="zuo1"> 
+        <div style=" float:left; margin-left:10px; margin-top:10px;">
+          <p style="color:#474747; font-size:16px; line-height:40px; font-weight:700;">河北省沧州市招木工队</p>
+          <p style=" line-height:38px;">建筑规模： XXX</p>
+          <p style=" line-height:40px;">发布时间：07-10 12:33</p>
+        </div>
+         <div class=" you11"><div style="position: absolute; width:60px; height:20px; top: 60px; left:50%; background-color: #cc0c0c; margin-left:-30px; color:#FFF; text-align:center; border-radius:5px; line-height:20px;">未验证</div>
+      </div>
+      </div>
+    </div>
+    <div class="fa_3">
+      <div class="zuo1"> 
+        <div style=" float:left; margin-left:10px; margin-top:10px;">
+          <p style="color:#474747; font-size:16px; line-height:40px; font-weight:700;">河北省沧州市有10人木工队</p>
+          <p style=" line-height:38px;">队伍人数：XX</p>
+          <p style=" line-height:40px;">发布时间：07-10 12:33</p>
+        </div>
+        <div class=" you11"><div style="position: absolute; width:60px; height:20px; top: 60px; left:50%; background-color:#cc0c0c; margin-left:-30px; color:#FFF; text-align:center; border-radius:5px; line-height:20px;">未验证</div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+</body>
+</html>

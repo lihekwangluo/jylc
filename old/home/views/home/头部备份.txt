@@ -1,0 +1,8 @@
+<div class="toph  right"> <a href="<?php echo site_url()."/PersonalCenter/index";?>">个人中心</a><span class="dln">|</span><a href="images">积分兑换</a><span class="dln">|</span><a href="sjb.html" rel="nofollow">手机版</a><span class="dln">|</span><a href="<?php echo site_url()."/Lilogin/login";?>" rel="nofollow">登录/</a><a href="<?php echo site_url()."/Lilogin/register";?>" rel="nofollow">注册</a> </div>
+
+
+
+
+    <div class="toph  right"> <a href="<?php echo site_url()."/PersonalCenter/index";?>">个人中心</a><span class="dln">|</span><a href="images">积分兑换</a><span class="dln">|</span><a href="sjb.html" rel="nofollow">手机版</a><span class="dln">|</span><a href="<?php echo site_url()."/Lilogin/login";?>" rel="nofollow">登录/</a><a href="<?php echo site_url()."/Lilogin/register";?>" rel="nofollow">注册</a> </div>
+
+  </div>

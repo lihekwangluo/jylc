@@ -1,0 +1,63 @@
+/* CSS Document */
+ 
+html {  width: 100%; font-family: 'Heiti SC', 'Microsoft YaHei';   outline: 0; -webkit-text-size-adjust:none;}
+body {  width:100%; margin: 0; -webkit-user-select: none; font-family:"微软雅黑"  position: relative; background-color:#fff;}
+a:hover,a:link,a:visited,a{ color:inherit; text-decoration:none;}
+ul,li{list-style:none}
+i{font-style:normal}
+header{ width:12.42rem; height:1.35rem; background-color:#7ecef4;}
+header i.logo{ float:left; display:block; width:0.85rem; height:0.8rem; margin:0.24rem 0 0.24rem 0.18rem; background:url(../images/icon/logo.png) no-repeat; background-size:0.85rem 0.8rem;}
+header .sch{ float:left; width:11rem; height:0.8rem; margin:0.24rem 0 0.24rem 0.18rem; border-radius:0.1rem; background-color:#68b2d5; text-align:center;}
+header .sch p{ line-height:0.8rem; color:#fff; font-size:0.4rem;}
+header .sch p img{ width:0.45rem; height:0.44rem; vertical-align:middle;}
+footer{ z-index:11111111; position:fixed; bottom:0; width:500px;; height:70px; background-color:#fff; border-top:1px solid #CCC; overflow:hidden;}
+footer .foot{ float:left; width:14%; height:65px; margin:1px 13px 0px 13px; text-align:center; overflow:hidden; color:#9c9c9c;}/*调
+
+整底部导航边距*/
+footer .foot img{ width:30px; height:30px; padding-top:2px; margin:0 auto; display:block;}
+footer .foot p{ margin-top:3px; font-size:15px;}
+footer .act{ color:#00bb9c;}
+.logo-dbs{ height:0.9rem; overflow:hidden;}
+.logo-dbs .dbs-img{ float:left; width:1rem; height:0.8rem; border-right:1px solid #fff; text-align:center;}
+.logo-dbs .dbs-img img{ width:0.85rem; height:0.8rem; display:block;}
+.logo-dbs p{ float:left; margin-left:0.15rem; font-size:0.35rem; line-height:0.8rem; color:#fff;}
+.jg{ width:12.42rem; height:1.58rem;}
+.daoh { width:auto; background:#6CC;}
+.fenge {height:5px; background:#F0F0F0; clear:both;}
+.bw-container { background: #fafafa; width: 1000px; height: 534px; margin: 0 auto; }
+.bw-menu { width: 1000px; height: 44px; }
+.bw-menu ul { list-style: none; width: 1000px; height: 34px; margin: 0 auto; padding: 0; }
+.bw-menu li { border-radius:20px; background: #fafafa; background-position: 214px 0; display: block; float: left; width: 325px; height: 34px; cursor: pointer; border: #d4d4d4 1px solid; margin: 0 3px; }
+.bw-menu li.bw-current { background-position: 0 0; }
+.bw-menu span { border-radius:20px; font: bold 11px "微软雅黑"; color: #22a6e1; display: block; line-height: 34px; text-align: center; font-weight: 100; letter-spacing: 4px; }
+.bw-current span { color: #fff; background: #22a6e1; }
+.bw-content { background: #fafafa; width: 1000px; height: 500px; }
+.bw-content ul { width: 1000px; height: 500px; list-style: none; }
+.bw-content li { float: left; width: 1000px; height: 500px; display: block; }
+.bw-content img { float: left; width: 400px; margin: 20px 30px; }
+.info { float: left; width: 300px; margin: 20px 0; height: auto; }
+.info p { font: bold 24px Verdana, Geneva, sans-serif; color: #999; display: block; line-height: 34px; text-align: center; }
+.clear { clear: both; }
+.loyab {display: inline; float:left;  margin:5px 7%; border-radius:5px; height: 22px; line-height: 22px; padding: 5px 10px; vertical-align: middle; border: 1px solid; border-color: #ccc #e8e8e8 #e8e8e8 #ccc; margin-right: 5px; color:#666; font-size:15px; }
+
+.loybn { -webkit-appearance: none; border-radius:5px;  margin:5px 7%; float: left; display: inline; height: 32px; line-height: 30px; padding: 0 45px 0px 80px; border: 1px solid #ccc; cursor: default; background: url(../images/job_icon_db.gif) #fff right top no-repeat; margin-right: 5px; overflow: hidden; zoom: 1; }
+.textb{ color:#999; font-size:15px; width:80%; margin:5px 7%;}
+.fb_ok{ background:#06F; width:75%; height:75%; border-radius:5px; border: #09F 1px solid; color:#FFF;}
+.loyln { -webkit-appearance: none;  margin:5px 7%; float: left; display: inline; height: 32px; line-height: 30px; padding: 0 35px 0 10px; border: 1px solid #ccc; cursor: default; background: url(../images/job_icon_db.gif) #fff right top no-repeat; margin-right: 5px; overflow: hidden; zoom: 1; }
+.mobile form .shaixuan #shen ,#gongzhong ,#daiyu ,#gongz ,#gz_zj ,#gc_lx ,#gongcl ,#duiw_rs ,#sb_xh ,#sb_sl ,#fuw_fanw ,#dianpu_name ,#gz_rs ,#gzdy ,#nianlin ,#gz_dz ,#gz_dh ,#gz_name{ color:#999; font-size:15px; }
+.shaixuan {background:#fff; clear:both; height:45px;}
+/*tab 如果要调整全屏，把500全部调整到100%*/
+.bw-container { background: #fafafa; width: 500px; height: 534px; margin: 0 auto; }
+.bw-menu { width: 500px; height: 44px; padding-top:10px;}
+.bw-menu ul { list-style: none; width:500px; height: 34px; margin: 0 auto; padding: 0; }
+.bw-menu li { background: #fafafa; background-position: 214px 0; display: block; float: left; width:25%; height: 34px; cursor: pointer; border: #d4d4d4 1px solid; margin:0 -6% 0 18%; }
+.bw-menu li.bw-current { background-position: 0 0; }
+.bw-menu span {  font: bold 11px "微软雅黑"; color: #22a6e1; display: block; line-height: 34px; text-align: center; font-weight: 100; letter-spacing: 4px; }
+.bw-current span { color: #fff; background: #22a6e1; }
+.bw-content { background: #fafafa; width: 500px; height: 500px; }
+.bw-content ul { width: 500px; height: 500px; list-style: none; }
+.bw-content li { float: left; width: 500px; height: 500px; display: block; }
+.bw-content img { float: left; width: 400px; margin: 20px 30px; }
+.info { float: left; width: 300px; margin: 20px 0; height: auto; }
+.info p { font: bold 24px Verdana, Geneva, sans-serif; color: #999; display: block; line-height: 34px; text-align: center; }
+.clear { clear: both; }

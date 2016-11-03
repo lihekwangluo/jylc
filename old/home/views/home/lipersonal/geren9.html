@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta property="qc:admins" content="262704770765011526375" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="wb:webmaster" content="6ffdc657eef2403e" />
+<title>意见反馈--用户中心</title>
+<meta name="generator" content="PEC" />
+<?php include "/../header.html" ?>
+<div class="bigwrapper">
+  <div class="wrapper clearfix"> 
+    <!--位置导航-->
+    <div class="crumb">您现在的位置： <a href="http://www.#.com">首页</a> &gt; <a href="/index.html">我的建筑</a> </div>
+    <!--左侧导航-->
+    <div class="wrapper_side uc_nav mbot_20">
+      <h2><a href="index.html">个人中心</a> </h2>
+      <?php include "left.html" ?>
+    </div>
+    <!--右侧主要内容-->
+     <div class="wrapper_main myorder">
+      <form action="<?php echo site_url()."/PersonalCenter/opinionsub";?>" method="post">
+      <table width="800" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="161" height="70" align="right">姓名：</td>
+    <td width="639" align="left"><label for="name"></label>
+      <input class="loyab" type="text" name="name" id="name" /></td>
+  </tr>
+  
+  <tr>
+    <td height="70" align="right">电话：</td>
+    <td align="left"><label for="dl_mima"></label>
+      <input class="loyab" type="text" name="tell" id="mima" /></td>
+  </tr>
+  
+  <tr>   <td height="70" align="right">意见：</td>
+    <td align="left"><label for="yijian"></label>
+      <textarea name="yijian"  style=" border:#CCC 1px solid;" id="yijian" cols="70" rows="7"></textarea>      
+      <label for="dl_mima"></label></td>
+  </tr>
+  <tr>
+    <td height="50" align="right">&nbsp;</td>
+    
+    <td colspan="2" align="left">
+	    <input name="sub" type="hidden" value="1" />
+	    <input type="submit"   class="int_b" name="OK" id="OK" value="提交" />
+	</td>
+  </tr>
+      </table>
+      </form>
+
+    </div>
+
+
+  </div>
+</div>
+  <?php include "/../footer.html" ?>
+</body>
+</html>

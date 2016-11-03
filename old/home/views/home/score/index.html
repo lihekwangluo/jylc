@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=edge" />
+<title>积分商城</title>
+<link rel="stylesheet" type="text/css" href="/resources/css/home/jifen_sc.css" />
+ <?php include "/../header.html" ?>
+
+<div class="main_layout wrap_full_w"> 
+  <!--排序行-->
+  <div class="blank"></div>
+  <div class="deal_list_box wrap_full2">
+    <ul class="deal_list clearfix">
+      <?php
+            foreach($query->result_array() as $array){
+      ?>
+        <li>
+          <div class="deal_item deal_item_border">
+            <div class="deal_img">
+              <div class="tags"> </div>
+              <a href="<?php echo site_url("/score/detail/$array[id]");?>" class="img"><img lazy="true" src="{$array['pic']}" isload="true"></a> </div>
+            <!--团购图片-->
+            <div class="deal_name"> <a href="<?php echo site_url("/score/detail/$array[id]");?>"><?php echo $array['title']?></a> </div>
+             <div class="deal_price"> <span class="current_price"><?php echo $array['integral']?><i>积分</i></span> </div>
+             
+          </div>
+          <!--end deal_item--> 
+        </li>
+      <?php } ?>
+    </ul>
+    <div>
+       <?php 
+       
+       $this->load->view("home/page.html"); 
+       ?>
+    </div>
+  </div>
+  <!--end deal_list_box-->
+  
+  <div class="blank"></div>
+</div>
+<?php include "/../footer.html" ?>
+</body>
+</html>

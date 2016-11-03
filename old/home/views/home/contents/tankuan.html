@@ -1,0 +1,24 @@
+<form action="<?php echo site_url()."/Shebei/jubao/".$id;?>" method="post" id="jubao_form">
+ <div id="bg"></div>
+      <div class="box" style="display:none">
+        <h2>你将举报此信息，请选择举报理由<a href="#" class="close">关闭</a></h2>
+        <div class="list">
+          <ul class="l jb_li">
+            <li>  <input type="checkbox" name="checkbox[1]" id="checkbox">&nbsp;信息与描述不符  <label for="checkbox"></label> </li>
+            <li>  <input type="checkbox" name="checkbox[2]" id="checkbox">&nbsp;信息已过期  <label for="checkbox"></label> </li>
+            <li>  <input type="checkbox" name="checkbox[3]" id="checkbox">&nbsp;联系电话不对  <label for="checkbox"></label> </li>
+          </ul>
+           <ul class="l jb_li">
+            <li>  <input type="checkbox" name="checkbox[4]" id="checkbox">&nbsp;电话不对  <label for="checkbox"></label> </li>
+            <li>  <input type="checkbox" name="checkbox[5]" id="checkbox">&nbsp;敏感信息<label for="checkbox"></label> </li>
+            <li>  <input type="checkbox" name="checkbox[6]" id="checkbox">&nbsp;垃圾广告  <label for="checkbox"></label> </li>
+          </ul>
+ <div class="db1"><a href="#" class="close">确定</a></div>
+  </div>
+</div></form>
+
+<script>
+	$(".db1 a").click(function(){
+		$("#jubao_form").submit();		
+	});
+</script>

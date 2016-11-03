@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>后台管理</title>
+    
+    <?php $this->load->view("admin/include.html"); $menu = json_decode($text,true);?>
+</head>
+
+<body>
+<div id="body-wrapper">
+    <!-- Wrapper for the radial gradient background -->
+    <div id="sidebar">
+        <?php $this->load->view("admin/left.html"); ?>
+    </div>
+    <!-- End #sidebar -->
+    <div id="main-content">
+        <!-- Main Content Section with everything -->
+       
+        <!-- Page Head -->
+        <div class="clear"></div>
+        <!-- End .clear -->
+        <div class="content-box">
+            <!-- Start Content Box -->
+            <div class="content-box-header">
+                <h3>管理员权限</h3>
+                <div style="float: right;margin: 14px"><a href="<?php echo site_url("/Manage/manageList");?>">返回管理员列表</a></div>
+                <ul class="content-box-tabs">
+
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!-- End .content-box-header -->
+
+            <div class="content-box-content">
+               <div class="tab-content default-tab" id="tab2">
+                    <form  action="" method="post" name="form1"  >
+                        <!-- 开始 -->
+                        <div class='quanxian'>
+                                <ul class='setall' style='padding:2px;'>
+                                    <li style='padding:2px;'><b>用户管理</b></li>
+                                </ul>
+                                <ul style='padding:2px; border-top-width: 0px;'>
+                                    <li> &nbsp; </li>
+                                    <li style='padding:2px;'> <label for="check1"><input id='check1' type='checkbox' name='menu[User][UserList]' <?php if(!empty($menu['User']['UserList'])){echo 'checked';}?>  value='1' > 用户列表</label></li>
+                                    <li style='padding:2px;'> <label for="check2"><input id='check2' type='checkbox' name='menu[User][UserAdd]' <?php if(!empty($menu['User']['UserAdd'])){echo 'checked';}?> value='1' > 用户添加</label></li>
+                                </ul>
+                                <ul class='setall' style='padding:2px;'>
+                                    <li style='padding:2px;'><b>发布需求管理</b></li>
+                                </ul>
+                                <ul style='padding:2px; border-top-width: 0px;'>
+                                    <li> &nbsp; </li>
+                                    <li style='padding:2px;'> <label for="check3"><input id='check3' type='checkbox' name='menu[Demand][publishList]' <?php if(!empty($menu['Demand']['publishList'])){echo 'checked';}?> value='1' > 发布需求列表</label></li>
+                                    <li style='padding:2px;'> <label for="check4"><input id='check4' type='checkbox' name='menu[Demand][publishAdd]' <?php if(!empty($menu['Demand']['publishAdd'])){echo 'checked';}?> value='1' > 需求添加</label></li>
+                                </ul>
+                                <ul class='setall' style='padding:2px;'>
+                                    <li style='padding:2px;'><b>积分商城</b></li>
+                                </ul>
+                                <ul style='padding:2px; border-top-width: 0px;'>
+                                    <li> &nbsp; </li>
+                                    <li style='padding:2px;'> <label for="check5"><input id='check5' type='checkbox' name='menu[Integral][product]' <?php if(!empty($menu['Integral']['product'])){echo 'checked';}?> value='1' > 商品列表</label></li>
+                                    <li style='padding:2px;'> <label for="check6"><input id='check6' type='checkbox' name='menu[Integral][productAdd]' <?php if(!empty($menu['Integral']['productAdd'])){echo 'checked';}?> value='1' > 商品添加</label></li>
+                                    <li style='padding:2px;'> <label for="check7"><input id='check7' type='checkbox' name='menu[Integral][integralLog]' <?php if(!empty($menu['Integral']['integralLog'])){echo 'checked';}?> value='1' > 兑换人类表</label></li>
+                                    <li style='padding:2px;'> <label for="check8"><input id='check8' type='checkbox' name='menu[Integral][integralSet]' <?php if(!empty($menu['Integral']['integralSet'])){echo 'checked';}?> value='1' > 积分规则制定</label></li>
+                                </ul>
+                                <ul class='setall' style='padding:2px;'>
+                                    <li style='padding:2px;'><b>分类管理</b></li>
+                                </ul>
+                                <ul style='padding:2px; border-top-width: 0px;'>
+                                    <li> &nbsp; </li>
+                                    <li style='padding:2px;'> <label for="check9"><input id='check9' type='checkbox' name='menu[Gzfenlei][GzfenleiList]' <?php if(!empty($menu['Gzfenlei']['GzfenleiList'])){echo 'checked';}?> value='1' > 工种列表</label></li>
+                                    <li style='padding:2px;'> <label for="check10"><input id='check10' type='checkbox' name='menu[Gzfenlei][GzfenleiDeit]' <?php if(!empty($menu['Gzfenlei']['GzfenleiDeit'])){echo 'checked';}?> value='1' > 添加工种分类</label></li>
+                                    <li style='padding:2px;'> <label for="check11"><input id='check11' type='checkbox' name='menu[Gzfenlei][deviceList]' <?php if(!empty($menu['Gzfenlei']['deviceList'])){echo 'checked';}?> value='1' > 设备分类</label></li>
+                                    <li style='padding:2px;'> <label for="check12"><input id='check12' type='checkbox' name='menu[Gzfenlei][deviceDeit]' <?php if(!empty($menu['Gzfenlei']['deviceDeit'])){echo 'checked';}?> value='1' > 添加设备分类</label></li>
+                                    <li style='padding:2px;'> <label for="check13"><input id='check13' type='checkbox' name='menu[Gzfenlei][moldList]' <?php if(!empty($menu['Gzfenlei']['moldList'])){echo 'checked';}?> value='1' > 项目分类</label></li>
+                                    <li style='padding:2px;'> <label for="check14"><input id='check14' type='checkbox' name='menu[Gzfenlei][moldDeit]' <?php if(!empty($menu['Gzfenlei']['moldDeit'])){echo 'checked';}?> value='1' > 添加项目分类</label></li>
+                                    <li style='padding:2px;'> <label for="check15"><input id='check15' type='checkbox' name='menu[Gzfenlei][alcorList]' <?php if(!empty($menu['Gzfenlei']['alcorList'])){echo 'checked';}?> value='1' > 店铺分类</label></li>
+                                    <li style='padding:2px;'> <label for="check16"><input id='check16' type='checkbox' name='menu[Gzfenlei][alcorDeit]' <?php if(!empty($menu['Gzfenlei']['alcorDeit'])){echo 'checked';}?> value='1' > 添加店铺类型</label></li>
+                                </ul>
+                                <ul class='setall' style='padding:2px;'>
+                                    <li style='padding:2px;'><b>记工管理</b></li>
+                                </ul>
+                                <ul style='padding:2px; border-top-width: 0px;'>
+                                    <li> &nbsp; </li>
+                                    <li style='padding:2px;'> <label for="check17"><input id='check17' type='checkbox' name='menu[Record][RecordList]' <?php if(!empty($menu['Record']['RecordList'])){echo 'checked';}?> value='1' > 记工列表</label></li>
+                                </ul>
+                                <ul class='setall' style='padding:2px;'>
+                                    <li style='padding:2px;'><b>工友圈</b></li>
+                                </ul>
+                                <ul style='padding:2px; border-top-width: 0px;'>
+                                    <li> &nbsp; </li>
+                                    <li style='padding:2px;'> <label for="check18"><input id='check18' type='checkbox' name='menu[Workmate][WorkmateList]' <?php if(!empty($menu['Workmate']['WorkmateList'])){echo 'checked';}?> value='1' > 帖子列表</label></li>
+                                    <li style='padding:2px;'> <label for="check19"><input id='check19' type='checkbox' name='menu[Workmate][WorkmateTeach]' <?php if(!empty($menu['Workmate']['WorkmateTeach'])){echo 'checked';}?> value='1' > 发布子女教育</label></li>
+                                    <li style='padding:2px;'> <label for="check20"><input id='check20' type='checkbox' name='menu[Workmate][WorkmateReply]' <?php if(!empty($menu['Workmate']['WorkmateReply'])){echo 'checked';}?> value='1' > 评论管理</label></li>
+                                </ul>
+                                <ul class='setall' style='padding:2px;'>
+                                    <li style='padding:2px;'><b>统计管理</b></li>
+                                </ul>
+                                <ul style='padding:2px; border-top-width: 0px;'>
+                                    <li> &nbsp; </li>
+                                    <li style='padding:2px;'> <label for="check21"><input id='check21' type='checkbox' name='menu[Statistics][usert]' <?php if(!empty($menu['Statistics']['usert'])){echo 'checked';}?> value='1' > 用户分析</label></li>
+                                    <li style='padding:2px;'> <label for="check22"><input id='check22' type='checkbox' name='menu[Statistics][usertDetails]' <?php if(!empty($menu['Statistics']['usertDetails'])){echo 'checked';}?> value='1' > 用户粘度</label></li>
+                                    <li style='padding:2px;'> <label for="check23"><input id='check23' type='checkbox' name='menu[Statistics][terminal]' <?php if(!empty($menu['Statistics']['terminal'])){echo 'checked';}?> value='1' > 终端属性</label></li>
+                                </ul>
+                                <ul class='setall' style='padding:2px;'>
+                                    <li style='padding:2px;'><b>消息推送</b></li>
+                                </ul>
+                                <ul style='padding:2px; border-top-width: 0px;'>
+                                    <li> &nbsp; </li>
+                                    <li style='padding:2px;'> <label for="check24"><input id='check24' type='checkbox' name='menu[Inform][informPush]' <?php if(!empty($menu['Inform']['informPush'])){echo 'checked';}?> value='1' > 消息推送</label></li>
+                                    <li style='padding:2px;'> <label for="check25"><input id='check25' type='checkbox' name='menu[Inform][informBrief]' <?php if(!empty($menu['Inform']['informBrief'])){echo 'checked';}?> value='1' > 发送短信</label></li>
+                                </ul>
+                                <ul class='setall' style='padding:2px;'>
+                                    <li style='padding:2px;'><b>举报管理</b></li>
+                                </ul>
+                                <ul style='padding:2px; border-top-width: 0px;'>
+                                    <li> &nbsp; </li>
+                                    <li style='padding:2px;'> <label for="check26"><input id='check26' type='checkbox' name='menu[Reason][reasonList]' <?php if(!empty($menu['Reason']['reasonList'])){echo 'checked';}?> value='1' > 信息列表</label></li>
+                                </ul>
+                                <ul class='setall' style='padding:2px;'>
+                                    <li style='padding:2px;'><b>权限管理</b></li>
+                                </ul>
+                                <ul style='padding:2px; border-top-width: 0px;'>
+                                    <li> &nbsp; </li>
+                                    <li style='padding:2px;'> <label for="check27"><input id='check27' type='checkbox' name='menu[Manage][manageList]' <?php if(!empty($menu['Manage']['manageList'])){echo 'checked';}?> value='1' > 管理员列表</label></li>
+                                </ul>
+                                <ul class='setall' style='padding:2px;'>
+                                    <li style='padding:2px;'><b>系统设置</b></li>
+                                </ul>
+                                <ul style='padding:2px; border-top-width: 0px;'>
+                                    <li> &nbsp; </li>
+                                    <li style='padding:2px;'> <label for="check28"><input id='check28' type='checkbox' name='menu[Systemset][setGps]' <?php if(!empty($menu['Systemset']['setGps'])){echo 'checked';}?> value='1' > 导航页</label></li>
+                                    <li style='padding:2px;'> <label for="check29"><input id='check29' type='checkbox' name='menu[Systemset][setEdition]' <?php if(!empty($menu['Systemset']['setEdition'])){echo 'checked';}?> value='1' > 版本介绍</label></li>
+                                    <li style='padding:2px;'> <label for="check30"><input id='check30' type='checkbox' name='menu[Systemset][setFeedback]' <?php if(!empty($menu['Systemset']['setFeedback'])){echo 'checked';}?> value='1' > 意见反馈</label></li>
+                                    <li style='padding:2px;'> <label for="check31"><input id='check31' type='checkbox' name='menu[Systemset][setAboutUs]' <?php if(!empty($menu['Systemset']['setAboutUs'])){echo 'checked';}?> value='1' > 关于我们</label></li>
+                                    <li style='padding:2px;'> <label for="check32"><input id='check32' type='checkbox' name='menu[Systemset][setTreaty]' <?php if(!empty($menu['Systemset']['setTreaty'])){echo 'checked';}?> value='1' > 协议设置</label></li>
+                                </ul>
+                                <ul class='setall' style='padding:2px;'>
+                                    <li style='padding:2px;'><b>数据库管理</b></li>
+                                </ul>
+                                <ul style='padding:2px; border-top-width: 0px;'>
+                                    <li> &nbsp; </li>
+                                    <li style='padding:2px;'> <label for="check33"><input id='check33' type='checkbox' name='menu[Datalog][backups]' <?php if(!empty($menu['Datalog']['backups'])){echo 'checked';}?> value='1' > 数据库备份</label></li>
+                                    <li style='padding:2px;'> <label for="check34"><input id='check34' type='checkbox' name='menu[Datalog][recover]' <?php if(!empty($menu['Datalog']['recover'])){echo 'checked';}?> value='1' > 数据库恢复</label></li>
+                                    <li style='padding:2px;'> <label for="check35"><input id='check35' type='checkbox' name='menu[Datalog][operation]' <?php if(!empty($menu['Datalog']['operation'])){echo 'checked';}?> value='1' > 操作日志</label></li>
+                                </ul>
+                                <ul class='setall' style='padding:2px;'>
+                                    <li style='padding:2px;'><b>其他管理</b></li>
+                                </ul>
+                                <ul style='padding:2px; border-top-width: 0px;'>
+                                    <li> &nbsp; </li>
+                                    <li style='padding:2px;'> <label for="check36"><input id='check36' type='checkbox' name='menu[Rests][brushpost]' <?php if(!empty($menu['Rests']['brushpost'])){echo 'checked';}?> value='1' > 发布需求设置</label></li>
+                                    <li style='padding:2px;'> <label for="check37"><input id='check37' type='checkbox' name='menu[Rests][sensitivity]' <?php if(!empty($menu['Rests']['sensitivity'])){echo 'checked';}?> value='1' > 敏感字设置</label></li>
+                                </ul>
+                                <ul class='setall' style='padding:2px;'>
+                                    <li style='padding:2px;'><input type="submit"  value="确认提交" /></li>
+                                </ul>
+
+                        </div>
+                            
+                        
+                    </from>
+               </div>
+                   
+            </div>
+            <!-- End .content-box-content -->
+        </div>
+
+        <div class="clear"></div>
+
+        <?php $this->load->view("admin/footer.html"); ?>
+    </div>
+    <!-- End #main-content -->
+</div>
+</body>
+<style>
+    .quanxian ul{padding-left:10px;height:35px;line-height:35px; border: 1px solid #ccc;list-style: none; padding: 0px;clear:both;}
+    .quanxian ul li{padding-left:10px;float: left;}
+    .quanxian .setall{background-color: #f1f1f1;}
+</style>
+</html>

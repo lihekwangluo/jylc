@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>后台管理</title>
+    
+    <?php $this->load->view("admin/include.html"); ?>
+</head>
+<body>
+<div id="body-wrapper">
+    <!-- Wrapper for the radial gradient background -->
+    <div id="sidebar">
+        <?php $this->load->view("admin/left.html"); ?>
+    </div>
+    <!-- End #sidebar -->
+    <div id="main-content">
+        <!-- Main Content Section with everything -->
+       
+        <!-- Page Head -->
+        <div class="clear"></div>
+        <!-- End .clear -->
+        <div class="content-box">
+            <!-- Start Content Box -->
+            <div class="content-box-header">
+                <h3>设置APP导航图片</h3>
+                <ul class="content-box-tabs">
+                  <!--  <li><a href="user.php?act=add" function="default-tab">添加帐号</a></li>-->
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!-- End .content-box-header -->
+            <div class="content-box-content">
+                <div class="tab-content default-tab" id="tab2">
+                    <form  action="<?php echo site_url("/Systemset/setGpsPost");?>" method="post" name="form1" enctype="multipart/form-data" >
+                       <?php $pic = explode(',',$pic);?>
+                        <p>
+                            <label>导航图片1：</label>
+                            <input type='file' name='pic1' /></br>
+                            <input type='hidden' name='pics1' value='<?php echo $pic['0']?>'/>
+                            <img src="<?php echo $pic['0']?>" />
+                        </p>
+                        <p>
+                            <label>导航图片2：</label>
+                            <input type='file' name='pic2' /></br>
+                            <input type='hidden' name='pics2' value='<?php echo $pic['1']?>'/>
+                            <img src="<?php echo $pic['1']?>" />
+                            
+                        </p>
+                        <p>
+                            <label>导航图片3：</label>
+                            <input type='file' name='pic3' /></br>
+                            <input type='hidden' name='pics3' value='<?php echo $pic['2']?>'/>
+                            <img src="<?php echo $pic['2']?>" />
+                           
+                        </p>
+                        <p>
+                            <label>导航图片4：</label>
+                            <input type='file' name='pic4' /></br>
+                            <input type='hidden' name='pics4' value='<?php echo $pic['3']?>'/>
+                            <img src="<?php echo $pic['3']?>" />
+                        </p>
+                        <p>
+                            <label>导航图片5：</label>
+                            <input type='file' name='pic5' /></br>
+                            <input type='hidden' name='pics5' value='<?php echo $pic['4']?>'/>
+                            <img src="<?php echo $pic['4']?>" />
+                        </p>
+                       
+                        <p>
+                            <input type='hidden' name='id' value='1'>
+                            <input type="submit" name="is" class="submit" value="确认编辑" >
+                        </p>
+                    </from>
+                </div>
+            </div>
+            <!-- End .content-box-content -->
+        </div>
+
+        <div class="clear"></div>
+
+        <?php $this->load->view("admin/footer.html"); ?>
+    </div>
+    <!-- End #main-content -->
+</div>
+</body>
+
+</html>

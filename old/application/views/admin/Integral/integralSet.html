@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>后台管理</title>
+    
+    <?php $this->load->view("admin/include.html"); ?>
+</head>
+<body>
+<div id="body-wrapper">
+    <!-- Wrapper for the radial gradient background -->
+    <div id="sidebar">
+        <?php $this->load->view("admin/left.html"); ?>
+    </div>
+    <!-- End #sidebar -->
+    <div id="main-content">
+        <!-- Main Content Section with everything -->
+       
+        <!-- Page Head -->
+        <div class="clear"></div>
+        <!-- End .clear -->
+        <div class="content-box">
+            <!-- Start Content Box -->
+            <div class="content-box-header">
+                <h3>积分设置</h3>
+                <ul class="content-box-tabs">
+                  <!--  <li><a href="user.php?act=add" function="default-tab">添加帐号</a></li>-->
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!-- End .content-box-header -->
+            <div class="content-box-content">
+                <div class="tab-content default-tab" id="tab2">
+                    <form  action="<?php echo site_url("/integral/integralSetPost");?>" method="post" name="form1"  >
+                        <p>
+                            <label>邀请注册赠送积分：</label>
+                            <input name="invitation" type="text" id='invitation' style="width: 200px" value='<?php echo $invitation?>'>
+                        </p>
+                         <p>
+                            <label>注册赠送积分：</label>
+                            <input name="register" type="text" id='register' style="width: 200px" value='<?php echo $register?>'>
+                        </p>
+                         <p>
+                            <label>签到初始赠送积分：</label>
+                            <input name="login" type="text" id='login' style="width: 200px" value='<?php echo $login?>'> <span>* 签到为登录自动签到，最大签到天数为15天</span>
+                        </p>
+                        <p>
+                            <label>积分规则：</label>
+                            <textarea rows="10" name='content'><?php echo $content?></textarea>
+                        </p>
+                        <p>
+                            <input type='hidden' name='id' value='1'>
+                            <input type="submit" name="is" class="button" value="设置" >
+                        </p>
+                    </from>
+                </div>
+            </div>
+            <!-- End .content-box-content -->
+        </div>
+
+        <div class="clear"></div>
+
+        <?php $this->load->view("admin/footer.html"); ?>
+    </div>
+    <!-- End #main-content -->
+</div>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<?php
+
+    if($pageall>0){
+?>
+<!--<link href="/resources/css/home/chinalao.css" rel="stylesheet" type="text/css">-->
+	<style>
+		#page { padding: 28px 18px; font-size: 15px; background: #f7f7f7; white-space: nowrap; }
+		#page a, #page strong, #page .pgtxt { background: #ffaeb9; display: inline-block; height: 30px; line-height: 30px; margin-right: 9px; overflow: hidden; text-align: center; text-decoration: none; vertical-align: text-bottom; color: #fff;  padding: 0px 15px; }
+		#page a.active, #page a:hover { background: #06c1b0; }
+		#page strong { background: 0 none; color: #ffaeb9; }
+		#page a { cursor: pointer; }
+		#page .pgn { padding: 0 18px; }
+		#page span { display: block; }
+		#page .pc { height: 30px; width: 30px; }
+		#page .pagefr { float: right; display: inline; height: 30px; line-height: 30px; }
+		#page .pgtxt { font-size: 15px; width: 30px; border: 0 none; }
+	</style>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td valign="top" class="td_n Bottom_pd ">
+            <div id="page">
+            <?php
+                if($pageindex<=1){
+
+            ?>
+            <a id='backpage grey'>首页</a>
+            <?php
+                }else{
+            ?>
+             <a href="<?php echo site_url($url."/1")."?".$get;?>" id='nextpage'>首页</a>　
+            <?php
+                }
+            ?>
+            <?php
+         
+                for($i=$arr[0];$i<=$arr[1];$i++){
+            ?>
+                <?php
+                    if($i==$pageindex){
+                ?>
+                <a style="color:#999999;"><b><?php echo $i;?></b></a>
+                <?php
+                    }else{
+                ?>
+                 <a href="<?php echo site_url($url."/".$i)."?".$get;?>" style="color:#0066CC;"><b><?php echo $i;?></b></a>
+                <?php
+                    }   
+                ?>
+            <?php
+                }
+            ?>
+            <?php
+                if($pageindex>=$pagecount){
+            ?>
+            <a id='backpage grey'>尾页</a>
+            <?php
+                }else{
+            ?>
+             <a href='<?php echo site_url($url."/".$pagecount)."?".$get;?>' id='nextpage'>尾页</a>　
+            <?php
+                }
+            ?>            
+             　
+          </div>
+          </td>
+    </tr>
+</table>
+
+<?php
+}
+?>

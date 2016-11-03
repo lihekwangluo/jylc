@@ -1,0 +1,67 @@
+<?php
+
+    if($pageall>0){
+?>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td valign="top" class="td_n Bottom_pd ">
+            <div class="pager">
+            <?php
+                if($pageindex<=1){
+
+            ?>
+            <a class='backpage grey'>首页</a>
+            <?php
+                }else{
+            ?>
+             <a href="<?php echo site_url($url."/1")."?".$get;?>" class='nextpage'>首页</a>　
+            <?php
+                }
+            ?>
+            <?php
+         
+                for($i=$arr[0];$i<=$arr[1];$i++){
+            ?>
+                <?php
+                    if($i==$pageindex){
+                ?>
+                <a style="color:#999999;"><b><?php echo $i;?></b></a>
+                <?php
+                    }else{
+                ?>
+                 <a href="<?php echo site_url($url."/".$i)."?".$get;?>" style="color:#0066CC;"><b><?php echo $i;?></b></a>
+                <?php
+                    }   
+                ?>
+            <?php
+                }
+            ?>
+            <?php
+                if($pageindex>=$pagecount){
+            ?>
+            <a class='backpage grey'>尾页</a>
+            <?php
+                }else{
+            ?>
+             <a href='<?php echo site_url($url."/".$pagecount)."?".$get;?>' class='nextpage'>尾页</a>　
+            <?php
+                }
+            ?>            
+            
+            记录：<B style="color:#f30;"> <?php echo $pageall;?> </B>条</label>
+            　
+            <input class="int" style="width:30px;vertical-align:middle;" type="text" id="geturl" value='<?php echo $pageindex;?>' /> 
+            / <B style="color:#f30;"> <?php echo $pagecount;?> </B>页 
+          <input class="button_page_go" type="button" value=" 跳转 " style="vertical-align:middle;" onclick="getpage();" /> </div>       </td>
+    </tr>
+</table>
+</form>
+<?php
+    }
+?>
+<script>
+function getpage(){
+    var p=$("#geturl").val();
+    location="<?php echo site_url($url);?>/" + p + "?<?php echo $get?>";
+}
+</script>

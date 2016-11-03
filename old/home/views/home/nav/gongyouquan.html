@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+    <head>
+    <title>子女教育-工友圈列表</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=edge" />
+    <link rel="stylesheet" href="css/reset.css"/>
+    <!--    -->
+    <link rel="stylesheet" href="css/chinalao1.css">
+    <link rel="stylesheet" href="css/style2.css" media="screen" type="text/css" />
+    <script src='js/jquery1.2.1.js'></script>
+    <script src="js/index2.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+<script type="text/javascript" src="js1/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js1/modal.js"></script>
+<script type="text/javascript" src="js1/modls.js"></script>
+<?php $this->load->view("home/header.html"); ?>    
+<div class="pgwrap">
+      <div class="ad-city">
+    
+  </div>
+    </div>
+
+<div class="pgwrap">
+      <div class=" mgt10 l">
+  </div>
+      <div style="width:1000px" class="r mgt10">
+          <div class="tabBlock-content">
+        <div class="tabBlock-pane">
+               
+              <div class="nr_row_tabwrap">
+                  <ul class="work-box">
+	              <?php if(empty($limit)){
+	              		echo '<li class="work-list w-had w-last" style="" companyid="0">暂无信息</li>';
+	               }?>
+	              <?php foreach($limit as $array){?>
+                <li class="work-list w-had w-last" style="" companyid="0">
+                      <div class="work-t">
+                    <h2 class="wtit"><a style="color: blue;text-decoration: underline" href="<?php echo site_url()."/Gongyouquan/contents/".$array['id'];?>" target="_blank"><?php echo $array['title'];?></a></h2>
+                    <span class="wdate"><?php echo date("Y-m-d H:i:s",$array['addtime']);?></span></div>
+                       <div class="work-b job-item clearfix">
+                      
+                    <ul class="work-infn">
+                          <li><?php echo mb_substr($array['content'],0,100,'utf-8');?>...</li>
+                        </ul>
+                  </div>
+                    </li>
+                  <?php }?>
+                 <!--<li class="work-list w-had w-last" style="" companyid="0">
+                      <div class="work-t">
+                    <h2 class="wtit"><a href="#" target="_blank">小伙乘坐公交故意丢失iphone6s plus 竟然是做测试</a></h2>
+                    <span class="wdate">2015-11-07</span></div>
+                       <div class="work-b job-item clearfix">
+                      
+                    <ul class="work-infn">
+                          <li>有的朋友出门坐车的时候粗心大意，不小心弄丢了手机，那急的像热锅蚂蚁，不过青岛的李先生，在公交车上丢了手机可一点也不着急，而且手机丢的特别标新立异，到底怎么回事呢？</li>
+                        </ul>
+                  </div>
+                    </li>-->
+                 
+              </ul>
+                </div>
+          </div>
+        
+        
+        <!--tab2-->
+         
+        </div>
+    
+                  <?php 
+                $this->load->view("home/page.html");
+              ?>
+  </div>
+    </div>
+</div>
+<script>
+	pageConfig.filter = {sex0:'/m/',sex1:'/f/',gz1:1000,gz2:8500,gzurl:'/_gongzi_/',pgurl:'/_page_/'};
+</script> 
+<!--<script src="--><!--js/app/zhaogong/list.js" ></script>--> 
+<script src="js/require.min.js" ></script> 
+<script src="js/require-conf.js" ></script> 
+<script src="js/list.js" ></script> 
+<!-- footer { -->
+<?php $this->load->view("home/footer.html"); ?>   
+<a id="backtop" href="javascript:;" title="返回顶部" rel="nofollow"></a> 
+<script type="text/javascript" src="css/gdt.php" charset="UTF-8"></script> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','js/analytics.js','ga');
+  ga('create', 'UA-67905236-1', 'auto');
+  ga('require', 'linkid');
+    ga('send', 'pageview');
+</script>
+<script>
+	$(document).ready(function(){
+		$(".more").click(function(){
+			if($(".city-expect").css("display")=="none"){
+				$(".city-expect").show();
+			}else{
+				$(".city-expect").hide();
+			}
+		});
+		$(window).scroll(function() {
+		   if ($(this).scrollTop() > 100) {
+                   $("#backtop").show();
+                } else {
+                   $("#backtop").hide();
+            }
+		 });
+	   $("#backtop").click(function(){
+		   $("body, html").animate({
+                    scrollTop : 0
+           }, 800); 
+	   });
+	});
+</script>
+</body>
+</html>

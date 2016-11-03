@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>后台管理</title>
+    
+    <?php $this->load->view("admin/include.html"); ?>
+</head>
+<body>
+<div id="body-wrapper">
+    <!-- Wrapper for the radial gradient background -->
+    <div id="sidebar">
+        <?php $this->load->view("admin/left.html"); ?>
+    </div>
+    <!-- End #sidebar -->
+    <div id="main-content">
+        <!-- Main Content Section with everything -->
+       
+        <!-- Page Head -->
+        <div class="clear"></div>
+        <!-- End .clear -->
+        <div class="content-box">
+            <!-- Start Content Box -->
+            <div class="content-box-header">
+                <h3>用户列表</h3>
+                <ul class="content-box-tabs">
+                   <!--  <li><a href="user.php?act=add" function="default-tab">添加帐号</a></li> -->
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!-- End .content-box-header -->
+
+            <div class="content-box-content">
+                    <div  style="height: 40px;font-size: 14px;">
+                        <form name='search_table' method="get" action="<?php echo site_url("/Demand/publishList/");?>" >
+                            
+                            需求类别：<select id="status" name="status" >
+                                         <option value =''>所有</option>
+                                         <option value ="1" <?php if($status == 1){echo 'selected';}?> >设备出租</option>
+                                         <option value ="2" <?php if($status == 2){echo 'selected';}?>>活找队</option>
+                                         <option value ="3" <?php if($status == 3){echo 'selected';}?>>队找活</option>
+                                         <option value ="4" <?php if($status == 4){echo 'selected';}?>>队找人</option>
+                                         <option value ="5" <?php if($status == 5){echo 'selected';}?>>辅材</option>
+                                    </select>
+                            标题：<input type='text' name='soso' value='<?php echo $soso ?>'>
+                            
+                            开始时间：<input class="Wdate" type="text" onClick="WdatePicker()" value='<?php echo $startime ?>' name='startime'>
+                            结束时间：<input class="Wdate" type="text" onClick="WdatePicker()" value='<?php echo $endtime ?>' name='endtime'>
+                            <input type="submit"  value="查询" />
+                        </form>
+                    </div>
+                 <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>发布者</th>
+                        <th>标题</th>
+                        <th>发布来源</th>
+                        <th>需求类别</th>
+                        <th>发布时间</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                    <?php
+                        foreach($query->result_array() as $array){
+                    ?>
+                    <tr>
+                        <td><?php echo $array['id']?></td>
+                        <td><?php echo $array['name']?></td>
+                        <td><?php echo $array['title']?></td>
+                        <td>
+                            <?php
+                            if($array['stype'] ==1){
+                                echo "普通用户";
+                            }elseif($array['stype'] ==2){
+                                echo "企业用户";
+                            }else{
+                                echo "未知";
+                            }
+                            ?>
+                        </td>
+                        <td>
+                            <?php
+                            if($array['status'] ==1){
+                                echo "设备出租";
+                            }elseif($array['status'] ==2){
+                                echo "活找队";
+                            }elseif($array['status'] ==3){
+                                echo "队找活";
+                            }elseif($array['status'] ==4){
+                                echo "队找人";
+                            }elseif($array['status'] ==5){
+                                echo "辅材";
+                            }else{
+                                echo "未知";
+                            }
+                            ?>
+                        </td>
+                        <td><?php echo date('Y-m-d',$array['addtime']);?></td>
+                        <td>
+                            <?php
+                            if($array['zhuangtai'] =='1'){
+                                echo "已审核";
+                            }else{
+                                echo "未审核";
+                            }
+                            ?>
+                        </td>
+                        <td>
+                            <a style='cursor:pointer;' onclick="{if(confirm('确定删除吗?')){window.location='<?php echo site_url("/Demand/publishDel/$array[id]");?>';return true;}return false;}">删除</a> 
+        
+                            <?php if($_SESSION["num_JSONPOWER_arr"]['Demand']['publishAdd']){?>
+                            /
+                            <a href='<?php echo site_url("/Demand/publishAdd/$array[id]");?>'>编辑查看</a>
+                            <?php }?>
+                        </td>
+                    </tr>
+                    <?php }?>
+                    
+                </table>
+                <div>
+                   <?php 
+                   
+                   $this->load->view("admin/page.html"); 
+                   ?>
+                </div>
+                   
+            </div>
+            <!-- End .content-box-content -->
+        </div>
+
+        <div class="clear"></div>
+
+        <?php $this->load->view("admin/footer.html"); ?>
+    </div>
+    <!-- End #main-content -->
+</div>
+</body>
+<style>
+</html>

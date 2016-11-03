@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>后台管理</title>
+    
+    <?php $this->load->view("admin/include.html"); ?>
+</head>
+<body>
+<div id="body-wrapper">
+    <!-- Wrapper for the radial gradient background -->
+    <div id="sidebar">
+        <?php $this->load->view("admin/left.html"); ?>
+    </div>
+    <!-- End #sidebar -->
+    <div id="main-content">
+        <!-- Main Content Section with everything -->
+       
+        <!-- Page Head -->
+        <div class="clear"></div>
+        <!-- End .clear -->
+        <div class="content-box">
+            <!-- Start Content Box -->
+            <div class="content-box-header">
+                <h3><?php echo $query['0']['uname'].' 与 '.$query['0']['name'];
+                    if($query['0']['type'] ==1){
+                        echo '工人';
+                    }else{
+                        echo '包工头';
+                    }
+                ?> 明细</h3>
+                <ul class="content-box-tabs">
+                   <!--  <li><a href="user.php?act=add" function="default-tab">添加帐号</a></li> -->
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!-- End .content-box-header -->
+
+            <div class="content-box-content">
+                    <div  style="height: 40px;font-size: 14px;">
+                        <form name='search_table' method="get" action="<?php echo site_url("/Record/RecordDetails/");?>" >
+                            开始时间：<input id='startime' class="Wdate" type="text" onClick="WdatePicker()" value='<?php echo $startime ?>' name='startime'  style="width: 100px;">
+                            结束时间：<input id='endtime' class="Wdate" type="text" onClick="WdatePicker()" value='<?php echo $endtime ?>' name='endtime'  style="width: 100px;">
+                            <input id='zuid' type='hidden' value='<?php echo $zuid?>' name='zuid' />
+                            <input id='fuid' type='hidden' value='<?php echo $fuid?>' name='fuid' />
+                            <input id='type' type='hidden' value='<?php echo $type?>' name='type' />
+                            <input type="submit"  value="查询" />
+                            <input type="button"  value="导出Execl" id='Execl'/>
+                        </form>
+                    </div>
+                 <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>类别</th>
+                        <th>余额（元）</th>
+                        <th>日期</th>
+                    </tr>
+                    <?php
+                        foreach($query as $array){
+                    ?>
+                    <tr>
+                        <td><?php echo $array['id']?></td>
+                        <td><?php 
+                                if($array['status'] == 1){
+                                    echo "记点";
+                                }elseif($array['status'] == 2){
+                                    echo "包工";
+                                }elseif($array['status'] == 3){
+                                     echo "<span style='color:red'>借支</span>";
+                                     $array['price'] = $array['jprice'];
+                                }else{
+                                    echo "未知";
+                                }
+                        ?></td>
+                        <td><?php echo $array['price']?></td>
+                        <td><?php echo date('Y-m-d',$array['startime']);
+                                    if($array['status'] == 2){
+                                        echo " 至 ".date('Y-m-d',$array['endtime']);
+                                    }
+                        ?></td>
+                    </tr>
+                    <?php }?>
+                    <tr>
+                        <td>总计</td>
+                        <td>总余额：<?php echo $price?></td>
+                        <td>借支: <?php echo $jprice?></td>
+                        <td>余额: <?php echo $price-$jprice?></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>加班</td>
+                        <td>加班工时: <?php echo $overtime?></td>
+                        <td>点工天数：<?php echo $overday?></td>
+                        <td></td>
+                    </tr>
+                    
+                </table>
+                <div>
+                   <?php 
+                   
+                   $this->load->view("admin/page.html"); 
+                   ?>
+                    
+                </div>
+                
+                   
+            </div>
+            <!-- End .content-box-content -->
+        </div>
+
+        <div class="clear"></div>
+
+        <?php $this->load->view("admin/footer.html"); ?>
+    </div>
+    <!-- End #main-content -->
+</div>
+</body>
+<script>
+$('#Execl').click(function(){
+        var startime = $('#startime').val();
+        var endtime = $('#endtime').val();
+        var url = '<?php echo site_url("/Record/RecordDetails/?Execl=1&fuid=$fuid&zuid=$zuid&type=$type");?>'+'&startime&'+startime+'&endtime'+endtime;
+        window.location.href=url;
+});
+    
+</script>
+</html>

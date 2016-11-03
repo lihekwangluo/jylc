@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <!--<link rel="stylesheet" type="text/css" media="screen" href="css/regist.css" />-->
+<title>登陆</title>
+ 
+</head>
+<body> 
+
+<div class="wi12">
+  <div class="regAndLogin_left_box regAndLogin_ad fl" onClick="clickLog('from=chr_jslogin_leftpic');">
+    <div class="xo-blockszone">
+      <div class="chinahr_login_banner">
+        <ul>
+          <li><a rel='nofollow' target='_blank' onMouseOver="self.status='0'; return true;" onMouseOut="self.status='';return true;"><img class="lazy"  src="/resources/images/home/1417177617.gif"  width='572' height='319' alt='xxx' title='xxx' border='0' rel="0"  /></a></li>
+          <div class="clear"></div>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="section_right_box fr">
+    <div class="section_right_form">
+      <form name="form1" action="<?php echo site_url()."/Lilogin/sub";?>" method="post" onsubmit="return jsperson.checkJobseekerLogin();" class="regAndLogin_form" autocomplete="off">
+        <div class="regAndLogin_top">
+          <div class="fl regAndLogin_title1">个人登录</div>
+          <div class="fr regAndLogin_quickLink">还没有账号? <a class="font_blue" href="<?php echo site_url()."/Lilogin/register";?>">立即注册</a></div>
+        </div>
+        <div class="clear"></div>
+        <fieldset class="regAndLogin_place">
+          <p class="position_rel"><em class="user_icon"></em>
+            <label for="uname" class="regAndLogin_first">
+              <input name="uname" tabIndex="1" id="uname"  type="text" value="请输入手机号/昵称"  class="regAndLogin_firstInput" onfocus="if(this.value==this.defaultValue){this.value='';};"  onblur="if(this.value==''){this.value=this.defaultValue;}" >
+            </label>
+                         
+            <span class="user_tips" style="display:none;"></span></p>
+          <p class="position_rel" id="pws_reset"><em class="pws_icon"></em>
+            <label for="password" class="regAndLogin_second" >
+              <input class="regAndLogin_secondInput" name="password" tabIndex="2" id="password" type="password"   onfocus="if(this.value==this.defaultValue){this.value='';};"  onblur="if(this.value==''){this.value=this.defaultValue;}" placeholder="请输入密码"  />
+            </label>
+            
+           <span id="pw_span" class="onfocus_psw"></span></p>
+           
+        </fieldset>
+        <p class="reg_protocal">
+          <label for="remember" class="regAndLogin_txt margin_R205">
+            <input  name="remember" value="1" checked="checked" class="regAndLogin_checkbox" type="checkbox"  />
+            自动登录</label>
+          <a href="/modules/jsperson/forget.php" target="_blank" class="font_blue fontSize14" onClick="clickLog('from=chr_jslogin_forgetpw');">忘记密码</a>
+        <div class="clear"></div>
+        </p>
+        <input type="hidden" name="http_referer" id="http_referer" value="" />
+        <input type="hidden" name="typeid" id="typeid" value="" />
+        <input type="hidden" name="action" id="action" value="login" />
+        <p>
+          <input type="submit" onClick="clickLog('from=chr_jslogin_login');" value="登 录" class="reg_confirm" style="box-shadow:#666 1px 2px 2px;"/>
+        </p>
+        <p class="loginByOther"> 使用其他账号直接登录 </p>
+        <p> <a href="/resources/images/home/weibo_login_btn.gif" target="_blank" onClick="clickLog('from=chr_jslogin_sina');"><img src="/resources/images/home/weibo_login_btn.gif"></a>&nbsp;&nbsp; <a href="/modules/jsperson/login_other.php?action=login&type=qq" target="_blank" onClick="clickLog('from=chr_jslogin_qq');"><img src="/resources/images/home/qq_login_btn.gif"></a> </p>
+      </form>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript">
+   
+</script> 
+
+
+<!-- 基本代码统计end -->
+<?php include "logininclude.html"; ?>
+
+</div>
+
+</body>
+</html>

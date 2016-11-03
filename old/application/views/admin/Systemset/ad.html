@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>后台管理</title>
+    <script type="text/javascript">
+        function doAction(a,id){
+            ids = 0;
+            if(a=='delete'){
+                if(confirm('请确认是否删除！')){
+                    window.location.href = 'member.php?act=delete&id='+id;
+
+                }
+            }
+            if(a=='shenhe'){
+                if(confirm('请确认是否审核！')){
+                    window.location.href = 'member.php?act=shenhe&id='+id;
+                }
+            }
+
+        }
+		function search_forum(){
+			//alert(100);
+			var keywords=document.getElementById("keywords").value;
+			if(keywords=="请输入公告标题,地址检索"){
+				keywords="";
+			}
+			location="index.php?ctrl=notice&keywords=" + keywords;
+		}
+		
+		function delete_it(){
+			var s_group = document.getElementsByName("noticeid[]");
+			var s_group_value="";
+			for(var i = 0; i< s_group.length; i++){
+				if(s_group[i].checked==true){
+					s_group_value=s_group_value + "" + s_group[i].value;
+				}
+			}
+			if(s_group_value==""){
+				alert("系统提示:\n\n请选择要删除的信息！");
+				return false;
+			}else{
+				return confirm("系统提示：\n\n您确定要删除所选信息吗？删除后不可以恢复！");
+			}
+		}
+    </script>
+     <?php $this->load->view("admin/include.html"); ?>
+</head>
+<body>
+<div id="body-wrapper">
+    <!-- Wrapper for the radial gradient background -->
+    <div id="sidebar">
+        <?php $this->load->view("admin/left.html"); ?>
+    </div>
+    <!-- End #sidebar -->
+    <div id="main-content">
+        <!-- Main Content Section with everything -->
+        <noscript>
+            <!-- Show a notification if the user has disabled javascript -->
+            <div class="notification error png_bg">
+                <div> Javascript is disabled or is not supported by your browser. Please <a href="#" title="Upgrade to a better browser">upgrade</a> your browser or <a href="http://www.google.com/support/bin/answer.py?answer=23852" title="Enable Javascript in your browser">enable</a> Javascript to navigate the interface properly.
+                    Download From <a href="#">exet.tk</a></div>
+            </div>
+        </noscript>
+        <!-- Page Head -->
+        <div class="clear"></div>
+        <!-- End .clear -->
+        <div class="content-box">
+            <!-- Start Content Box -->
+            <div class="content-box-header">
+              <h3>首页轮播图片</h3>
+                <ul class="content-box-tabs">
+                  <!--  <li><a href="user.php?act=add" function="default-tab">添加帐号</a></li>-->
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!-- End .content-box-header -->
+            <div class="content-box-content">
+              <form action="<?php echo site_url("/Systemset/deleallad") ?>" method="post" onsubmit="return delete_it();">
+<table>
+                    <thead>
+                    <tr>
+                        <th>
+                            <input class="check-all" type="checkbox" />                        </th>
+                        <th>ID</th>
+                        <th>轮播图标题</th>
+                        <th>轮播图显示</th>
+                        <th>轮播图链接地址</th>
+                        <th >排序编号</th>
+                        <th >最后更新时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <td colspan="11">
+
+                              <table width="904" border="0" align="left">
+  <tr>
+    <td width="164" align="left" valign="middle"><label>
+      <input type="submit" name="button2" id="button2" value="删除所选" />
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="button" name="button" id="button" value="添加一条" onclick="location='<?php echo site_url("/Systemset/addad") ?>'" />
+    </label></td>
+<td width="730" align="right" valign="middle"><div class="pagination">                         </div>
+          <!-- End .pagination -->
+                      <div class="clear"></div></td>
+  </tr>
+</table>
+                      </td>
+                    </tr>
+                    </tfoot>
+                    <tbody>                   
+	                <?php
+                        foreach($query->result_array() as $array){
+                    ?>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="noticeid[]" id="noticeid[]"	value="<?php echo $array['id']?>" onclick="checkDeleteStatus('checkbox')" />                        </td>
+                        <td><?php echo $array['id']?></td>
+                        <td><?php echo $array['title']?></td>
+                        <td><a href="<?php echo $array['imgurl'] ?>" target="_blank"><img src="<?php echo $array['imgurl'] ?>" width=120 height=50></a></td>
+                        <td><?php echo $array['url']?></td>
+                        <td><?php echo $array['sort']?></td>
+                        <td><?php echo date("Y-m-d H:i:s",$array['addtime'])?></td>
+                        <td>
+                            <!-- Icons -->
+                            <a href='<?php echo site_url("/Systemset/adedit/$array[id]");?>' title="Edit">修改</a>
+                            <a href='<?php echo site_url("/Systemset/addelect/$array[id]");?>' title="Delete" onclick="return confirm('系统提示:\n\n您确定要删除当前信息吗？删除后不可以恢复！')"; > 删除 </a>  </td>
+                    </tr>
+                    <?php }?>
+
+                    </tbody>
+                </table>                
+                </form>
+          </div>
+            <!-- End .content-box-content -->
+        </div>
+
+        <div class="clear"></div>
+		<?php $this->load->view("admin/footer.html"); ?>
+    </div>
+    <!-- End #main-content -->
+</div>
+</body>
+
+</html>

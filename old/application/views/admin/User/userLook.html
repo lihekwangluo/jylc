@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>后台管理</title>
+    
+    <?php $this->load->view("admin/include.html"); ?>
+</head>
+<body>
+<div id="body-wrapper">
+    <!-- Wrapper for the radial gradient background -->
+    <div id="sidebar">
+        <?php $this->load->view("admin/left.html"); ?>
+    </div>
+    <!-- End #sidebar -->
+    <div id="main-content">
+        <!-- Main Content Section with everything -->
+       
+        <!-- Page Head -->
+        <div class="clear"></div>
+        <!-- End .clear -->
+        <div class="content-box">
+            <!-- Start Content Box -->
+            <div class="content-box-header">
+                <h3>用户详情</h3>
+                <ul class="content-box-tabs">
+                  <!--  <li><a href="user.php?act=add" function="default-tab">添加帐号</a></li>-->
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!-- End .content-box-header -->
+            <div class="content-box-content">
+                <div class="tab-content default-tab" id="tab2">
+                    <form  action="<?php echo site_url("/User/UserPost");?>" method="post" name="form1"  >
+                        <p>
+                            <sanp>姓 &nbsp;&nbsp; 名：</sanp>
+                            <?php echo $name?>
+                        </p>
+                        <p>
+                            <sanp>性 &nbsp;&nbsp; 别：</sanp>
+                            <?php 
+                                if($sex == 1){
+                                    echo "男";
+                                }else{
+                                    echo "女";
+                                }
+                            ?>
+                        </p>
+                        <p>
+                            <sanp>年 &nbsp;&nbsp; 龄：</sanp>
+                            <!--<?php echo $chusheng;?>-->
+                            <?php echo $this->Public->getAge2($chusheng);?>
+                        </p>
+                        <p>
+                            <label>头 &nbsp;&nbsp; 像：</label>
+                            <?php
+                                if(!$pic){
+                                    echo "该用户还没上传头像...";
+                                }else{
+                            ?>
+                            <img src='<?php $pic?>' width='50px' height='50px'/>
+                            <?php } ?>
+                        </p>
+                        <p>
+                            <sanp>联系电话：</sanp>
+                            <?php echo $mobile?>
+                        </p>
+                        <?php 
+                            if($type==2){
+                        ?>
+                         <p>
+                            <label>营业执照：</label>
+                            <?php
+                                if(!$enterprisepic){
+                                    echo "该企业还没上传营业执照...";
+                                }else{
+                            ?>
+                            <img src='<?php echo $enterprisepic?>'/>
+                            <?php } ?>
+                        </p>
+                       <?php } ?>
+                        <p>
+                            <label>身份证正面：</label>
+                            <?php
+                                if(!$cardzpic){
+                                    echo "该用户还没上传...";
+                                }else{
+                            ?>
+                            <img src='<?php echo $cardzpic?>' />
+                            <?php } ?>
+                        </p>
+                        <p>
+                            <label>身份证反面：</label>
+                            <?php
+                                if(!$cardfpic){
+                                    echo "该用户还没上传...";
+                                }else{
+                            ?>
+                            <img src='<?php echo $cardfpic?>' />
+                            <?php } ?>
+                        </p>
+                        <p>
+                            <sanp>身份证号码：</sanp>
+                            <?php echo $idcard?>
+                        </p>
+                        <p>
+                            <sanp>个人认证：</sanp>
+                            <input type='radio' name='renzheng' value='2' <?php if($renzheng == 2){echo 'checked';} ?> > 不通过
+                            <input type='radio' name='renzheng' value='1' <?php if($renzheng == 1){echo 'checked';} ?> > 通过
+                            <input type='button' id='renzheng'  value='确认'>
+                        </p>
+                        <!-- <p>
+                            <sanp style='color:red'> ↓ 平台认证资料 ↓ </sanp>
+                           
+                        </p>
+
+                        <?php
+                            $terracepic = explode(',',$terracepic);
+                        ?>
+                        
+                         <p>
+                            <label>营业执照：</label>
+                            <?php
+                                if(!$enterprisepic){
+                                    echo "该企业还没上传营业执照...";
+                                }else{
+                            ?>
+                            <img src='<?php echo $terracepic['0']?>'/>
+                            <?php } ?>
+                        </p>
+
+
+                        <?php  if($type == 1 ){ ?>
+
+                        <p>
+                            <label>身份证正面：</label>
+                            <?php
+                                if(!$cardzpic){
+                                    echo "该用户还没上传...";
+                                }else{
+                            ?>
+                            <img src='<?php echo $terracepic['1']?>' />
+                            <?php } ?>
+                        </p>
+                        <p>
+                            <label>身份证反面：</label>
+                            <?php
+                                if(!$cardfpic){
+                                    echo "该用户还没上传...";
+                                }else{
+                            ?>
+                            <img src='<?php echo $terracepic['2']?>' />
+                            <?php } ?>
+                        </p>
+
+                        <?php } ?>
+
+                         <p>
+                            <sanp>平台认证：</sanp>
+                            <input type='radio' name='rterrace' value='0' <?php if($rterrace == 0){echo 'checked';} ?> > 不通过
+                            <input type='radio' name='rterrace' value='1' <?php if($rterrace == 1){echo 'checked';} ?> > 通过
+                            <input type='radio' name='rterrace' value='2' <?php if($rterrace == 2){echo 'checked';} ?> > 审核中
+                            <input type='button' id='rterrace'  value='确认'>
+                        </p> -->
+
+                        <input type='hidden' value='<?php echo $id; ?>' id='id' />
+                    </from>
+                </div>
+            </div>
+            <!-- End .content-box-content -->
+        </div>
+
+        <div class="clear"></div>
+
+        <?php $this->load->view("admin/footer.html"); ?>
+    </div>
+    <!-- End #main-content -->
+</div>
+</body>
+<script type="text/javascript">
+    $('#renzheng').click(function(){
+        var renzheng = $('input[name="renzheng"]:checked ').val();
+        var id = $('#id').val();
+        if(id){
+            $.post("<?php echo site_url('/User/userRenzheng');?>",{id:id,renzheng:renzheng});
+        }
+        alert('提交成功！');
+        window.history.go(-1)
+    });
+    $('#rterrace').click(function(){
+        var rterrace = $('input[name="rterrace"]:checked ').val();
+        var id = $('#id').val();
+        if(id){
+            $.post("<?php echo site_url('/User/userRenzheng');?>",{id:id,rterrace:rterrace});
+        }
+        alert('提交成功！');
+        window.history.go(-1)
+    });
+</script>
+</html>

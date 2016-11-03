@@ -1,0 +1,179 @@
+<!--[if IE 6]>
+
+<![endif]-->
+<script type="text/javascript" src="/resources/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/resources/js/jquery-1.5.2.min.js"></script>
+
+<?php if($nav=="1"):?>
+<!----><script type="text/javascript" src="/resources/js/jquery.SuperSlide.2.1.1.js"></script>
+<!--<script src="/resources/js/index2.1.js"></script>-->
+<?php endif;?>
+    <!--<     *****-->
+
+<link href="/resources/css/home/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/resources/css/home/reset.css"/>  
+<link rel="stylesheet" href="/resources/css/home/chinalao1.css">
+<!--<script type="text/javascript" src="js/analyticsf.js"></script>-->
+<!---->
+<link rel="stylesheet" href="/resources/css/home/style2.css" media="screen" type="text/css" />
+
+
+<link rel="stylesheet" type="text/css" href="/resources/css/home/modal.css">
+<!----><script type="text/javascript" src="/resources/js/modal.js"></script>
+<script type="text/javascript" src="/resources/js/modls.js"></script>     <!--    ******-->
+
+<!---冲突样式-->
+<?php if(empty($css)):?>
+<link rel="stylesheet" href="/resources/css/home/base-1000.css" type="text/css" media="all" />
+ <link rel="stylesheet" href="/resources/css/home/member.css" type="text/css" />
+<?php endif;?>
+<!--<link rel="stylesheet" href="/resources/css/home/haiershangcheng.css" type="text/css" media="all" />-->
+
+<link rel="stylesheet" href="/resources/css/home/jquery1.css" type="text/css">
+<!--发布队找人-->
+<link rel="stylesheet" href="/resources/css/home/jqrxzgz.css" type="text/css">
+
+	<link href="/resources/css/home/SpryValidationTextField.css" rel="stylesheet" type="text/css">
+ <!----联系我们-->
+ <link href="/resources/css/home/about2015.css" rel="stylesheet" type="text/css">
+<script>
+        //var _hmt = _hmt || [];
+        //(function() {
+        //    var hm = document.createElement("script");
+        //    hm.src = "//hm.baidu.com/hm.js?a0b5360370daf06f8e072e3c02aee781";
+        //    var s = document.getElementsByTagName("script")[0];
+        //    s.parentNode.insertBefore(hm, s);
+        //})();
+    </script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1257678066'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257678066' type='text/javascript'%3E%3C/script%3E"));</script>
+</head>
+
+<body>
+<div id="header">
+	
+ <div class="pgwrap">
+     
+<?php if($nav=="1"):?>
+  <div class="fl wenzi"><?php echo $areaname?><span><a href="<?php echo site_url("/area/index");?>">切换城市</a></span></div>
+ <?php endif;?>
+
+  
+   <div class="toph  right">
+      <a href="<?php echo site_url()."/score/index";?>">积分兑换</a><span class="dln">|</span><a href="<?php echo site_url("/Sjb/index");?>" rel="nofollow">手机版</a>
+      <span class="dln">|</span>
+      <?php if ($_SESSION["uid"]): ?>
+        <a href="<?php echo site_url()."/PersonalCenter/index";?>">个人中心</a><span class="dln">|</span>
+        <a href="<?php echo site_url()."/Lilogin/logout";?>" rel="nofollow">退出</a>
+      <?php else: ?>
+        <a href="<?php echo site_url()."/Lilogin/login";?>" rel="nofollow">登录/</a><a href="<?php echo site_url()."/Lilogin/register";?>" rel="nofollow">注册</a> 
+      <?php endif ?></div>
+  </div>
+
+  
+  <div class="pgwrap clearfix">
+
+    <div class="logo-tel">
+        <a href="#" class="icon">
+            <img src="/resources/images/new_logo.png" width="100%" style="margin:0 auto;" />
+        </a> 
+          
+    </div>
+    <div class="search">
+	  <?php if($index==1){?>
+      <form action="<?php echo site_url()."/index/indexsearch";?>" method="get" id="searchform">
+        <div class="sch-bd clearfix">
+          <div class="sch-txt">
+            <input type="text"   value="" class="sch-txt-input" name="name"/>
+          </div>
+          <a href="javascript:;"  class="sch-btn">搜&nbsp;索</a> </div>
+        <p class="sch-link"> 大家都在找： 
+        <?php foreach($search as $array){ ?>
+        <a href="javascript:;" rel="nofollow" class="li_zhao1" zhao="<?php echo $array['name'] ?>"><?php echo $array['name'] ?></a>
+        <?php }?>
+         </p>
+      </form>
+      <?php }?>
+      <?php if($index!=1){?>
+      <form action="<?php echo site_url()."/index/indexsearch2";?>" method="get" id="searchforms">
+        <div class="sch-bd clearfix">
+          <div class="sch-txt">
+            <input type="text"   value="" class="sch-txt-input" name="name"/>
+          </div>
+          <a href="javascript:;"   class="sch-btn">搜&nbsp;索</a> </div>
+        <p class="sch-link"> 大家都在找： 
+        <?php foreach($search as $array){ ?>
+        <a href="javascript:;" rel="nofollow" class="li_zhao" zhao="<?php echo $array['name'] ?>"><?php echo $array['name'] ?></a>
+        <?php }?>
+         </p>
+      </form>
+      <?php }?>
+    </div>
+    <!--<div class="searchi">
+		<form name="searchiform" method="post" >
+			<input name='ecmsfrom' type='hidden' value='9'>
+			<input type="hidden" name="show" value="title,newstext">
+			<select name="classid" id="choose">
+				<option value="0">搜索全部</option>
+				<option value="1">新闻中心</option>
+				<option value="4">技术文档</option>
+				<option value="22">下载中心</option>
+			</select> 
+			<input class="inp_srh" name="keyboard"  placeholder="请输入您要搜索的作品" >
+			<input class="btn_srh" type="submit" name="submit" value="搜索">
+		</form> 
+	 
+	    <p class="sch-link"> 大家都在找： <a href=" #" rel="nofollow">普工</a> <a href="#" rel="nofollow">操作工</a> <a href="#" rel="nofollow">厨师</a> <a href="#" rel="nofollow">技工</a> <a href="#" rel="nofollow">销售</a> </p>
+	</div>
+	
+<script type="text/javascript" src="/resources/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/resources/js/jquery.select_1.js"></script>-->
+    <div>
+     <div class="fabu"><i></i><a data-toggle="modal" href="#login-modal">发布信息</a></div>
+  </div>
+  </div>
+</div>
+  <div class="modal" id="login-modal">
+	<a class="close" data-dismiss="modal">×</a>
+	<h1>请选择发布类型</h1>
+	<ul class="login-bind-tp">
+		<li class="duizhaoren"> <a href="<?php echo site_url("/Publish/index");?>">队找人</a> </li>
+		<li class="huozhaodui"> <a href="<?php echo site_url("/Publish/index2");?>"> 活找队</a> </li>
+		<li class="duizhaohuo"> <a href="<?php echo site_url("/Publish/index3");?>"> 队找活</a> </li>
+        <li class="fucai"> <a href="<?php echo site_url("/Publish/index4");?>">  辅材购买</a> </li>
+		<li class="shebei"> <a href="<?php echo site_url("/Publish/index5");?>"> 设备承租</a> </li>
+	</ul>
+	
+</div>
+ <div id="nav">
+      <div class="pgwrap navs">
+    <ul class="sf1 ">
+         <li><a href="<?php echo site_url("/Index/index");?>" <?php if($nav=="1"):?>class="selected"<?php endif;?>>首页</a></li>
+          <li><a href="<?php echo site_url("/ActivityMan/index");?>" <?php if($nav=="2"):?>class="selected"<?php endif;?> >队找人</a></li>
+          <li><a href="<?php echo site_url("/ActivityTeam/index");?>" <?php if($nav=="3"):?>class="selected"<?php endif;?> >活找队</a></li>
+          <li><a href="<?php echo site_url("/TeamActivity/index");?>" <?php if($nav=="4"):?>class="selected"<?php endif;?> >队找活</a></li>
+          <li><a href="<?php echo site_url("/Fucai/index");?>" <?php if($nav=="5"):?>class="selected"<?php endif;?> >辅材购买</a></li>
+          <li><a href="<?php echo site_url("/Shebei/index");?>" <?php if($nav=="6"):?>class="selected"<?php endif;?>>设备承租</a></li>
+           <li><a href="<?php echo site_url("/Gongyouquan/index");?>" <?php if($nav=="7"):?>class="selected"<?php endif;?>>工友圈</a></li> 
+           <li><a  href="<?php echo site_url("/Gongyouquan/zinv");?>" <?php if($nav=="8"):?>class="selected"<?php endif;?>>子女教育</a></li>
+          <li><a href="<?php echo site_url("/Sjb/index");?>">手机版</a></li>
+        </ul>
+  </div>
+    </div>
+<script>
+	$(".sch-btn").click(function(){
+		$("#searchform").submit();
+	});
+	$(".sch-btn").click(function(){
+		$("#searchforms").submit();
+	});
+	$(".li_zhao").click(function(){
+		var name=$(this).attr("zhao");
+		 location.href ='<?php echo site_url("/Index/indexsearch2/");?>'+"?name="+name;
+		//alert(name);	
+	});
+	$(".li_zhao1").click(function(){
+		var name=$(this).attr("zhao");
+		 location.href ='<?php echo site_url("/Index/indexsearch/");?>'+"?name="+name;
+		//alert(name);	
+	});
+</script>

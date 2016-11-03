@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+    <title>用户发布-队找活</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=edge" />
+   <?php include "/../header.html" ?>
+<div class="mask"> </div>
+<!--<script src="/resources/SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<link href="/resources/SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">-->
+<div id="wrap">
+	
+	<div class="city">
+		<div class="top01-city">
+			<em class="ok">确定</em><b>请选择工种</b>
+		</div>
+		<div class="mid01-city">
+			<div class="cityshow" id="show">
+				<i>已选工种:</i>
+				<ul></ul>	
+			</div>
+
+			<div class="cityshow1" id="show1">
+			<table>
+			<tbody><tr><td colspan="2"><i>主要工种:</i></td></tr>
+			<tr><td>
+			<ul class="cityul">
+		 	<li>
+				<?php foreach($carft as $array){?><a><b gongzhongid="<?php echo $array['id']?>"	class="gong1"><?php echo $array['name']?></b></a><?php }?></li>
+			</ul>
+			</td>
+			 
+			</tr>	
+ 
+    </table>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="pgwrap">
+      <form action="<?php echo site_url()."/Publish/fabu3";?>" method="post">
+        <div class="ad-fbnr">
+        <div class="loyls">为了信息的准确性，请尽量填写真实信息</div> 
+        <table width="1024"  height="550" border="0" cellspacing="0" cellpadding="0">
+  <tr width="156" height="20"></tr>
+ <tr>
+    <td height="50" align="right"><span class="xhb">*</span>地&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 区：</td>
+    <td colspan="2"><label for="diqu"></label>
+      <select class="loyln" name="diqu" id="diqu" onchange="show_shi(this)">
+        <option value="0">-- 地区 --</option>
+		<?php foreach($sheng as $s){?>
+			<option value="<?php echo $s['area_id']?>"><?php echo $s['area_name']?></option>
+		<?php }?>
+      </select>
+      <label for="diqu_shi"></label>
+      <select class="loyln" name="diqu_shi" id="diqu_shi">
+         <option value="0">-- 市 --</option>
+		<?php foreach($shi as $ss){?>
+			<option value="<?php echo $ss['area_id']?>"><?php echo $ss['area_name']?></option>
+		<?php }?>
+      </select></td>
+  </tr>
+
+    <tr>
+    <td height="50" align="right"><span class="xhb">*</span>队伍人数：</td>
+    <td colspan="2"><span id="sprytextfield4">
+    <label for="tel"></label>
+    <input name="duiwurenshu" type="text" class="loyab"  id="tel" value="" maxlength="11" placeholder="请输入队伍人数">
+    <span class="textfieldRequiredMsg">请输入联系人数。</span><span class="textfieldInvalidFormatMsg">格式不正确</span></span></td>
+  </tr>  <tr>
+  
+    <td width="156" height="50" align="right"><span class="xhb">*</span>工&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 种：</td> 
+    <td colspan="2"> 
+    
+      <!--<label for="xuyao_gongzhong" ></label>
+      <input name="xuyao_gongzhong"  type="text" class="loyab "  id="xuyao_gongzhong"  >--> <div style="height:35px; width:220px; border:1px #CCCCCC solid;"><b class="acity">请选择工种</b></div> 
+     
+      </td>
+  </tr>
+
+  <tr>
+    <td height="50" align="right"><span class="xhb">*</span>权&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 限：</td>
+    <td width="145"><input name="radio" type="radio" id="quanxian1" value="1" checked>
+      认证用户可见</td>
+    <td width="723"><input type="radio" name="radio" id="quanxian2" value="2">
+全部用户可见</td>
+  </tr>
+  <tr>
+    <td height="50" align="right"><span class="xhb">*</span>联&nbsp; 系 人：</td>
+    <td colspan="2"><span id="sprytextfield2">
+      <label for="lianxiren"></label>
+      <input name="lianxiren" type="text" class="loyab" id="lianxiren" value="" maxlength="4" placeholder="请输入姓名">
+      <span class="textfieldRequiredMsg">需要提供一个值。</span></span></td>
+  </tr>
+  <tr>
+    <td height="50" align="right"><span class="xhb">*</span>电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 话：</td>
+    <td colspan="2"><span id="sprytextfield4">
+    <label for="tel"></label>
+    <input name="tel" type="text" class="loyab" id="tel" value="" maxlength="11" placeholder="请输入手机号">
+    <span class="textfieldRequiredMsg">请输入联系电话。</span><span class="textfieldInvalidFormatMsg">格式不正确</span></span></td>
+  </tr>
+  <tr>
+    <td height="200" align="right"><span class="xhb">*</span>队伍介绍：</td>
+    <td colspan="2"><label for="yaoqiu"></label>
+      <textarea class="textb" name="yaoqiu" cols="60" rows="10" id="yaoqiu" placeholder="这是详细要求"></textarea></td>
+  </tr>
+ 
+  <tr>
+    <td height="50" align="right">&nbsp;</td>
+    <td colspan="2"><input type="submit"  class="int_b"  name="ok" id="ok" value="确定"></td>
+  </tr>
+ 
+        </table>
+</div>
+</form>
+</div>
+
+ 
+ 
+<script>
+	pageConfig.filter = {sex0:'/m/',sex1:'/f/',gz1:1000,gz2:8500,gzurl:'/_gongzi_/',pgurl:'/_page_/'};
+</script> 
+<!--<script src="--><!--js/app/zhaogong/list.js" ></script>--> 
+<script src="js/require.min.js" ></script> 
+<script src="js/require-conf.js" ></script> 
+<script src="js/list.js" ></script> 
+<!-- footer { -->
+<?php include "/../footer.html" ?>
+    
+<a id="backtop" href="javascript:;" title="返回顶部" rel="nofollow"></a> 
+<script type="text/javascript" src="css/gdt.php" charset="UTF-8"></script> 
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','js/analytics.js','ga');
+  ga('create', 'UA-67905236-1', 'auto');
+  ga('require', 'linkid');
+    ga('send', 'pageview');
+var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
+var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4", "integer", {validateOn:["blur"]});
+	function show_shi(){
+		var diqu=$("#diqu").val();
+		$.ajax({
+			url:"<?php echo site_url()."/Publish/index_2"?>", 
+			type: 'POST', 
+			data:{diqu:diqu}, 
+			dataType:'json', 
+			timeout: 5000, 
+			error: function(){
+				alert("网络故障！");
+			},
+			beforeSend:function(){
+				
+			},
+			success:function(result){
+				var f='<option value="0">-- 市 --</option>';
+				for(var g in result){
+					f+='<option value="'+result[g]['area_id']+'">'+result[g]['area_name']+'</option>';
+				}
+				$('#diqu_shi').html(f);
+
+
+			} 
+		});
+	}
+</script> 
+ 
+</body>
+</html>

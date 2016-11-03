@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+    <title>联系我们</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=edge" />
+ <?php $this->load->view("home/header.html"); ?>  
+<div class="main clear">
+    <div class="mainLeft">
+        <div class="ml-box">
+            <div class="ml-txt">
+                <h3 class="ml-txt-head">联系我们</h3>
+                <div class="ml-txt-body">
+                    <p><?php echo $content?></p>
+                </div>
+            </div>
+            
+            
+            <div class="ml-txt">
+                <h3 class="ml-txt-head">更多</h3>
+                <div class="ml-txt-body">
+                   <p>免费求职热线<i class="w3em"></i><?php echo $moblie?></p>
+                    <p>邮箱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="w3em"></i><?php echo $mail?> </p>
+                    <p>微信&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<i class="w3em"></i><?php echo $weixin?> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainRight">
+        <p class="mr-tit">扫二维码关注</p>
+        <div class="mr-box">
+            <!--<img src="/resources/images/home/chinalao-gongyoubanga.jpg" width="210px" height="210px"/>-->
+            <img src="/resources/images/and_qrcode.png" width="210px" height="210px"/>
+            <p><span>“建遇良才”</span>安卓版</p>
+          
+      </div>
+        <div class="mr-box">
+            <!--<img src="/resources/images/home/chinalao-gongyoubanga.jpg" width="210px" height="210px"/>-->
+            <img src="/resources/images/ios_qrcode.png" width="210px" height="210px"/>
+            <p><span>“建遇良才”</span>ios版</p>
+           
+      </div>
+        
+    </div>
+</div>
+<script>
+	pageConfig.filter = {sex0:'/m/',sex1:'/f/',gz1:1000,gz2:8500,gzurl:'/_gongzi_/',pgurl:'/_page_/'};
+</script> 
+<!--<script src="--><!--js/app/zhaogong/list.js" ></script>--> 
+<script src="js/require.min.js" ></script> 
+<script src="js/require-conf.js" ></script> 
+<script src="js/list.js" ></script> 
+<!-- footer { -->
+<?php $this->load->view("home/footer.html"); ?> 
+<a id="backtop" href="javascript:;" title="返回顶部" rel="nofollow"></a> 
+<script type="text/javascript" src="css/gdt.php" charset="UTF-8"></script> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','js/analytics.js','ga');
+  ga('create', 'UA-67905236-1', 'auto');
+  ga('require', 'linkid');
+    ga('send', 'pageview');
+</script>
+</body>
+</html>

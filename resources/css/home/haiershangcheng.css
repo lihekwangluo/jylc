@@ -1,0 +1,67 @@
+@charset "utf-8";
+a.bfd_img_logo{float:right;display:block;width:101px;height:14px;margin:8px 8px 0 0;background:url(http://static.baifendian.com/themes/logo/bfd_logo_ch.gif) no-repeat;overflow:hidden;}
+a.bfd_img_logo:hover{background:url(http://static.baifendian.com/themes/logo/bfd_logo_ch.gif) no-repeat 0 -14px;}
+/*列表页*/
+.bfd_ls_title{background: url('http://cdn02.ehaier.com/image/4e5a5d3d14a4ce9435000021.png') left -205px repeat-x;height: 31px;border-right: 1px solid #c9c9c9;padding:0;margin:0;}
+.bfd_ls_title h2{background: url('http://cdn02.ehaier.com/image/4e5a5d3d14a4ce9435000021.png') left -238px no-repeat;height: 31px;padding: 0 0 0 15px;width: 150px;margin:0;}
+.bfd_ls_title h2 span{background: url('http://cdn02.ehaier.com/image/4e5a5d3d14a4ce9435000021.png') right -238px no-repeat;padding: 0 15px 0 0;display: block;height: 30px;line-height: 30px;text-align: center;}
+.bfd_border{overflow: hidden;width: 793px;border: 1px solid #c9c9c9;border-top: none;}
+.bfd_border .bfd_show_list{padding: 5px 0 7px 10px;overflow: hidden;}
+.bfd_border .bfd_show_list li{float:left;border-right:1px solid #f2f4f4;padding:0 11px;width:130px;text-align:center;position:relative;overflow:hidden;list-style:none;}
+.bfd_border .bfd_show_list li.none{border:none;}
+.bfd_border .bfd_show_list .bfd_title{height:32px;line-height:16px;overflow:hidden;margin-top:5px;}
+.bfd_border .bfd_show_list .bfd_title a{color:#000;}
+.bfd_border .bfd_show_list .bfd_title a span{color:#D70D48;}
+.bfd_border .bfd_show_list .bfd_price{color: #d71149;line-height: 24px;}
+.bfd_border .bfd_show_list .bfd_price .price{color:#d71149;line-height:24px;color: #d71249;font-size: 18px;font-weight: 700;font-family: tahoma, arial, 宋体, sans-serif;line-height: 2em;}
+.bfd_border .bfd_show_list .bfd_img{display:block;}
+.bfd_border .bfd_show_list .bfd_img img{width:130px;height:130px;}
+.bfd_border .bfd_pl{height:24px;line-height:24px;}
+/*无货*/
+#bfd_hot-recommend,#bfd_404-recommend{width:1000px;overflow:hidden;margin:0 auto;}
+.bfd_border_del{overflow: hidden;width: 1000px;border: 1px solid #c9c9c9;border-top: none;}
+.bfd_border_del .bfd_show_list{padding: 5px 0 7px 10px;overflow: hidden;_height:190px;}
+.bfd_border_del .bfd_show_list li{float:left;border-right:1px solid #f2f4f4;padding:0 16px;width:130px;text-align:center;position:relative;overflow:hidden;list-style:none;}
+.bfd_border_del .bfd_show_list li.none{border:none;}
+.bfd_border_del .bfd_show_list .bfd_title{height:32px;line-height:16px;overflow:hidden;margin-top:5px;}
+.bfd_border_del .bfd_show_list .bfd_title a{color:#000;}
+.bfd_border_del .bfd_show_list .bfd_title a span{color:#D70D48;}
+.bfd_border_del .bfd_show_list .bfd_price{color: #d71149;line-height: 24px;}
+.bfd_border_del .bfd_show_list .bfd_price .price{color:#d71149;line-height:24px;color: #d71249;font-size: 18px;font-weight: 700;font-family: tahoma, arial, 宋体, sans-serif;line-height: 2em;}
+.bfd_border_del .bfd_show_list .bfd_img{display:block;}
+.bfd_border_del .bfd_show_list .bfd_img img{width:130px;height:130px;}
+.bfd_border_del .bfd_pl{height:24px;line-height:24px;}
+
+/*单品页*/
+.bfd_border_left{border:1px solid #ddd;border-bottom:none;margin:0 0 10px 0;-moz-border-radius:3px;-webkit-border-radius:3px ;border-radius:3px;overflow:hidden;}
+.bfd_border_left .bfd_header{background:url('http://cdn09.ehaier.com/images/product/sprite-product-repeat.png') repeat-x;height:48px;padding:0 0 0 16px;line-height:40px;font-size:1.17em;background-position:0 -50px;font-weight:bold;}
+.bfd_border_left .bfd_img{margin:8px 0;display:block;text-align:center;}
+.bfd_border_left .bfd_img img{width:120px;height:120px;}
+.bfd_border_left li{border-bottom:1px solid #ddd;list-style:none;}
+.bfd_border_left li .bfd_title{font-weight:normal;text-align:center;}
+.bfd_border_left li .bfd_price{color:#d71249;padding:10px 0;font-size:1.17em;text-align:center;}
+/*搜索&会员中&404*/
+.bfd_sr_title,.bfd_ap_title{font-size:14px;font-weight:bold;height:30px;background:#f9f9f9;padding: 5px 12px;border-bottom: 1px solid #dddddd;margin-top:10px;}
+.bfd_sr_title span,.bfd_ap_title span{font-family: "微软雅黑";color: #000;line-height: 30px;font-weight: bold;font-size: 16px;overflow: hidden;}
+.bfd_border_con{overflow: hidden;width: 793px;}
+.bfd_border_con .bfd_show_list{padding: 5px 0 7px 10px;overflow: hidden;}
+.bfd_border_con .bfd_show_list li{float:left;padding:5px 16px;border:1px solid #fff;width:160px;text-align:center;margin-bottom:10px;overflow:hidden;list-style:none;}
+.bfd_border_con .bfd_show_list li:hover{padding:5px 16px;border:1px solid #ccc;}
+.bfd_border_con .bfd_show_list .bfd_title{height:32px;line-height:16px;overflow:hidden;}
+.bfd_border_con .bfd_show_list .bfd_title a{color:#000;}
+.bfd_border_con .bfd_show_list .bfd_title span a{color:#D70D48;}
+.bfd_border_con .bfd_show_list .bfd_price{color: #d71149;line-height: 24px;}
+.bfd_border_con .bfd_show_list .bfd_price .price{color:#d71149;line-height:24px;color: #d71249;font-size: 18px;font-weight: 700;font-family: tahoma, arial, 宋体, sans-serif;line-height: 2em;}
+.bfd_border_con .bfd_show_list .bfd_img{display:block;width:130px;margin:0 auto 8px auto;text-align:center;}
+.bfd_border_con .bfd_show_list .bfd_img img{width:130px;height:130px;}
+/*404*/
+.bfd_border_404{overflow: hidden;width: 1000px;}
+/*团购*/
+.bfd_border_right{border: 1px solid #afafaf;margin: 8px 0 0 0;overflow:hidden;}
+.bfd_border_right .bfd_header{background: url('http://cdn02.ehaier.com/image/4f7d2bf0d572fd8e6f00018a.png') 0 -442px no-repeat;height: 30px;padding: 0 10px;line-height:30px;font-size:14px; font-weight:bold;color:#000;}
+.bfd_border_right .bfd_img{margin:8px 0;display:block;text-align:center;}
+.bfd_border_right .bfd_img img{width:120px;height:120px;}
+.bfd_border_right li{border-bottom:1px solid #ddd;list-style:none;margin:0 10px;}
+.bfd_border_right li .bfd_title{font-weight:normal;text-align:center;}
+.bfd_border_right li .bfd_price{color:#d71249;padding:10px 0;font-size:1.17em;text-align:center;}
+.bfd_border_right li.none{border:none;}

@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta property="qc:admins" content="262704770765011526375" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta property="wb:webmaster" content="6ffdc657eef2403e" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11" >
+    <title>我要认证--用户中心</title>
+
+<?php $this->load->view("home/header.html"); ?>  
+    <script type="text/javascript">
+$(function(){
+
+	$("input[type=file]").change(function(){
+		$(this).parents(".uploader").find(".filename").val($(this).val());
+	});
+	
+	$("input[type=file]").each(function(){
+		if($(this).val()==""){
+			$(this).parents(".uploader").find(".filename").val("请选择文件...");
+		}
+	});
+	
+});
+</script>
+<div class="bigwrapper">
+  <div class="wrapper clearfix"> 
+    <!--位置导航-->
+    <div class="crumb">您现在的位置： <a href="/">首页</a> &gt; <a href="/">个人中心</a> &gt; 我要认证</div>
+    <!--左侧导航-->
+    <div class="wrapper_side uc_nav mbot_20">
+      <h2><a href="index.html">个人中心</a> </h2>
+      <?php include "left.html" ?>
+    </div>
+    <!--右侧主要内容-->
+     <div class="wrapper_main myorder">
+<form action="<?php echo site_url('personalcenter/certification') ?>" id="uploadForm" name="uploadForm" method="post" enctype="multipart/form-data">
+      <table width="800" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="161" height="50" align="right">姓名：</td>
+    <td width="639" align="left"><label for="name"></label>
+      <input class="loyab" type="text" name="name" id="name" value="<?php echo $name; ?>" /></td>
+  </tr>
+  <tr>
+    <td height="50" align="right">身份证：</td>
+    <td align="left"><label for="zhenjian"></label>
+      <input class="loyab" type="text" name="idcard" id="idcard" value="<?php echo $idcard; ?>" /></td>
+  </tr>
+  <tr>
+    <td height="50" align="right">认证类型：</td>
+    <td align="left"><label for="type"></label><!--<div class="lobngb" style="width:120px">商家不提交营业执照</div>-->
+      <select class="loyln" name="type" id="type">
+        <option value="0">---认证类型---</option> 
+        <option <?php if($type==1) echo "selected"; ?> value="1">商家</option>
+        <option <?php if($type==2) echo "selected"; ?> value="2">厂家</option>
+        <option <?php if($type==3) echo "selected"; ?> value="3">个人认证</option>
+      </select>
+      <label for="zhenjian"></label></td>
+  </tr>
+  <tr>
+    <td height="50" align="right">身份证正面：</td>
+    <td colspan="2" align="left">
+<div class="uploader upolb white">
+    <input type="text" class="filename" readonly>
+    <input type="button" name="file" class="button" value="上传...">
+    <input type="file" name="idcard_1" id="idcard_1" size="30">
+</div><div class="lobngb">请上传清晰照片</div></td>
+  </tr>
+  <tr>
+    <td height="50" align="right">身份证反面：</td>
+    <td colspan="2" align="left">
+<div class="uploader upolb white">
+    <input type="text" class="filename" readonly>
+    <input type="button" name="file" class="button" value="上传...">
+    <input type="file" id="idcard_2" name="idcard_2" size="30">
+</div><div class="lobngb">请上传清晰照片</div></td>
+  </tr>
+  <tr>
+    <td height="50" align="right">营业执照：</td>
+    <td colspan="2" align="left">
+<div class="uploader upolb white">
+    <input type="text" class="filename" readonly>
+    <input type="button" name="file" class="button" value="上传...">
+    <input type="file" id="zhizhao" name="zhizhao" size="30">
+</div><div class="lobngb">请上传清晰照片</div></td>
+  </tr>
+  <tr>
+    <td height="50" align="right">&nbsp;</td>
+    <td colspan="2" align="left"><input type="button" class="int_b" name="OK" onclick="sub()" value="提交" /></td>
+  </tr>
+      </table>
+      </form>
+
+    </div>
+
+
+  </div>
+</div>
+
+ <?php $this->load->view("home/footer.html"); ?>  
+
+<script src="/resources/js/jquery.form.js"></script>
+<script src="/resources/layer/layer.js"></script>
+<script type="text/javascript">
+
+  function sub(){
+      var type = $("#type option:selected").val();
+      var name = $("#name").val();
+      var idcard = $("#idcard").val();
+
+      if(!type || !name||!idcard) {
+          layer.msg("请填写完整");
+          return false;
+      }
+
+      if(type==1 && (!$("#idcard_1").val() || !$("#idcard_2").val())){
+          layer.msg("请上传身份证正反面");
+          return false;
+      }
+
+      if(type==2 && !$("#zhizhao").val()){
+          layer.msg("请上传营业执照");
+          return false;
+      }
+      
+      var index = layer.load(2,{shade:false});
+       $('#uploadForm').ajaxSubmit(function(data){
+            layer.close(index);
+            if(data==true){
+                layer.msg("提交成功");  
+            }else{
+                layer.msg(data);
+            }
+        });
+        return false;
+  }
+</script>
+</body>
+</html>

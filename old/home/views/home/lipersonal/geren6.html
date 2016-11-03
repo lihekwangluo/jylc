@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta property="qc:admins" content="262704770765011526375" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="wb:webmaster" content="6ffdc657eef2403e" />
+<title>我要认证--用户中心</title>
+<meta name="generator" content="PEC" />
+<?php include "/../header.html" ?>
+    <script type="text/javascript">
+$(function(){
+
+	$("input[type=file]").change(function(){
+		$(this).parents(".uploader").find(".filename").val($(this).val());
+	});
+	
+	$("input[type=file]").each(function(){
+		if($(this).val()==""){
+			$(this).parents(".uploader").find(".filename").val("请选择文件...");
+		}
+	});
+	
+});
+</script>
+<div class="bigwrapper">
+  <div class="wrapper clearfix"> 
+    <!--位置导航-->
+    <div class="crumb">您现在的位置： <a href="http://www.#.com">首页</a> &gt; <a href="/index.html">我的建筑</a> </div>
+    <!--左侧导航-->
+    <div class="wrapper_side uc_nav mbot_20">
+      <h2><a href="index.html">个人中心</a> </h2>
+      <?php include "left.html" ?>
+    </div>
+    <!--右侧主要内容-->
+     <div class="wrapper_main myorder">
+      <form action="" method="get">
+      <table width="800" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="161" height="50" align="right">姓名：</td>
+    <td width="639" align="left"><label for="name"></label>
+      <input class="loyab" type="text" name="name" id="name" /></td>
+  </tr>
+  <tr>
+    <td height="50" align="right">身份证：</td>
+    <td align="left"><label for="zhenjian"></label>
+      <input class="loyab" type="text" name="zhenjian" id="zhenjian" /></td>
+  </tr>
+  <tr>
+    <td height="50" align="right">认证类型：</td>
+    <td align="left"><label for="renzhen_lx"></label>
+      <select class="loyln" name="renzhen_lx" id="renzhen_lx">
+        <option>---认证类型---</option>
+        <option>商家</option>
+        <option>厂家</option>
+      </select>      <label for="zhenjian"></label></td>
+  </tr>
+  <tr>
+    <td height="50" align="right">身份证正面：</td>
+    <td colspan="2" align="left">
+<div class="uploader upolb white">
+    <input type="text" class="filename" readonly>
+    <input type="button" name="file" class="button" value="上传...">
+    <input type="file" size="30">
+</div><div class="lobngb">请上传清晰照片</div></td>
+  </tr>
+  <tr>
+    <td height="50" align="right">身份证反面：</td>
+    <td colspan="2" align="left">
+<div class="uploader upolb white">
+    <input type="text" class="filename" readonly>
+    <input type="button" name="file" class="button" value="上传...">
+    <input type="file" size="30">
+</div><div class="lobngb">请上传清晰照片</div></td>
+  </tr>
+  <tr>
+    <td height="50" align="right">营业执照：</td>
+    <td colspan="2" align="left">
+<div class="uploader upolb white">
+    <input type="text" class="filename" readonly>
+    <input type="button" name="file" class="button" value="上传...">
+    <input type="file" size="30">
+</div><div class="lobngb">请上传清晰照片</div></td>
+  </tr>
+  <tr>
+    <td height="50" align="right">&nbsp;</td>
+    <td colspan="2" align="left"><input type="submit"   class="int_b" name="OK" id="OK" value="提交" /></td>
+  </tr>
+      </table>
+      </form>
+
+    </div>
+
+
+  </div>
+</div>
+   <div id="footer" >
+      <div class="pgwrap">
+    <div class="copyright">
+          <div class="foot-link"><a href="" rel="nofollow">关于建筑</a> <a href=" " rel="nofollow">企业文化</a> <a href=" " rel="nofollow">法律声明</a> <a href=" " rel="nofollow">服务条款</a> <a href="/">加盟合作</a> <a href=" " rel="nofollow">诚聘英才</a> <a href=" " rel="nofollow">联系我们</a> </div>
+          <div class="foot-seo">是中国领先的蓝领找工作网站,提供最新 <a href=" ">普工招聘</a> <a href=" ">电子厂招聘</a> <a href=" ">工厂招聘信息</a> (xxxxxxxxx.com)是中国真正为工人服务的 <a href=" ">打工网、招工网</a>。 </div>
+          <p>中劳网版权所有 2005-2015 | 鲁ICP备11040554号</p>
+        </div>
+  </div>
+    </div>
+<script type="text/javascript" src="js1/jquery-1.8.2.min.js"></script> 
+<script type="text/javascript" src="js1/base.js"></script> 
+<script type="text/javascript" src="js1/head.min.js"></script> 
+ 
+<!-- google [2] -->
+<noscript>
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/977487004/?value=0&amp;guid=ON&amp;script=0"/>
+</noscript>
+
+<!-- 品友 [5] --> 
+<!-- mnt [10] --> 
+<script type="text/javascript">
+    //user scripts
+    var dr='';
+    var r=dr?dr:encodeURIComponent(document.referrer);
+    var rn=Math.floor(Math.random()*2147483647);
+    var u='';
+    if(r!==''&&r!==0&&r!=='0'&&r!==null&&r!==false&&r!==undefined){u+='&referrer='+r}
+    document.write('<img width="1" height="1" style="position:absolute;" src="http://mnt.ehaier.com/mnt.gif?v=0.3&rn='+rn+u+'" />');
+</script> 
+
+<!-- Acxiom[11] -->
+<noscript>
+<div style="visibility:hidden;display:none">
+  <object type="text/html" width="0" height="0" data="//t-cn.acxiom-online.com/tag/db749ed1e60d113dba67560ebadb445b/ns.html">
+  </object>
+</div>
+</noscript> 
+<script type="text/javacript" src="js1/haiershangcheng.js"></script> 
+<script type="text/javascript" src="js1/jquery.soValidate.js"></script> 
+<script type="text/javascript" src="js1/member_v4.js"></script> 
+ 
+</body>
+</html>

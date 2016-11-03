@@ -1,0 +1,150 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="m.178hui.com" />
+<meta name="applicable-device" content="mobile" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>会员中心 — 一起惠返利网·触摸版</title>
+<link href="css/public.css" rel="stylesheet" type="text/css" />
+<link href="css/user.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="layer/layer.js"></script>
+<script>
+$(window).load(function() {
+	$("#status").fadeOut();
+	$("#preloader").delay(350).fadeOut("slow");
+})
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".login_out").click(function(){
+		layer.confirm('您确定要退出吗？',  {skin: 'layui-layer-molv',offset: '30%'}, function(index){
+			layer.close(index);
+			layer.msg('拜拜！欢迎下次光临！', {shift: 6, time: 1500},function(){
+				window.location='index.html';
+			});
+		});
+	});
+});
+</script>
+
+</head>
+
+<body>
+<div style="width:500px; height:900px; position:relative" class="mobile">
+	<div  class="jifen">积分兑换</div>
+	<!--页面加载 开始-->
+  <div id="preloader">
+    <div id="status">
+      <p class="center-text"><span>拼命加载中···</span></p>
+    </div>
+  </div>
+  <!--页面加载 结束--> 
+  <!--header 开始-->
+  <header>
+    <div class="header"> <a class="new-a-back" href="javascript:history.back();"> <span><img src="images/iconfont-fanhui.png"></span> </a>
+      <h2>个人中心</h2>
+    </div>
+  </header>
+  <!--header 结束-->
+
+	<div class="user_top w">
+   	  <div class="user_logo"><div class="img"><img src="images/geren_03.png"></div></div>
+        <div class="user_info">
+        	<div class="user_name" style="color:#3e3e3e">忆乡人</div>
+            <div class="user_dengji" style="color:#969696">159456416123</div>
+        </div>
+    </div>
+    <div class="user_nav_list w">
+    	<ul>
+            <li>
+            	<a href="wodefabu.html">
+                	<div class="u_nav_icon money"></div>
+                    <div class="u_nav_name">我的发布</div>
+                     <div class="nt_icon"></div>
+                    <div class="u_money"><i></i></div>
+              </a>
+            </li>
+            <li>
+            	<a href="ziliao.html">
+                	<div class="u_nav_icon huibi"></div>
+                    <div class="u_nav_name">基本资料</div>
+                    <div class="nt_icon"></div>
+                    <div class="u_money"><i></i></div>
+              </a>
+            </li>
+            <li>
+            	<a href="jifen.html">
+                	<div class="u_nav_icon tixian"></div>
+                    <div class="u_nav_name">我的积分</div>
+                    <div class="nt_icon"></div>
+                    <div class="u_money"><i></i></div>
+              </a>
+            </li>
+            <li>
+            	<a href="shoucang.html">
+                	<div class="u_nav_icon tixian1"></div>
+                    <div class="u_nav_name">我的收藏</div>
+                    <div class="nt_icon"></div>
+                    <div class="u_money"><i></i></div>
+              </a>
+            </li>
+            <li>
+            	<a href="order.html">
+                	<div class="u_nav_icon dingdan"></div>
+                    <div class="u_nav_name">邀请有奖</div>
+                    <div class="nt_icon"></div>
+                    <div class="u_money"><i></i></div>
+              </a>
+            </li>
+            <li>
+            	<a href="renzhen.html">
+                	<div class="u_nav_icon qiandao"></div>
+                    <div class="u_nav_name">我要认证</div>
+                    <div class="nt_icon"></div>
+                    <div class="u_money"><i></i></div>
+              </a>
+            </li>
+           
+            <li>
+            	<a href="anquan.html">
+                	<div class="u_nav_icon anquan"></div>
+                    <div class="u_nav_name">安全中心</div>
+                    <div class="nt_icon"></div>
+              </a>
+            </li>
+            <li>
+            	<a href="fankui.html">
+                	<div class="u_nav_icon anquan1"></div>
+                    <div class="u_nav_name">意见反馈</div>
+                    <div class="nt_icon"></div>
+              </a>
+            </li>
+            <li>
+            	<a href="guanyu.html">
+                	<div class="u_nav_icon anquan2"></div>
+                    <div class="u_nav_name">关于我们</div>
+                    <div class="nt_icon"></div>
+              </a>
+            </li>
+            <li>
+            	<a href="user_info.html">
+                	<div class="u_nav_icon anquan"></div>
+                    <div class="u_nav_name">版本升级</div>
+                    <div class="nt_icon"></div>
+              </a>
+            </li>
+        </ul>
+    </div>
+  <div class="login_out w"><a href="javascript:void(0);" style="margin-bottom:40px;"><span></span><i>退出登录</i></a></div>
+  <div class="footer w">
+  	<a href="index.html"><div class="ico_img"><img src="../切图/images/1f1_45.png"></div><span style="color:#7e7e7e">首页</span></a>
+    <a href="#"><div class="ico_img"><img src="images/images/tutu_05.png"></div><span style="color:#7e7e7e">工友圈</span></a>
+    <a href="#"><div class="ico_img"><img src="images/images/tutu_07.png"></div><span style="color:#7e7e7e">人脉</span></a>
+    <a href="index.html"><div class="ico_img"><img src="images/images/tutu_09.png"></div><span style="color:#7e7e7e">记工</span></a>
+    <a href="#"><div class="ico_img"><img src="../切图/images/1f1_51.png"></div><span style="color:#00bb9c">我的</span></a>
+  </div>
+</div>
+<blockquote>&nbsp;</blockquote>
+</body>
+</html>

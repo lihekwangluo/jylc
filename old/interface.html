@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>接口测试页面</title>
+<script src="jquery.min.js"></script>
+<!--<link href="css/style.css" rel="stylesheet"/>-->
+</head>
+<body>
+	<header>
+		<!-- 参数以"&"分隔 返回结果json 形式 -->
+		<div class="yis_left">测试接口(<font color='red'>注:参数以"&"分隔  默认post 提交 返回结果json 形式</font>)</div>
+		 <p>
+		   <label>
+		   	   接口名：<input type="text" id='interfaces' value='login' />
+		   </label>
+		 </p> 
+		 <p>
+		   <label>
+		   	  提交方式：<input type="text" id='method' value='POST' />
+		   </label>
+		 
+		  <div style="float:left; margin-right:100px;">
+             参数列表:<textarea id="list" rows="10" cols="60"></textarea>
+
+         </div>  	   
+		      <div>
+		   	  返回结果：<textarea id="back" rows="10" cols="60"></textarea>
+		     </div>
+		   	   <input type='button' id='btn_sunb' value="测试提交"/>
+		
+	</header>
+
+</body>
+<script type="text/javascript">
+      //接口地址
+      var host=window.location.host;
+      var u="http://"+host+"/api/index.php/";
+     
+	  $('#btn_sunb').click(function(){
+	  	   //接口
+	  	   var interfaces = $('#interfaces').val();
+	  	   var method=$('#method').val();
+	  	   var list=$("#list").val(); 
+           
+            //测试提交接口
+           var url=u+"="+interfaces;
+           $.ajax({
+                    type:method,
+                    url:url,
+                    data:list,
+                    success:function(data){
+                           $('#back').text(data);
+                      }
+                  });
+           
+	  });
+
+</script>
+</html>

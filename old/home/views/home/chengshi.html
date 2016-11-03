@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>建筑-切换城市</title>
+<link rel="stylesheet" type="text/css" href="/resources/css/home/v45f16f16.css" />
+<link rel="stylesheet" type="text/css" href="/resources/css/home/v9d08aff8.css" />
+<link rel="stylesheet" href="/resources/css/home/chinalao1.css">
+</head>
+<body>
+
+<!-- header { -->
+
+<div id="bdw" class="bdw">
+<div id="bd" class="cf">
+  <div class="choosecities">
+    <div class="citieslist">
+      <h2>按拼音首字母选择<span class="arrow">&raquo;</span></h2>
+      <ol class="hasallcity">
+	    <?php foreach($data->result_array() as $value): ?>
+        <li id="city-<?=$value['area_s']?>">  
+          <p class="cf"><span class="label"><strong><?=$value['area_s']?></strong></span><span><a gaevent="changecity/build" class="isonline" href="<?php echo site_url("Index/index?id=".$value['area_id']);?>"><?=$value['area_name']?></a></span></p>
+        </li>
+       <?php endforeach;?>
+      </ol>
+    </div>
+    <!--   <p class="city-subscription">如果以上没有您要找的城市，请<a href="/maillist/subscribe">点击订阅>></a>。当城市开通团购后，您可以第一时间收到最新团购信息！</p>--> 
+  </div>
+</div>
+<?php include "footer.html"?>
+</body>
+</html>

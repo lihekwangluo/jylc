@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>收藏</title>
+
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(function(){
+	var t=0
+	var p
+	$(".dian li").click(function(){
+		d=$(".dian li").index(this)
+		for(var i=0;i<7;i++){
+			$(".dian li").eq(i).removeClass("on")
+			}
+			$(".dian li").eq(d).addClass("on")
+			$(".nei").animate({left:0-d*300},500)
+		})
+window.onload=function aa(){
+	t++
+	for(var i=0;i<7;i++){
+			$(".dian li").eq(i).removeClass("on")
+			}
+		if(t>5){
+			t=0
+			}
+			$(".dian li").eq(t).addClass("on")
+			$(".nei").animate({left:0-t*300},500)
+			p=window.setTimeout(function(){  aa() },2000)
+	}
+	/*$(".da").mouseover(function(){
+		window.clearTimeout(p)
+		})*/
+/*	
+	var t
+	var i=0
+	window.onload=function(){
+			aa()
+		}
+	function aa(){
+		i-=300
+		if(i<-2650){
+			i=0
+			}
+			
+		$(".nei").css("left",i)
+
+	timer =window.setInterval(function(){  aa() },2000)
+		
+		}*/
+	})
+</script>
+<link href="css/tcstyle.css" rel="stylesheet" type="text/css">
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<link href="css/nei.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div style="width:100%; height:1140px; background-color:#ececec;" class="mobile">
+	<div class="tou"><img src="images/zuo.png" style="margin-top:10px; cursor:pointer; float:left;">  <img  style="cursor:pointer; float: right;margin-top:10px;" src="images/images/fden_05.png">
+    <img  style=" float: right; cursor:pointer;margin-top:10px; margin-right:10px;" src="images/images/fden_03.png"> <h2>设备出租</h2>
+  </div>
+  <div class="biao">
+  	<div  class="zuo"><h4>出售各种搅拌机，价格好商量</h4><p style="float:left;">发布时间 ：2015.12.12</p>
+  	</div>
+    <div  class="you"><img src="images/images/tu_03.png" style="margin-right:10px; cursor:pointer;"><p></p><a href="javascript:void(0);"><a href="jubao.html"><img src="images/images/tu_07.png" style="margin-top:5px;"></a></div>
+  </div>
+  <p>&nbsp;</p>
+  <div class="wai">
+  <div class="da">
+       <ul class="dian">
+       <li class="on"></li>
+       	<li></li>
+       	<li></li>
+       	<li></li>
+       	<li></li>
+       	<li></li>
+       </ul>
+      <div class="nei">
+      <ul>
+      <li><img src="img/2011523948177.jpg" width="300"/></li>
+      <li><img src="img/2011671341219.jpg" width="300"/></li>
+      <li><img src="img/2011711154438.jpg" width="300"/></li>
+      <li><img src="img/2011915935447.jpg" width="300"/></li>
+      <li><img src="img/2011712162391.jpg" width="300"/></li>
+      <li><img src="img/20116713412110.jpg" width="300"/></li>
+            </ul>
+            
+      </div>
+    </div>
+    </div>
+  <div class="nei1"><p><span style="font-size:14px;">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量<span style="  border-left:1px solid #e5e5e5;padding-left:16px;margin-left:16px;">3台</span></p><p><span style="font-size:14px;">规格型号</span><span style="  border-left:1px solid #e5e5e5;padding-left:16px;margin-left:16px;">XXX</span></p><p ><span style="font-size:14px;">详细地址</span><span style="  border-left:1px solid #e5e5e5;padding-left:16px;margin-left:16px;">XXX</span></p></div>
+  <div class="nei2">
+    <h6>文字描述</h6><p>这里是文字描述这里是文字描述
+  这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描字描述这里是述这里字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描述这里是文字描字描述这里是述这里</p></div>
+  <div class="nei3"><p><span style="font-size:14px;">联&nbsp;&nbsp;系&nbsp;&nbsp;人</span><span style="  border-left:1px solid #e5e5e5;padding-left:16px;margin-left:16px;">李先生</span></p>
+  <p><span style="font-size:14px;">联系电话</span><span style="  border-left:1px solid #e5e5e5;padding-left:16px;margin-left:16px;">XXX</span></p></div>
+    <div class="cha"><img class="on1" style="cursor:pointer;" src="images/images/dian_03.png"><br/><img style="cursor:pointer;" src="images/images/dian_07.png"><img src="images/images/dian_08.png"><img style="cursor:pointer;" src="images/images/dian_09.png"></div>
+</div>
+
+</body>
+</html>
