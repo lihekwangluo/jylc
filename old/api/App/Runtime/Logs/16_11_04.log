@@ -1,0 +1,17 @@
+[ 2016-11-04T13:58:00+08:00 ] 127.0.0.1 /api/index.php/Workmate/workmatereply
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001136s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001207s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000889s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000929s ]
+NOTIC: [8] A session had already been started - ignoring session_start() G:\www\jylc8\old\api\App\Lib\Action\IndexAction.class.php 第 6 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead G:\www\jylc8\old\api\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `zj_public` [ RunTime:0.005451s ]
+ERR: 1146:Table 'jianzhu.zj_public' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `zj_public`
+SQL: SHOW COLUMNS FROM `zj_setsystem` [ RunTime:0.050978s ]
+SQL: SELECT * FROM `zj_setsystem` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.008020s ]
+SQL: SHOW COLUMNS FROM `zj_user` [ RunTime:0.007077s ]
+SQL: SELECT * FROM `zj_user` WHERE ( status = 1 and token='11323'  ) LIMIT 1   [ RunTime:0.017107s ]
+
